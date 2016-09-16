@@ -1,0 +1,51 @@
+---
+permalink: /404.html
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Error 404 | AddyMotion.com</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/css/materialize.css"  media="screen,projection"/>
+
+    <!--Import custom css-->
+    <link type="text/css" rel="stylesheet" href="/css/style.css"  media="screen,projection"/>
+		
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body class="grey lighten-5">
+    <div class="container">
+      <div class="row">
+        <div class="col m12 l6 offset-l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="/images/bg/notfound.jpg">
+              <span class="card-title cyan-text text-lighten-3">Error 404</span>
+            </div>
+            <div class="card-content">
+              <p>The place you were looking for, <span id="address"></span>, has gone missing!</p>
+              <p>I probably broke something; try looking at one of the links below.</p>					
+            </div>
+            <div class="card-action">
+              <!--<a id = "archive-link" href="">Go to site archive</a>-->
+              <a href="/">Go to homepage</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>	
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/init.js"></script>
+    <script type="text/javascript">
+      document.getElementById('address').innerHTML = window.location.href;
+    </script>
+  </body>
+</html>
+        
