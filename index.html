@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alastair Toft: Computer Science Student | AddyMotion.com</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="I'm a second year student at Cambridge. A collection of my projects including programming, web design and game mods.">
+    <meta name="keywords" content="Alastair Toft, Cambridge, Computer Science, student, programming, Source SDK, level design, web design, Java">
+    <meta name="author" content="Alastair Toft">
+    
+
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+    <!--Import custom css-->
+    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+    
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <!--Top navbar-->
+    <div class="navbar-fixed">
+    <nav class="cyan">
+      <div class="nav-wrapper container">
+        <a href="#top" class="brand-logo right"><img src="/images/logos/old_logo_vector.svg" title="&#35;LoveWins"></a>
+        <a href="#" data-activates="mobile-drawer" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="table-of-contents left hide-on-med-and-down ">
+          <li><a href="#top">Home</a></li>
+          <li class="breadcrumb"> &gt;</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-drawer">
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    </div>    
+    <!--End top navbar-->
+   
+    <!--Parallax title area-->
+
+    <div class="parallax-container section scrollspy" id="top">
+      <div class="parallax">
+        <img id ="changeImg" width="1920" height="1080">
+      </div>
+      <div class="container" style="height:100%">
+      <h1 class="left-align cyan-text text-darken-2">Alastair Toft</h1>
+        <h2 class="left-align cyan-text text-darken-1">Computer Science Undergraduate</h2>
+
+        <div class="row topImage-container">
+         
+          <div id = "spinner" class="preloader-wrapper big active">
+            <!--#include file="spinner.shtml" -->
+          </div>
+
+            <a class="modal-trigger" href="#modal-iframe"><div id="caption" class="card cyan darken-1 topImage-card" style="display:none;">
+              <div class="card-content white-text">
+                <div class="results">
+                  <!--Image caption is inseted here-->
+
+                </div>
+
+            </div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <!--End parallax-->
+
+    <!--Begin about-->
+    <div id="about" class="container section scrollspy">
+      <div class="row">   
+        <div class="col s12 m4 l6">
+          <a name="about"><h2 class="left-align cyan-text text-darken-1">About Me</h2>  </a>
+          <h5>Hi, I'm Alastair. I make things with computers!</h5>
+          <p>I'm a second year Computer Scientist at the University of Cambridge. When I'm not really busy with
+          my course I'll work on my own projects, whether that's web design, programming, or making games, 
+          maps and mods.</p>
+          <p>AddyMotion.com is my strangely named personal website where you can find some of my stuff, follow my blog, or get in touch.</p>
+          <div class="divider"></div>
+          <p><a href="#contact">Contact me</a> for a copy of my CV.</p>
+          <div class="divider"></div>
+          <p>This is a brand new website, so if something goes wrong feel free to <a href="#contact">let me know!</a></p>
+        </div>
+        <div class="col s12 m8 l6">
+          <img src="images/home/temp_avatar.jpg" alt="" class="circle" id="main-avatar">
+        </div>
+      </div>
+    </div>
+    <!--End about-->
+
+
+    <!--Blog promo section-->
+    <div id ="blog" class="parallax-container section scrollspy">
+      <div class="parallax"><img src="images/bg/cambridge.jpg"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6 offset-m6">
+              <div id="blog-panel" class="card-panel">
+                <div class="card-content">
+                  <a name="blog"><h2 class="left-align cyan-text text-darken-1">Blog</h2></a>
+                  <p>I share some of the things I get up to as a CompSci at Cambridge, and anything else
+                  that might cross my mind.</p>
+                  <p>Sci-fi, coding, video games, attempts at photography, anything goes here.</p>
+                  <div class="row">
+                    <div class="col l4 offset-l8 m6 offset-m6 s12">
+                      <a class="waves-effect waves-light btn cyan" href="http://blog.addymotion.com">View Blog</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End blog section-->
+
+    <img src="images/home/logos.svg" height="365px" style="float:right; margin-top:20px;max-width:150%">
+    <div id="projects" class="container section scrollspy" style="padding-top:220px; padding-bottom:190px">
+      
+      <div class="row" style="margin:0">
+        <div class="col s12 m6" style="margin-bottom:50px;">
+          <a name="projects"><h2 class="left-align cyan-text text-darken-1" style="margin-bottom:none;">Projects</h2></a>
+          <p>These are a few of the things I've worked on recently, grouped roughly into categories. 
+          Further projects not listed here can be found on my 
+          <a href="/archive/2014">old site</a>.</p>
+
+        </div>
+      </div>
+        <ul class="collapsible" data-collapsible="accordion">
+           <li>
+             <div class="collapsible-header"><i class="material-icons">code</i>Programming</div>
+             <div class="collapsible-body">
+               <ul class="collection">
+
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/code-clouds.html');">
+                <li class="collection-item avatar">
+                  <img src="images/code/icon_clouds.png" alt="" class="circle">
+                  <span class="project-type">Unity, C&#35;, HLSL | 2016</span>
+                  <span class="title">Optimisations for Real-Time Volumetric Cloudscapes</span>
+                  <br>An internship project investigating volume ray-marching.
+                </li></a>
+
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/code-grpproj.html');">
+                <li class="collection-item avatar">
+                  <img src="images/icons/icon_generic.png" alt="" class="circle">
+                  <span class="project-type">C++ | 2016</span>
+                  <span class="title">Computer Science Group Project</span>
+                  <br>A server architecture for distributed, non-linear video processing.
+                </li></a>
+                
+                <div class="divider"></div>
+                
+                 <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/code-cam.html');">
+                 <li class="collection-item avatar">
+                   <img src="images/bg/cambridge.jpg" alt="" class="circle">
+                   <span class="project-type">2014-</span>
+                   <span class="title">Cambridge Computer Science</span>
+                   <br>Work as part of my undergraduate degree.
+                 </li></a>
+
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/code-ld34.html');">
+                <li class="collection-item avatar">
+                  <img src="images/code/icon_ld34.png" alt="" class="circle">
+                  <span class="project-type">JavaScript | 2015</span>
+                  <span class="title">Ludum Dare: The Forces Awakened</span>
+                  <br>An entry to the 72 hour Ludum Dare game jam.
+                </li></a>
+                
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/code-raytrace.html');">
+                <li class="collection-item avatar">
+                  <img src="images/code/icon_raytrace.jpg" alt="" class="circle">
+                  <span class="project-type">Java | 2015</span>
+                  <span class="title">RayTracer</span>
+                  <br>A really simple ray tracing engine in Java.
+                </li></a>
+
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/git.html');">
+                <li class="collection-item avatar">
+                  <img src="images/icons/icon_generic.png" alt="" class="circle">
+                  <span class="project-type">Java | 2015</span>
+                  <span class="title">Github</span>
+                  <br>Code for other Java Projects.
+                </li></a>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">games</i>Level Design</div>
+            <div class="collapsible-body">
+              <ul class="collection">
+                <a class="modal-trigger" href="#modal-iframe" 
+                    onclick="setFrame('modal/src-up.html');">
+                <li class="collection-item avatar">
+                  <img src="images/src/icon_up.png" alt="" class="circle">
+                  <span class="project-type">Mod | 2015</span>
+                  <span class="title">Uncertainty Principle</span>
+                  <br>Play through four chapters of Half-Life gameplay, exploring new locations, meeting new characters and uncovering lost secrets.
+                </li></a>
+
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                    onclick="setFrame('modal/src-peak.html');">
+                <li class="collection-item avatar">
+                  <img src="images/src/icon_src.png" alt="" class="circle">
+                  <span class="project-type">Map | 2015</span>
+                  <span class="title">Outland Peak</span>
+                  <br>Discover Antlion caves and a new snow-covered environment as you infiltrate a Combine outpost.
+                </li></a>
+
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                    onclick="setFrame('modal/src-demons.html');">
+                <li class="collection-item avatar">
+                  <img src="images/src/icon_src.png" alt="" class="circle">
+                  <span class="project-type">Map | 2014</span>
+                  <span class="title">&quot;These Peculiar Demons&quot;</span>
+                  <br>Search for survivors in a Zombie infested town and hope that you can survive the night.
+                </li></a>
+                
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                    onclick="setFrame('modal/src-retreat.html');">
+                <li class="collection-item avatar">
+                  <img src="images/src/icon_src.png" alt="" class="circle">
+                  <span class="project-type">Map | 2013</span>
+                  <span class="title">Retreat</span>
+                  <br>Awoken in the middle of the night, you find that your hideout is being raided by the Combine.
+                </li></a>
+
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                    onclick="setFrame('modal/src-coast.html');">
+                <li class="collection-item avatar">
+                  <img src="images/src/icon_src.png" alt="" class="circle">
+                  <span class="project-type">Map | 2013</span>
+                  <span class="title">Secret of the Coast</span>
+                  <br>Climb islands, descend cliffs and explore the mysteries of the Coast.
+                </li></a>
+
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                    onclick="setFrame('modal/src-falls.html');">
+                <li class="collection-item avatar">
+                  <img src="images/src/icon_src.png" alt="" class="circle">
+                  <span class="project-type">Map | 2012</span>
+                  <span class="title">Gravity Falls</span>
+                  <br>Working your way through the forest, via a couple of stops, you need to turn off a Combine power generator.
+                </li></a>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">http</i>Web Design</div>
+            <div class="collapsible-body">
+               <ul class="collection">
+
+                 <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/web-site.html');">
+                 <li class="collection-item avatar">
+                   <img src="images/web/icon_site-2014.jpg" alt="" class="circle">
+                   <span class="project-type">2007-</span>
+                   <span class="title">Personal Projects</span>
+                   <br>Previous websites and other projects.
+                 </li></a>
+
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/web-divest.html');">
+                <li class="collection-item avatar">
+                  <img src="images/web/icon_divest.jpg" alt="" class="circle">
+                  <span class="project-type">2015</span>
+                  <span class="title">Divest Cambridge</span>
+                  <br>A web app created for a university society.
+                </li></a>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">subject</i>Other Projects</div>
+            <div class="collapsible-body">
+               <ul class="collection">
+
+                 <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/project-lambda.html');">
+                 <li class="collection-item avatar">
+                   <img src="images/projects/icon_lambda.jpg" alt="" class="circle">
+                   <span class="project-type">2013-2015</span>
+                   <span class="title">LambdaGeneration.com</span>
+                   <br>My work as an editor at LambdaGeneration.com, a Valve community website.
+                 </li></a>
+
+                <div class="divider"></div>
+
+                <a class="modal-trigger" href="#modal-iframe" 
+                     onclick="setFrame('modal/project-flash.html');">
+                <li class="collection-item avatar">
+                  <img src="images/icons/icon_generic.png" alt="" class="circle">
+                  <span class="project-type">Flash | 2008-2010</span>
+                  <span class="title">Flash Games</span>
+                  <br>A collection of browser games of questionable quality...
+                </li></a>
+              </ul>
+            </div>
+          </li>
+          
+        </ul>
+    </div>
+
+    <!--Contact section-->
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <div id ="contact" class="parallax-container section scrollspy" style="width:100%">
+      <div id="googlemaps" style="height:600px;width:100%;position:absolute; top:0px;left:0px;z-index:0;"></div>
+        <div class="container"style="z-index:1;position:relative;pointer-events: none;">
+          <div class="row">
+            <div class="col s12 m6 offset-m6"style="z-index:1;">
+              <div id="blog-panel" class="card-panel" style="z-index:1;pointer-events: auto;"> <!--Rename this-->
+                <div class="card-content">
+                  <a name="blog"><h2 class="left-align cyan-text text-darken-1">Contact</h2></a>
+                  <p>I'm either studying hard at Downing College, Cambridge or chilling by the sea in Weymouth, Dorset.</p>
+                  <p>You can find me on the web at the links below:</p>
+                  <p>
+                  <a href="http://www.google.com/recaptcha/mailhide/d?k=013-VGRfrK080al_nkZYyUWg==&amp;c=l0r_6zTFe90HF12KxMwyW_9KKpMhVBv2bRkNDAaDOe4=" 
+                  onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075013-VGRfrK080al_nkZYyUWg\75\75\46c\75l0r_6zTFe90HF12KxMwyW_9KKpMhVBv2bRkNDAaDOe4\075',
+                   '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">
+                  <i class="tiny material-icons">email</i> Email</a></p>
+                  <p>
+                  <a href="https://linkedin.com/in/alastairtoft">
+                  <img src="/images/icons/linkedin-tiny.png"> LinkedIn</a></p>
+                  <p><a href="https://twitter.com/toftyboy7">
+                  <img src="/images/icons/twitter-tiny.png"> Twitter</a></p>
+                  <p><a href="https://www.facebook.com/AddyMotion/">
+                  <img src="/images/icons/fb-tiny.png"> Facebook</a></p>
+                  
+                  
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!--End contact section-->
+
+    <!--Temporary footer-->
+    <footer class="page-footer cyan" style="height:200px;">
+
+          <div class="footer-copyright" style="bottom:0;margin-top:110px;">
+            <div class="container">
+             Site design and content &#169; 2008-2016 Alastair Toft unless noted otherwise. 
+             All trademarks are properties of their respective owners.
+            <a class="grey-text text-lighten-4 right" href="#top">Back to top</a>
+            </div>
+          </div>
+        </footer>
+
+
+
+    <!--Finally, pop-up windows-->
+    <!-- Modal Structure -->
+    <div id="modal-iframe" class="modal modal-fixed-footer">
+      <div id = "modal-spinner" class="preloader-wrapper big active">
+        <!--#include file="spinner.shtml" -->
+      </div>
+      <iframe id="frame-dynamic"></iframe>    
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-cyan btn-flat ">Close</a>
+    </div>
+          
+    </div>
+
+    
+    <!--Load scripts last-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/PxLoader.js"></script>
+    <script type="text/javascript" src="js/PxLoaderImage.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+
+    <script>
+    //Google maps code
+    var position = [52.1999722,0.1247423];
+    var centre = [51.4134011,-1.18405075];
+    var weymouth = [50.62683,-2.4928438];
+
+    function initialize() {
+
+      var myOptions = {
+        zoom: 8,
+        zoomControl: false,
+        scaleControl: false,
+        scrollwheel: false,
+        disableDoubleClickZoom: true,
+        streetViewControl: false,
+        scaleControl: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      map = new google.maps.Map(document.getElementById('googlemaps'),
+            myOptions);
+
+
+
+      posCambridge = new google.maps.LatLng(position[0], position[1]);
+      customCentre = new google.maps.LatLng(centre[0], centre[1]);
+      posWeymouth = new google.maps.LatLng(weymouth[0], weymouth[1]);
+
+      map.setCenter(customCentre);
+
+      marker = new google.maps.Marker({
+        position: posCambridge,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
+      });
+      marker2 = new google.maps.Marker({
+        position: posWeymouth,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
+      });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    //End google maps
+
+    //Sets the iFrame used for the dynamic modal screens
+    function setFrame(location){
+      document.getElementById('frame-dynamic').style.display="none";
+      document.getElementById('modal-spinner').style.display="block";
+      document.getElementById('frame-dynamic').src=location;
+      document.getElementById('frame-dynamic').onload = function() {
+        console.log("iFrame loaded");
+        document.getElementById('frame-dynamic').style.display="block";
+        document.getElementById('modal-spinner').style.display="none";
+      }
+    }
+
+ 
+    var topImages = ["/images/bg/clouds.jpg",
+                     "/images/bg/raytrace.png",
+                     "/images/bg/ld34.png",
+                     "/images/bg/up.jpg",
+                     "/images/bg/cambridge_cl.jpg"];
+    var topImageText = ["<span class='topImage-emphasis'>Volumetric Cloudscapes:</span> An internship graphics project",
+                        "<span class='topImage-emphasis'>RayTracer:</span> A Java 3D graphics project",
+                        "<span class='topImage-emphasis'>The Forces Awakened:</span> An entry to Ludum Dare",
+                        "<span class='topImage-emphasis'>Uncertainty Principle:</span>"+
+                           " A Half-Life 2 modification",
+                        "Computer Science at the University of Cambridge"];
+
+    var topImageFun = [function() { setFrame('modal/code-clouds.html'); }, 
+                       function() { setFrame('modal/code-raytrace.html'); }, 
+                       function() { setFrame('modal/code-ld34.html'); }, 
+                       function() { setFrame('modal/src-up.html'); }, 
+                       function() { setFrame('modal/code-cam.html'); }  ]
+
+    var loader = new PxLoader();
+    for (i=0; i<topImages.length;i++) {
+      loader.addImage(topImages[i]);
+    }
+    loader.start();
+    //Cycles through the arrays of images and captions above
+    loader.addCompletionListener(function(){
+      
+      //Remove the loading animation
+      document.getElementById('spinner').style.display="none";
+
+      //Show the caption card
+      document.getElementById('caption').style.display="block";
+
+      //Now loop over all images
+      var i =0;
+
+      function nextTopImage() {
+        document.getElementById('changeImg').src=topImages[i];
+        document.querySelector('.results').innerHTML = topImageText[i];
+        document.getElementById('caption').onclick = topImageFun[i];
+        Materialize.fadeInImage('#changeImg');
+        console.log("Changed to top image "+i+topImageText[i]); 
+        i++;
+        if(i==topImages.length) i=0;
+      }
+
+      nextTopImage();
+      setInterval(nextTopImage, 6000);
+    });
+    </script>
+  </body>
+</html>
+        
