@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+  <title>Ludum Dare 34</title>
+  <style>
+    * {
+      padding: 0; margin:0;
+    }
+    @font-face {
+    font-family: Pixel;
+    src: url('font/prstartk.ttf');
+    }
+    canvas {
+      background: black;
+      display: block;
+      margin: auto;
+      image-rendering: optimizeSpeed;             /* Older versions of FF          */
+      image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+      image-rendering: -webkit-optimize-contrast; /* Safari                        */
+      image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+      image-rendering: pixelated;                 /* Awesome future-browsers       */
+      -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+      cursor:none;
+      width:100%;
+      height:auto;
+    }
+    body {
+      background-color:black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="640" height="360"></canvas>
+  
+  <!--Audio-->
+  <audio id="audio_music1" src="sound/SpaceFighterLoop.mp3" preload>
+  <audio id="audio_explode" src="sound/explode.wav" preload>
+  <audio id="audio_health" src="sound/health.wav" preload>
+  <audio id="audio_junk" src="sound/junk.wav" preload>
+  <audio id="audio_laser" src="sound/laser.wav" preload>
+  <audio id="audio_teleport" src="sound/teleport.wav" preload>
+  <audio id="audio_asteroid" src="sound/asteroid.wav" preload>
+    
+  
+  <!--JS-->
+  <script type="text/javascript" src="js/Engine.js"></script> 
+  <script type="text/javascript" src="js/MoveableEntity.js"></script>
+  <script type="text/javascript" src="js/Player.js"></script>
+  <script type="text/javascript" src="js/Asteroid.js"></script>
+  <script type="text/javascript" src="js/Laser.js"></script>
+  <script type="text/javascript" src="js/Pickup.js"></script>
+  <script type="text/javascript" src="js/Sprite.js"></script>
+  <script type="text/javascript" src="js/AIShip.js"></script>
+  <script type="text/javascript" src="js/Cutscene.js"></script>
+  
+  <script type="text/javascript" src="js/buckets.js"></script> <!--Data structure lib -->
+  <script type="text/javascript" src="js/PxLoader.js"></script>
+  <script type="text/javascript" src="js/PxLoaderImage.js"></script>
+  <script>
+    console.log("Initializing...");
+    
+    //Amount to scale rendering from the "actual" resolution
+    var screenScale = 1;
+    
+    /*Get a reference to the HTML canvas and a 2D rendering context*/
+    var canvas = document.getElementById("gameCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.imageSmoothingEnabled = false; //Display pixellated images
+    ctx.scale(screenScale,screenScale);
+    
+    //Suppress right click
+    canvas.oncontextmenu = function (e) {
+      e.preventDefault();
+    };
+             
+    /*Global variables*/
+    var PX_WIDTH = 640;
+    var PX_HEIGHT = 360;
+    var engine;
+  
+    //Inputs
+    var rightPressed = false;
+    var leftPressed = false;
+    var spacePressed = false;
+    var upPressed = false;
+    var lmbPressed = false;
+    var rmbPressed = false;
+    var lmbClicked = false;
+    var rmbClicked = false;
+    var mouseX = 0;
+    var mouseY = 0;
+    var mouseMoved = false;
+    var mPressed = false;
+    
+    var mute = false;
+    var paused = false;
+        
+    //Timing
+    var time;
+    var dt;
+    
+    //Input
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+    document.addEventListener("keypress", keyPressHandler);
+    document.addEventListener("mousemove", mouseMoveHandler, false);
+    window.addEventListener("mousedown", mouseDownHandler, false);
+    window.addEventListener("mouseup", mouseUpHandler, false);
+    window.addEventListener("click", mouseClickHandler, false);
+    
+    function keyPressHandler(e) {
+      if(e.keyCode == 109) {
+        console.log("m pressed");
+        mute = !mute;
+        if(mute) music.pause();
+        if(!mute) music.play();
+      }
+      else if(e.keyCode == 112) {
+        console.log("toggle paused");
+        paused = !paused;
+      }
+    }
+    
+    function keyDownHandler(e) {
+      if(e.keyCode == 39) {
+        rightPressed = true;
+      }
+      else if(e.keyCode == 37) {
+        leftPressed = true;
+      }
+      else if(e.keyCode == 38) {
+        upPressed = true;
+      }
+      else if(e.keyCode == 32) {
+        spacePressed = true;
+      }
+    }
+    function keyUpHandler(e) {
+      if(e.keyCode == 39) {
+        rightPressed = false;
+      }
+      else if(e.keyCode == 37) {
+        leftPressed = false;
+      }
+      else if(e.keyCode == 38) {
+        upPressed = false;
+      }
+      else if(e.keyCode == 32) {
+        spacePressed = false;
+      }
+    }
+    function mouseDownHandler(e) {
+      if(e.button == 0 || e.button == 1){
+        lmbPressed = true;
+      }
+      else if(e.button == 2){
+        rmbPressed = true;
+      }
+    }    
+    function mouseUpHandler(e) {
+      if(e.button === 0 || e.button === 1){
+        console.log("lmb released");
+        lmbPressed = false;
+      }
+      else if(e.button === 2){
+        console.log("rmb released");
+        rmbPressed = false;
+      }
+    }
+    
+    function mouseClickHandler(e) {
+      if(e.button == 0 || e.button == 1){
+        console.log("lmb click");
+        lmbClicked = true;
+      }
+      else if(e.button == 2){
+        rmbClicked = true;
+      }
+    }
+    
+    function mouseMoveHandler(e) {
+      scaleX = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)/PX_WIDTH;
+      //scaleY = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)/PX_HEIGHT;
+    
+      mouseX = (e.pageX - canvas.offsetLeft)/scaleX;
+      mouseY = (e.pageY - canvas.offsetTop)/scaleX;
+      mouseMoved = true;
+    }
+
+
+    console.log("Drawing loading screen");
+    ctx.beginPath();
+
+  
+    ctx.fillStyle = "yellow";
+    ctx.font = "18px Pixel";
+    ctx.fillText("Loading...",20,20);
+    
+    console.log("Loading assets");
+    //Audio
+    var music = document.getElementById("audio_music1");
+    var audioExplode = document.getElementById("audio_explode");
+    var audioHealth = document.getElementById("audio_health");
+    var audioJunk = document.getElementById("audio_junk");
+    var audioLaser = document.getElementById("audio_laser");
+    var audioTeleport = document.getElementById("audio_teleport");
+    var audioAsteroid = document.getElementById("audio_asteroid");
+    
+    var loader = new PxLoader();
+    var imgStarscape = loader.addImage("img/stars.png");
+    var imgDust = loader.addImage("img/dust.png");
+    var imgShip      = loader.addImage("img/ship.png");
+    var imgShipFly   = loader.addImage("img/ship_fly.png");
+    var imgCrosshair = loader.addImage("img/crosshair.png");
+    
+    var imgAsteroid1 = loader.addImage("img/asteroid1.png");
+    var imgAsteroid2 = loader.addImage("img/asteroid2.png");
+    var imgAsteroid3 = loader.addImage("img/asteroid3.png");
+    var imgAsteroid4 = loader.addImage("img/asteroid4.png");
+    
+    var imgHealth    = loader.addImage("img/health.png");
+    var imgJunk      = loader.addImage("img/junk.png");
+    
+    var imgExplode   = loader.addImage("img/explode.png");
+    var imgEnemy   = loader.addImage("img/enemy_fly.png");
+    
+    var imgScroll   = loader.addImage("img/scroll.png");
+    var imgLogo     = loader.addImage("img/logo.png");
+    var imgMenu     = loader.addImage("img/menu.png");
+    var imgCredits  = loader.addImage("img/credits.png");
+    
+    var iconHealth     = loader.addImage("img/icon_health.png");
+    var iconJunk     = loader.addImage("img/icon_junk.png");
+    
+    loader.addCompletionListener(function() {
+      console.log("Starting game loop...");
+      engine = new Engine();
+    });
+    
+    //TODO: Refactor to have a function which handles sound playback
+    //to allow for a global mute and volume control
+    
+    //Load music when it's ready
+    music.addEventListener('canplaythrough', function() { 
+      if(!mute) music.play();
+    }, false);
+    music.addEventListener('ended', function() {
+      if(!mute) music.play();});
+    loader.start();
+  </script>
+</body>
+</html>
