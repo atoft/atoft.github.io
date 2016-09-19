@@ -1,0 +1,76 @@
+div#wrapper{
+height:auto;
+}
+div#footer{
+top:auto;
+}
+
+
+
+
+
+#disqus_thread{
+
+width:800px;
+background: url(images/pattern_gradient.png), url(images/patternblu.png);
+background-repeat: repeat-x, repeat;
+
+       padding-top: 20px;
+       padding-left: 20px;
+       padding-right: 20px;
+       margin-bottom: 20px;
+       -moz-box-shadow: 0 0 5px 5px #48b7e0;
+-webkit-box-shadow: 0 0 5px 5px#48b7e0;
+box-shadow: 0 0 5px 5px #48b7e0;
+color:#ffffff;
+}
+
+#HCB_comment_box div.comment {
+width:800px;
+background: url(images/pattern_gradient.png) ;background-repeat: repeat-x;
+       padding-top: 20px;
+       padding-left: 20px;
+       padding-right: 20px;
+       margin-bottom: 20px;
+       -moz-box-shadow: 0 0 5px 5px #48b7e0;
+-webkit-box-shadow: 0 0 5px 5px#48b7e0;
+box-shadow: 0 0 5px 5px #48b7e0;
+color:#ffffff;
+}
+#HCB_comment_box b.author-name{
+font-weight:bold;
+}
+#HCB_comment_box span.date{
+font-style:italic;
+}
+#HCB_comment_box img.gravatar{
+
+       padding-right: 20px;
+       }
+div#HCB_comment_form_box{
+width:800px;
+background: url(images/pattern_gradient.png) ;background-repeat: repeat-x;
+       padding-top: 20px;
+       padding-left: 20px;
+       padding-right: 20px;
+       margin-bottom: 20px;
+       -moz-box-shadow: 0 0 5px 5px #48b7e0;
+-webkit-box-shadow: 0 0 5px 5px#48b7e0;
+box-shadow: 0 0 5px 5px #48b7e0;
+opacity: .80;
+filter: alpha(opacity=80);
+}
+#HCB_comment_box div.likes{
+       padding-top: 20px;
+       padding-right: 20px
+  }
+       h3{
+       display:none;
+       }
+       
+div#contentback{
+height:2200px;
+}
+a{
+color:white;
+}

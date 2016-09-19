@@ -1,0 +1,138 @@
+/*Formatting for the featured content sliders*/
+ #featured{  
+     width:960px;  
+     padding-top: 20px;
+          padding-bottom: 20px;
+     position:relative;  
+       margin-left: auto ;
+  margin-right: auto ;
+
+     height:295px;  
+/*     background:#fff;  */
+/*     border:5px solid #ccc;  */
+ }  
+ #featured ul.ui-tabs-nav{
+ 	display: none;
+ 	z-index: 3;
+	position:absolute;
+	top:0; left:710px;
+	list-style:none;
+	padding-top: 20px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	 margin:0;
+	width:250px;
+}
+#featured ul.ui-tabs-nav li{
+	padding:1px 0; padding-left:13px;
+	font-size:12px;
+	color:#666;
+}
+#featured ul.ui-tabs-nav li span{
+	font-size:11px; font-family:Verdana;
+	line-height:18px;
+}
+#featured .ui-tabs-panel{
+	z-index: 2;
+	width:960px; height:295px;
+	background:#999; position:relative;
+        overflow:hidden;
+}
+#featured .ui-tabs-hide{
+	display:none;
+}
+#featured li.ui-tabs-nav-item a{/*On Hover Style*/
+	display:block;
+	height:60px;
+	color:#333;  background:#fff;
+	line-height:20px;
+	outline:none;
+}
+#featured li.ui-tabs-nav-item a:hover{
+	background:#f2f2f2;
+}
+#featured li.ui-tabs-selected{ /*Selected tab style*/
+	background:url('images/selected-item.png') top left no-repeat;
+}
+#featured ul.ui-tabs-nav li.ui-tabs-selected a{
+	background:transparent;
+}
+#featured .ui-tabs-panel .info{
+	position:absolute;
+	top:225px; left:0;
+	height:70px; width: 960px;
+	background:#0396f4;
+	  opacity: .80;
+  filter: alpha(opacity=80);
+
+
+}
+#featured .info{
+
+	z-index: 20;
+}
+#featured .info h2{
+	font-size:18px; font-family:Trebuchet MS, sans-serif;
+	color:#fff; padding:5px; margin:0;
+	overflow:hidden;
+}
+#featured .info p{
+	margin:0 5px;
+	font-family:Verdana; font-size:11px;
+	line-height:15px; color:#f0f0f0;
+}
+#featured .info a{
+	text-decoration:none;
+	color:#fff;
+
+}
+#featured .info a:hover{
+	text-decoration:underline;
+
+}
+/*featured content ends here*/
+
+div#homename {
+	font-size:72px;
+	color:#999;
+	font-family:Trebuchet MS, sans-serif;
+	position:relative;
+
+	       margin-left: auto ;
+  margin-right: auto ;
+  width: 580px;
+	}
+div#welcome{
+	position:relative;
+	top:10px;
+	left:20px;
+		font-family:Trebuchet MS, sans-serif;
+		font-size:2em;
+	}
+div#random{
+	position:relative;
+	top:0px;
+width: 250px;
+	left:350px;
+		font-family:Trebuchet MS, sans-serif;
+		font-size:14px;
+text-align:right;
+	}
+	
+div#news{
+width:680px;
+float:left;
+display:block;
+}
+div#chat{
+width:250px;
+display:block;
+float:right;
+height:300px;
+top:-90px;
+}
+div#note{
+font-family:Trebuchet MS;
+font-size: 8px;
+}

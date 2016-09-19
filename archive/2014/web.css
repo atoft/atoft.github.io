@@ -1,0 +1,392 @@
+/*Web fonts*/
+@font-face {
+	font-family: 'Droid Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Droid Sans'), local('DroidSans'), url(http://fonts.gstatic.com/s/droidsans/v6/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+/*End web fonts*/
+
+body {
+	font-family: Arial, helvetica, sans-serif;
+	/*font-size: 80%;*/
+ 	background: url(images/headerback.png) ;background-repeat: repeat-x;
+	background-color: #70b0f1 ;
+	padding: 0;
+	border:0 ;
+	min-width: 960px;
+}
+div#wrapper {
+	position:relative;
+	padding-top: 0;
+	left:50%;
+	margin-left:-480px;
+	margin-top:0;
+	width:960px;
+
+}
+
+
+h1 {
+	
+	font-size: 2em;
+	font-family: 'Droid Sans', Sans-Serif;
+	margin: 0;
+	padding: 0.25em;
+	text-align: center;
+}
+
+h2 {
+	color: white;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0.1em;
+	/*padding-left: 1em;*/
+	z-index:100;
+	font-family: 'Droid Sans', Sans-Serif;
+}
+h4 {
+	color: white;
+	font-size: 12px;
+	margin: 0;
+	padding: 0.1em;
+	/*padding-left: 1em;*/
+	z-index:100;
+	font-family: 'Droid Sans', Sans-Serif;
+}
+h3{
+	color: white;
+	font-size: 1.2em;
+	}
+p {
+
+	font-family: Arial, Helvetica, Sans-Serif;
+}
+
+
+a {
+	text-decoration: none;
+	padding: 0
+	color:white;
+}
+
+a:visited{
+	color:white;
+}
+
+strong {
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+li {
+	z-index: 100;
+}
+
+
+ul{
+	list-style-type:square;
+}
+table {
+	background-color: #ccc;
+}
+
+img {
+	border: 0;
+	padding: 0;
+	behavior: url(iepngfix.htc);
+}
+
+/*CSS for the Blue Menu bar in menu.shtml*/
+div#menu{
+	z-index:100;
+	width:960px;
+} 
+#menu ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	z-index:6;
+
+}
+#menu li{
+	float:left;
+}
+
+#menu a:link,#menu a:visited{
+	display:block;
+	width:180px;
+	height: 20px;
+	font-weight:lighter;
+	color:#FFFFFF;
+	background: url(images/patternblu.png);
+	background-repeat: repeat;
+	text-align:right;
+	padding-top:25px;
+	padding-bottom:5px;
+	padding-left:0;
+	padding-right:5px;
+	margin-right:0px;
+	text-shadow:2px 2px 8px #ffffff;
+	z-index:6;
+}
+
+#menu a:hover,#menu a:active{
+	background: url(images/pattern_gradient.png); 
+	background-repeat: repeat-x;
+}
+#menu img{
+	display:block;
+	position:absolute;
+	top:0;
+}
+#menu p{
+	display:block;
+	width:8px;
+	position:relative;
+}
+/*end of menu css*/
+
+
+
+
+
+div#headpic {
+    position:relative;
+z-index:5;
+/*    left: -63px;*/
+
+    margin-right:auto;
+/*    width:1168px;*/
+    top:20px; /*was 0*/
+    padding-top:0;
+    padding-bottom:20px;
+
+}
+div#menu{
+	position:relative;
+	padding-top: 0;
+	margin-left:auto;
+	margin-right:auto;
+	width:960px;
+	height:50px;
+}
+
+
+div#pageinfo{
+
+
+    
+/*-moz-border-radius: 1em;
+-webkit-border-radius: 1emm;*/
+ /*   behavior: url('border-radius.htc');*/
+/*border-radius: 1em;
+zoom: 1;*/
+background: url(images/boxtop.png) ;background-repeat: repeat-x;    background-color: #ffffff;
+padding-top:25px;
+padding-bottom:25px;
+padding-right:20px;
+padding-left:20px;
+color:#cccccc
+border: 100px;
+width: 640px;
+height: 160px;
+display: inline-block;
+position: relative;
+float: left;
+margin-bottom:20px;
+
+-moz-box-shadow: 0 0 5px 5px #77daff;
+-webkit-box-shadow: 0 0 5px 5px#77daff;
+box-shadow: 0 0 5px 5px #77daff;
+}
+
+div#follow{
+padding:5px;
+background: url(images/boxtop.png) ;background-repeat: repeat-x;
+    background-color: #ffffff;
+    padding-top:0px;
+padding-bottom:25px;
+/*padding-right:20px;
+padding-left:20px;*/
+color:#cccccc
+border: 0px;
+width: 250px;
+height: 185px;
+display: inline-block;
+position: relative;
+float: right; 
+margin-bottom:20px;
+margin-top:0
+-moz-box-shadow: 0 0 5px 5px #48b7e0;
+-webkit-box-shadow: 0 0 5px 5px#48b7e0;
+box-shadow: 0 0 5px 5px #48b7e0;
+}
+div#icons{
+position:relative;
+    margin-left:auto;
+	margin-top:40px;
+    margin-right:auto;
+    width:210px;
+    }
+div#twitter_update_list{
+width:200px;
+height:100px;
+margin:0;
+padding:0;
+border:0;
+}
+  div#iconbox{
+  background-color:white;
+  margin-top:10px;
+  width:250px;
+  margin-bottom:20px;
+  }  
+
+div#mainconetnt{
+display:block;
+width: 680px;
+}
+
+
+div#whoosh {
+/*position: absolute;
+
+top: 0px;
+left: -148px;
+
+height:400px;*/
+
+background: url(images/header/header_bubbles.png);
+background-repeat: no-repeat;
+background-position: center top;
+/*background-attachment:fixed;*/
+position:absolute;
+padding-top: 0;
+padding-left:0%;
+/*left:50%;*/
+top:0;
+/*margin-left:-756px;*/
+margin-top:0;
+width:100%;
+height:500px;
+}
+
+div#footerbox{
+width:100%;
+height:310px;
+padding:0;
+bottom:0;
+ 	background: url(images/patternblu.png) ;background-repeat: repeat;
+margin-top: 50px;
+border-top-width: 2px;
+border-top-color: #01496b;
+border-style:solid;
+display:block;
+}
+div#footer{
+    position:relative;
+padding-top: 20px;
+    margin-left:auto;
+	margin-top:0;
+	padding-bottom:100px;
+    margin-right:auto;
+    width:960px;
+
+    }
+    
+#footer h2{
+margin-bottom:15px;
+}
+#footer a:link,#footer a:visited {
+color: white;
+font-size: 1.2em;
+line-height:1em;
+  }  
+#footer a:active {
+color: #9dcbf9;
+}
+div#sitemap{
+display: inline-block;
+width: 290px;
+height: 170px;
+padding:10px;
+        zoom: 1;
+        *display: inline;
+        vertical-align: top;
+/*        background: url(images/footbox.png) ; background-repeat: no-repeat;*/
+text-align:justify;
+font-size: 0.8em;
+color: #9dcbf9;
+}
+div#about{
+display: inline-block;
+
+width: 290px;
+height: 170px;
+padding:10px;
+        zoom: 1;
+        *display: inline;
+vertical-align: top;
+/*background: url(images/footbox.png) ;background-repeat: no-repeat;*/
+text-align:justify;
+font-size: 0.8em;
+color: #9dcbf9;
+
+}
+about#p{
+line-height:100%
+}
+div#copyright{
+display: inline-block;
+width: 290px;
+height: 170px;
+padding:10px;
+        zoom: 1;
+        *display: inline;
+vertical-align: top;
+/*background: url(images/footbox.png) ;background-repeat: no-repeat;*/
+text-align:justify;
+font-size: 0.8em;
+color: #9dcbf9;
+}
+#heading{
+/*opacity: .80;
+filter: alpha(opacity=80);
+background:#948d8d;*/
+color:white;
+position:absolute;
+top: 60px;
+right: 0px;
+font-family:'Droid Sans', Verdana, Arial, Sans-serif;
+font-size:2em;
+
+}
+
+
+
+
+
+
+
+div#notfound{
+width:800px;
+background: url(images/pattern_gradient.png), url(images/patternblu.png);
+background-repeat: repeat-x, repeat;
+
+      padding-top: 20px;
+        padding-bottom: 20px;   
+       padding-left: 20px;
+       padding-right: 20px;
+margin-top:100px;       
+       margin-bottom: 20px;
+       -moz-box-shadow: 0 0 5px 5px #48b7e0;
+-webkit-box-shadow: 0 0 5px 5px#48b7e0;
+box-shadow: 0 0 5px 5px #48b7e0;
+color:#ffffff;
+
+position: absolute;
+top: 400px;
+left: 50px;
+
+}
