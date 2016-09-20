@@ -26,7 +26,7 @@ Source Engine maps and more...</title>
 <!--[if lte IE 7]> <p align="center"><b><font color="red">Did you know that the web browser you are using is outdated? Please update to a modern browser such as <a href="http://www.mozilla-europe.org/en/firefox/">Mozilla Firefox</a>
 or <a href="http://www.google.com/chrome">Google Chrome </a>otherwise you may experience problems viewing this website.</b></font></p> <![endif]-->
 <div id="whoosh">&nbsp;</div>
-<div id="wrapper"> <!--#include file="menu.shtml" -->
+<div id="wrapper"> {% include archive/menu.html %}
 
 
 
