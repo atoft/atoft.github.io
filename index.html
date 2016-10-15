@@ -146,71 +146,19 @@
              <div class="collapsible-header"><i class="material-icons">code</i>Programming</div>
              <div class="collapsible-body">
                <ul class="collection">
-
-
-                <a href="project-clouds.html" 
-                     >
+                {% assign sortedCode = site.code | sort: 'date' %}
+                {% for proj in site.code reversed %}
+                <a href="{{proj.url}}">
                 <li class="collection-item avatar">
-                  <img src="images/code/icon_clouds.png" alt="" class="circle">
-                  <span class="project-type">Unity, C&#35;, HLSL | 2016</span>
-                  <span class="title">Optimisations for Real-Time Volumetric Cloudscapes</span>
-                  <br>An internship project investigating volume ray-marching.
+                  <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                  <span class="project-type">{{proj.metadata}} | {{proj.year}}</span>
+                  <span class="title">{{proj.title}}</span>
+                  <br>{{proj.summary}}
                 </li></a>
 
                 <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                     onclick="setFrame('modal/code-grpproj.html');">
-                <li class="collection-item avatar">
-                  <img src="images/icons/icon_generic.png" alt="" class="circle">
-                  <span class="project-type">C++ | 2016</span>
-                  <span class="title">Computer Science Group Project</span>
-                  <br>A server architecture for distributed, non-linear video processing.
-                </li></a>
-                
-                <div class="divider"></div>
-                
-                 <a class="modal-trigger" href="#modal-iframe" 
-                     onclick="setFrame('modal/code-cam.html');">
-                 <li class="collection-item avatar">
-                   <img src="images/bg/cambridge.jpg" alt="" class="circle">
-                   <span class="project-type">2014-</span>
-                   <span class="title">Cambridge Computer Science</span>
-                   <br>Work as part of my undergraduate degree.
-                 </li></a>
-
-                <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                     onclick="setFrame('modal/code-ld34.html');">
-                <li class="collection-item avatar">
-                  <img src="images/code/icon_ld34.png" alt="" class="circle">
-                  <span class="project-type">JavaScript | 2015</span>
-                  <span class="title">Ludum Dare: The Forces Awakened</span>
-                  <br>An entry to the 72 hour Ludum Dare game jam.
-                </li></a>
-                
-                <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                     onclick="setFrame('modal/code-raytrace.html');">
-                <li class="collection-item avatar">
-                  <img src="images/code/icon_raytrace.jpg" alt="" class="circle">
-                  <span class="project-type">Java | 2015</span>
-                  <span class="title">RayTracer</span>
-                  <br>A really simple ray tracing engine in Java.
-                </li></a>
-
-                <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                     onclick="setFrame('modal/git.html');">
-                <li class="collection-item avatar">
-                  <img src="images/icons/icon_generic.png" alt="" class="circle">
-                  <span class="project-type">Java | 2015</span>
-                  <span class="title">Github</span>
-                  <br>Code for other Java Projects.
-                </li></a>
+                {% endfor %}
+               
               </ul>
             </div>
           </li>
