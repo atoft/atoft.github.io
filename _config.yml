@@ -2,9 +2,9 @@ collections:
   code:
     output: true
     permalink: /projects/code/:path/
-  mapping:
+  maps:
     output: true
-    permalink: /projects/mapping/:path/
+    permalink: /projects/maps/:path/
   web:
     output: true
     permalink: /projects/web/:path/
