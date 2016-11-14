@@ -166,69 +166,18 @@
             <div class="collapsible-header"><i class="material-icons">games</i>Level Design</div>
             <div class="collapsible-body">
               <ul class="collection">
-                <a class="modal-trigger" href="#modal-iframe" 
-                    onclick="setFrame('modal/src-up.html');">
+                {% assign sortedMaps = site.maps | sort: 'date' %}
+                {% for proj in site.maps reversed %}
+                <a href="{{proj.url}}">
                 <li class="collection-item avatar">
-                  <img src="images/src/icon_up.png" alt="" class="circle">
-                  <span class="project-type">Mod | 2015</span>
-                  <span class="title">Uncertainty Principle</span>
-                  <br>Play through four chapters of Half-Life gameplay, exploring new locations, meeting new characters and uncovering lost secrets.
+                  <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                  <span class="project-type">{{proj.metadata}} | {{proj.year}}</span>
+                  <span class="title">{{proj.title}}</span>
+                  <br>{{proj.summary}}
                 </li></a>
 
                 <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                    onclick="setFrame('modal/src-peak.html');">
-                <li class="collection-item avatar">
-                  <img src="images/src/icon_src.png" alt="" class="circle">
-                  <span class="project-type">Map | 2015</span>
-                  <span class="title">Outland Peak</span>
-                  <br>Discover Antlion caves and a new snow-covered environment as you infiltrate a Combine outpost.
-                </li></a>
-
-                <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                    onclick="setFrame('modal/src-demons.html');">
-                <li class="collection-item avatar">
-                  <img src="images/src/icon_src.png" alt="" class="circle">
-                  <span class="project-type">Map | 2014</span>
-                  <span class="title">&quot;These Peculiar Demons&quot;</span>
-                  <br>Search for survivors in a Zombie infested town and hope that you can survive the night.
-                </li></a>
-                
-                <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                    onclick="setFrame('modal/src-retreat.html');">
-                <li class="collection-item avatar">
-                  <img src="images/src/icon_src.png" alt="" class="circle">
-                  <span class="project-type">Map | 2013</span>
-                  <span class="title">Retreat</span>
-                  <br>Awoken in the middle of the night, you find that your hideout is being raided by the Combine.
-                </li></a>
-
-                <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                    onclick="setFrame('modal/src-coast.html');">
-                <li class="collection-item avatar">
-                  <img src="images/src/icon_src.png" alt="" class="circle">
-                  <span class="project-type">Map | 2013</span>
-                  <span class="title">Secret of the Coast</span>
-                  <br>Climb islands, descend cliffs and explore the mysteries of the Coast.
-                </li></a>
-
-                <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                    onclick="setFrame('modal/src-falls.html');">
-                <li class="collection-item avatar">
-                  <img src="images/src/icon_src.png" alt="" class="circle">
-                  <span class="project-type">Map | 2012</span>
-                  <span class="title">Gravity Falls</span>
-                  <br>Working your way through the forest, via a couple of stops, you need to turn off a Combine power generator.
-                </li></a>
+                {% endfor %}
               </ul>
             </div>
           </li>
