@@ -55,7 +55,7 @@
 
     <div class="parallax-container section scrollspy" id="top">
       <div class="parallax">
-        <img id ="changeImg" width="1920" height="1080">
+        <img id ="changeImg" style="min-width:100%; min-height:1080px"">
       </div>
       <div class="container" style="height:100%">
       <h1 class="left-align cyan-text text-darken-2">Alastair Toft</h1>
@@ -146,12 +146,12 @@
              <div class="collapsible-header"><i class="material-icons">code</i>Programming</div>
              <div class="collapsible-body">
                <ul class="collection">
-                {% assign sortedCode = site.code | sort: 'date' %}
+                
                 {% for proj in site.code reversed %}
                 <a href="{{proj.url}}">
                 <li class="collection-item avatar">
                   <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                  <span class="project-type">{{proj.metadata}} | {{proj.year}}</span>
+                  <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
                   <span class="title">{{proj.title}}</span>
                   <br>{{proj.summary}}
                 </li></a>
@@ -166,12 +166,12 @@
             <div class="collapsible-header"><i class="material-icons">games</i>Level Design</div>
             <div class="collapsible-body">
               <ul class="collection">
-                {% assign sortedMaps = site.maps | sort: 'date' %}
+                
                 {% for proj in site.maps reversed %}
                 <a href="{{proj.url}}">
                 <li class="collection-item avatar">
                   <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                  <span class="project-type">{{proj.metadata}} | {{proj.year}}</span>
+                  <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
                   <span class="title">{{proj.title}}</span>
                   <br>{{proj.summary}}
                 </li></a>
@@ -184,54 +184,38 @@
           <li>
             <div class="collapsible-header"><i class="material-icons">http</i>Web Design</div>
             <div class="collapsible-body">
-               <ul class="collection">
-
-                 <a class="modal-trigger" href="#modal-iframe" 
-                     onclick="setFrame('modal/web-site.html');">
-                 <li class="collection-item avatar">
-                   <img src="images/web/icon_site-2014.jpg" alt="" class="circle">
-                   <span class="project-type">2007-</span>
-                   <span class="title">Personal Projects</span>
-                   <br>Previous websites and other projects.
-                 </li></a>
+              <ul class="collection">
+                
+                {% for proj in site.web reversed %}
+                <a href="{{proj.url}}">
+                <li class="collection-item avatar">
+                  <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                  <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                  <span class="title">{{proj.title}}</span>
+                  <br>{{proj.summary}}
+                </li></a>
 
                 <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                     onclick="setFrame('modal/web-divest.html');">
-                <li class="collection-item avatar">
-                  <img src="images/web/icon_divest.jpg" alt="" class="circle">
-                  <span class="project-type">2015</span>
-                  <span class="title">Divest Cambridge</span>
-                  <br>A web app created for a university society.
-                </li></a>
+                {% endfor %}
               </ul>
             </div>
           </li>
           <li>
             <div class="collapsible-header"><i class="material-icons">subject</i>Other Projects</div>
             <div class="collapsible-body">
-               <ul class="collection">
-
-                 <a class="modal-trigger" href="#modal-iframe" 
-                     onclick="setFrame('modal/project-lambda.html');">
-                 <li class="collection-item avatar">
-                   <img src="images/projects/icon_lambda.jpg" alt="" class="circle">
-                   <span class="project-type">2013-2015</span>
-                   <span class="title">LambdaGeneration.com</span>
-                   <br>My work as an editor at LambdaGeneration.com, a Valve community website.
-                 </li></a>
+              <ul class="collection">
+                
+                {% for proj in site.misc reversed %}
+                <a href="{{proj.url}}">
+                <li class="collection-item avatar">
+                  <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                  <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}}| {%endif%} {{proj.year}}</span>
+                  <span class="title">{{proj.title}}</span>
+                  <br>{{proj.summary}}
+                </li></a>
 
                 <div class="divider"></div>
-
-                <a class="modal-trigger" href="#modal-iframe" 
-                     onclick="setFrame('modal/project-flash.html');">
-                <li class="collection-item avatar">
-                  <img src="images/icons/icon_generic.png" alt="" class="circle">
-                  <span class="project-type">Flash | 2008-2010</span>
-                  <span class="title">Flash Games</span>
-                  <br>A collection of browser games of questionable quality...
-                </li></a>
+                {% endfor %}
               </ul>
             </div>
           </li>
