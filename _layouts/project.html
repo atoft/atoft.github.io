@@ -30,16 +30,17 @@
     <div class="navbar-fixed">
     <nav class="cyan">
       <div class="nav-wrapper container">
-        <a href="#top" class="brand-logo right"><img src="{{site.url}}/images/logos/old_logo_vector_standard.svg"></a>
+        <a href="{{site.url}}/" class="brand-logo right"><img src="{{site.url}}/images/logos/old_logo_vector_standard.svg"></a>
         <a href="#" data-activates="mobile-drawer" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="table-of-contents left hide-on-med-and-down ">
-          <li><a href="{{site.url}}/index.html">Home</a></li>
+          <li><a href="{{site.url}}/">Home</a></li>
           <li><a href="{{site.url}}/index.html#about">About</a></li>
           <li><a href="{{site.url}}/index.html#blog">Blog</a></li>
-          <li><a href="{{site.url}}/index.html#projects">Projects</a></li>
+          <li><a class="active" href="{{site.url}}/index.html#projects">Projects</a></li>
           <li><a href="{{site.url}}/index.html#contact">Contact</a></li>
         </ul>
         <ul class="side-nav" id="mobile-drawer">
+          <li><a href="{{site.url}}/">Home</a></li>
           <li><a href="{{site.url}}/index.html#about">About</a></li>
           <li><a href="{{site.url}}/index.html#blog">Blog</a></li>
           <li><a href="{{site.url}}/index.html#projects">Projects</a></li>
@@ -54,11 +55,11 @@
 
     <div class="parallax-container section scrollspy" id="top">
       <div class="parallax">
-        <img src="{{site.url}}/{{page.img}}" width="1920" height="1080">
+        <img src="{{site.url}}/{{page.img}}" style="min-width:100%; min-height:1080px" >
       </div>
       <div class="container" style="height:100%">
-        <h2 class="left-align cyan-text text-darken-1" style="position:absolute; bottom:20px; color:#005c67!important;">{{ page.title }}</h2>
-
+        <h2 class="left-align cyan-text text-darken-1" style="position:absolute; bottom:30px; {%if page.lighttheme != true%}color:#005c67!important;{%else%}color:#fff!important;{%endif%}">{{ page.title }}</h2>
+        <h5 class="left-align cyan-text text-darken-1" style="position:absolute; bottom:10px; {%if page.lighttheme != true%}color:#323c3e!important;{%else%}color:#adadad!important;{%endif%}"> {% if page.metadata != null %} {{ page.metadata }} | {% endif %}{{page.year}}</h2>
         </div>
       </div>
     </div>
