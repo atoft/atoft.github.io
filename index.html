@@ -329,17 +329,6 @@
 
     //End google maps
 
-    //Sets the iFrame used for the dynamic modal screens
-    function setFrame(location){
-      document.getElementById('frame-dynamic').style.display="none";
-      document.getElementById('modal-spinner').style.display="block";
-      document.getElementById('frame-dynamic').src=location;
-      document.getElementById('frame-dynamic').onload = function() {
-        console.log("iFrame loaded");
-        document.getElementById('frame-dynamic').style.display="block";
-        document.getElementById('modal-spinner').style.display="none";
-      }
-    }
 
  
     var topImages = ["images/bg/clouds.jpg",
