@@ -67,19 +67,18 @@
             {% include spinner.html %}
           </div>
 
-            <a class="modal-trigger" href="#modal-iframe"><div id="caption" class="card cyan darken-1 topImage-card" style="display:none;">
+            <a id="jumbo-card"><div id="caption" class="card cyan darken-1 topImage-card" style="display:none;">
               <div class="card-content white-text">
                 <div class="results">
                   <!--Image caption is inseted here-->
 
                 </div>
 
-            </div></a>
-          </div>
+            </div>
+          </div></a>
         </div>
       </div>
     </div>
-</div>
     <!--End parallax-->
 
     <!--Begin about-->
@@ -273,22 +272,6 @@
             </div>
           </div>
         </footer>
-
-
-
-    <!--Finally, pop-up windows-->
-    <!-- Modal Structure -->
-    <div id="modal-iframe" class="modal modal-fixed-footer">
-      <div id = "modal-spinner" class="preloader-wrapper big active">
-        {% include spinner.html %}
-      </div>
-      <iframe id="frame-dynamic"></iframe>    
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-cyan btn-flat ">Close</a>
-    </div>
-          
-    </div>
-
     
     <!--Load scripts last-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvVlWHjEvG2gyO0MGr7MnU-JP_RumnQew"></script>
@@ -370,12 +353,8 @@
                         "<span class='topImage-emphasis'>Uncertainty Principle:</span>"+
                            " A Half-Life 2 modification",
                         "Computer Science at the University of Cambridge"];
-
-    var topImageFun = [function() { setFrame('modal/code-clouds.html'); }, 
-                       function() { setFrame('modal/code-raytrace.html'); }, 
-                       function() { setFrame('modal/code-ld34.html'); }, 
-                       function() { setFrame('modal/src-up.html'); }, 
-                       function() { setFrame('modal/code-cam.html'); }  ]
+    
+    var topImageHref = ["projects/code/clouds", "projects/code/raytrace", "projects/code/ld34", "projects/maps/uncertainty-principle", "projects/code/cambridge"];
 
     var loader = new PxLoader();
     for (i=0; i<topImages.length;i++) {
@@ -397,13 +376,13 @@
       function nextTopImage() {
         document.getElementById('changeImg').src=topImages[i];
         document.querySelector('.results').innerHTML = topImageText[i];
-        document.getElementById('caption').onclick = topImageFun[i];
+        document.getElementById('jumbo-card').href = topImageHref[i];
         Materialize.fadeInImage('#changeImg');
-        console.log("Changed to top image "+i+topImageText[i]); 
         i++;
         if(i==topImages.length) i=0;
       }
 
+      console.log("Well, hello there! Yes, there's some JavaScript up in here");
       nextTopImage();
       setInterval(nextTopImage, 6000);
     });
