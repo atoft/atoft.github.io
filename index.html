@@ -141,7 +141,7 @@
       </div>
         <ul class="collapsible" data-collapsible="accordion">
            <li>
-             <div class="collapsible-header"><i class="material-icons">code</i>Programming</div>
+             <div class="collapsible-header waves-effect"><i class="material-icons">code</i>Programming</div>
              <div class="collapsible-body">
                <ul class="collection">
                 
@@ -161,7 +161,7 @@
             </div>
           </li>
           <li>
-            <div class="collapsible-header"><i class="material-icons">games</i>Level Design</div>
+            <div class="collapsible-header waves-effect"><i class="material-icons">games</i>Level Design</div>
             <div class="collapsible-body">
               <ul class="collection">
                 
@@ -180,7 +180,7 @@
             </div>
           </li>
           <li>
-            <div class="collapsible-header"><i class="material-icons">http</i>Web Design</div>
+            <div class="collapsible-header waves-effect"><i class="material-icons">http</i>Web Design</div>
             <div class="collapsible-body">
               <ul class="collection">
                 
@@ -199,13 +199,13 @@
             </div>
           </li>
           <li>
-            <div class="collapsible-header"><i class="material-icons">subject</i>Other Projects</div>
+            <div class="collapsible-header waves-effect"><i class="material-icons">subject</i>Other Projects</div>
             <div class="collapsible-body">
               <ul class="collection">
                 
                 {% for proj in site.misc reversed %}
                 <a href="{{proj.url}}">
-                <li class="collection-item avatar">
+               <li class="collection-item avatar">
                   <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
                   <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}}| {%endif%} {{proj.year}}</span>
                   <span class="title">{{proj.title}}</span>
