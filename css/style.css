@@ -229,3 +229,9 @@ h1{
   top:40px;
 }
 
+
+
+/*CSS for generated project pages */
+#project-content img {
+  max-width: 100%;
+}
