@@ -38,11 +38,13 @@ body{
 .collapsible-header
 {
     border-color:#333;
+    background-color: #222;
 }
 
 .collapsible-body
 {
     border-color:#333;
+    background-color: #222!important;
 }
 
 .divider
@@ -54,4 +56,16 @@ body{
 .collapsible
 {
   border-color:#333;
+  background-color: #222!important;
+}
+
+
+.collection
+{
+  background-color: #222!important;
+}
+
+.collection-item
+{
+  background-color: #222!important;
 }
