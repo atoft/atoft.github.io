@@ -55,7 +55,24 @@
 
 .collapsible-header{
 	font-size:1.4em;
+  background-color:rgba(0,0,0,0)!important;
 }
+
+.collapsible
+{
+  background-color:rgba(0,0,0,0)!important;
+}
+
+.collection
+{
+  background-color:rgba(0,0,0,0)!important;
+}
+
+.collection-item
+{
+  background-color:rgba(0,0,0,0)!important;
+}
+
 .project-type{
 	top:0;
 	padding-top:0;

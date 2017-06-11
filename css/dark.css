@@ -1,0 +1,57 @@
+body{
+  transition:0.5s;
+
+  background-color: #222;
+  color:#eee;
+}
+
+.card-panel
+{
+  background-color: #222;
+}
+
+.cyan 
+{
+  background-color: #005560!important;
+}
+
+.cyan.darken-1
+{
+  background-color: #005560!important;
+}
+
+.cyan-text.text-darken-2
+{
+  color: #002f35!important;
+}
+
+.cyan-text.text-darken-1
+{
+  color: #02535e!important;
+}
+
+.collection a
+{
+  color: #eee;
+}
+
+.collapsible-header
+{
+    border-color:#333;
+}
+
+.collapsible-body
+{
+    border-color:#333;
+}
+
+.divider
+{
+    background-color:#333!important;
+}
+
+
+.collapsible
+{
+  border-color:#333;
+}
