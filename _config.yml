@@ -11,6 +11,9 @@ collections:
   misc:
     output: true
     permalink: /projects/misc/:path/
+  about:
+    output: true
+    permalink: /about/:path/
 
 
 
