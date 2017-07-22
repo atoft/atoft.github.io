@@ -48,19 +48,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
 // Globals
 var isDark = false;
 
-var topImages = ["images/bg/clouds.jpg",
-                    "images/bg/raytrace.png",
+var topImages = ["images/code/banner_diss.jpg", 
+                    "images/bg/clouds.jpg",
                     "images/bg/ld34.png",
                     "images/bg/up.jpg",
                     "images/bg/cambridge_cl.jpg"];
-var topImageText = ["<span class='topImage-emphasis'>Volumetric Cloudscapes:</span> An internship graphics project",
-                    "<span class='topImage-emphasis'>RayTracer:</span> A Java 3D graphics project",
+var topImageText = ["<span class='topImage-emphasis'>Parallax-corrected cubemaps:</span> My undergraduate dissertation",
+                    "<span class='topImage-emphasis'>Volumetric Cloudscapes:</span> An internship graphics project",
                     "<span class='topImage-emphasis'>The Forces Awakened:</span> An entry to Ludum Dare",
                     "<span class='topImage-emphasis'>Uncertainty Principle:</span>"+
                         " A Half-Life 2 modification",
                     "Computer Science at the University of Cambridge"];
 
-var topImageHref = ["projects/code/clouds", "projects/code/raytrace", "projects/code/ld34", "projects/maps/uncertainty-principle", "projects/code/cambridge"];
+var topImageHref = ["projects/code/dissertation", "projects/code/clouds", "projects/code/ld34", "projects/maps/uncertainty-principle", "projects/code/cambridge"];
 var loader = new PxLoader();
 
 // End globals
@@ -100,14 +100,14 @@ function toggleTheme()
 {
     if(!isDark)
     {
-    isDark = true;
-    document.getElementById("css-theme").href= "css/dark.css";
-    console.log("Switched to dark theme");
+        isDark = true;
+        document.getElementById("css-theme").href= "css/dark.css";
+        console.log("Switched to dark theme");
     }
     else
     {
-    isDark = false;
-    document.getElementById("css-theme").href="css/light.css";
-    console.log("Switched to light theme");
+        isDark = false;
+        document.getElementById("css-theme").href="css/light.css";
+        console.log("Switched to light theme");
     }
 }
