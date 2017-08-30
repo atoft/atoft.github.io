@@ -1,7 +1,8 @@
 //Google maps code
-var position = [52.1999722,0.1247423];
-var centre = [51.4134011,-1.18405075];
+var cambridge = [52.1999722,0.1247423];
+var centre = [51.413401, -1.184051];
 var weymouth = [50.62683,-2.4928438];
+var brighton = [50.8399049,-0.1966856];
 
 function initialize() {
 
@@ -21,23 +22,30 @@ function initialize() {
 
 
 
-    posCambridge = new google.maps.LatLng(position[0], position[1]);
+    posCambridge = new google.maps.LatLng(cambridge[0], cambridge[1]);
     customCentre = new google.maps.LatLng(centre[0], centre[1]);
     posWeymouth = new google.maps.LatLng(weymouth[0], weymouth[1]);
+    posBrighton = new google.maps.LatLng(weymouth[0], weymouth[1]);
 
     map.setCenter(customCentre);
 
     marker = new google.maps.Marker({
-    position: posCambridge,
-    map: map,
-    draggable: false,
-    animation: google.maps.Animation.DROP
+        position: posCambridge,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
     });
     marker2 = new google.maps.Marker({
-    position: posWeymouth,
-    map: map,
-    draggable: false,
-    animation: google.maps.Animation.DROP
+        position: posWeymouth,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
+    });
+    marker2 = new google.maps.Marker({
+        position: posBrighton,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
     });
 }
 
