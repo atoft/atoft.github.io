@@ -101,21 +101,3 @@ loader.addCompletionListener(function(){
     nextTopImage();
     setInterval(nextTopImage, 6000);
 });
-
-
-
-function toggleTheme()
-{
-    if(!isDark)
-    {
-        isDark = true;
-        document.getElementById("css-theme").href= "css/dark.css";
-        console.log("Switched to dark theme");
-    }
-    else
-    {
-        isDark = false;
-        document.getElementById("css-theme").href="css/light.css";
-        console.log("Switched to light theme");
-    }
-}
