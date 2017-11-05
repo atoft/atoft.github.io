@@ -3,31 +3,30 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Alastair Toft: Computer Science Graduate | AddyMotion.com</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="I'm a computer science graduate from Cambridge University. A collection of my projects including programming, web design and game mods.">
-    <meta name="keywords" content="Alastair Toft, Cambridge, Computer Science, student, programming, Source SDK, level design, web design, Java">
-    <meta name="author" content="Alastair Toft">
+
+<head>
+  <title>Alastair Toft: Computer Science Graduate | AddyMotion.com</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="I'm a computer science graduate from Cambridge University. A collection of my projects including programming, web design and game mods.">
+  <meta name="keywords" content="Alastair Toft, Cambridge, Computer Science, student, programming, Source SDK, level design, web design, Java">
+  <meta name="author" content="Alastair Toft">
 
 
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
 
-    <!--Import custom css-->
-    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+  <!--Import custom css-->
+  <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-  <body>
-    <!--Top navbar-->
-    <div class="addymotion-navbar-fixed">
+<body>
+  <!--Top navbar-->
+  <div class="addymotion-navbar-fixed">
     <nav class="cyan">
       <div class="nav-wrapper container">
         <a href="#top" class="brand-logo right"><img src="images/logos/old_logo_vector.svg" title="&#35;LoveWins"></a>
@@ -47,233 +46,234 @@
         </ul>
       </div>
     </nav>
-    </div>
-    <!--End top navbar-->
+  </div>
+  <!--End top navbar-->
 
-    <!--Parallax title area-->
-    <div class="addymotion-marquee section scrollspy" id="top">
+  <!--Featured image area-->
+  <div class="addymotion-marquee section scrollspy" id="top">
     <div class="addymotion-marquee-overlay" id="top-overlay"></div>
-      <div class="container topImage-container">
+    <div class="container topImage-container">
       <h1 class="left-align cyan-text text-darken-2">Alastair Toft</h1>
-        <h2 class="left-align cyan-text text-darken-1">Computer Science Graduate</h2>
+      <h2 class="left-align cyan-text text-darken-1">Computer Science Graduate</h2>
 
-        <!-- <div class="row topImage-container"> -->
+      <div id="spinner" class="preloader-wrapper big active">
+        {% include spinner.html %}
+      </div>
 
-          <div id = "spinner" class="preloader-wrapper big active">
-            {% include spinner.html %}
-          </div>
-
-            <a id="jumbo-card"><div id="caption" class="card cyan darken-1 topImage-card" style="display:none;">
-              <div class="card-content white-text">
-                <div class="results">
-                  <!--Image caption is inseted here-->
-
-                </div>
-
+      <a id="jumbo-card">
+        <div id="caption" class="card cyan darken-1 topImage-card" style="display:none;">
+          <div class="card-content white-text">
+            <div class="results">
+              <!--Image caption is inseted here-->
             </div>
-          </div></a>
-        <!-- </div> -->
+
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!--End featured-->
+
+  <!--About-->
+  <div id="about" class="container section scrollspy">
+    <div class="row">
+      <div class="col s12 m4 l6">
+        <a name="about"><h2 class="left-align cyan-text text-darken-1">About Me</h2>  </a>
+        <h5>Hi, I&apos;m Alastair. I make things with computers!</h5>
+        <p>I&apos;m a graduate in Computer Science from the University of Cambridge, and I work as a programmer at <a href="http://www.studiogobo.com" target="_blank">Studio Gobo</a>.
+        </p>
+        <p>AddyMotion.com is my strangely named personal website where you can find some of my projects past and present, including programming, web design, games and level design. This is also the place to get in touch with me, or check out my blog.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div class="divider"></div>
+        <p>More about <a href="about/now/">what I&apos;m up to now</a>.</p>
+        <div class="divider"></div>
+        <p><a href="#contact">Contact me</a> for a copy of my CV.</p>
+        <div class="divider"></div>
+      </div>
+      <div class="col s12 m8 l6">
+        <img src="images/home/avatar_gamegig.jpg" alt="" class="circle" id="main-avatar">
       </div>
     </div>
-    <!--End parallax-->
+  </div>
+  <!--End about-->
 
-    <!--Begin about-->
-    <div id="about" class="container section scrollspy">
+
+  <!--Blog promo section-->
+  <div id="blog" class="addymotion-fixed-bg section scrollspy">
+    <div class="container">
       <div class="row">
-        <div class="col s12 m4 l6">
-          <a name="about"><h2 class="left-align cyan-text text-darken-1">About Me</h2>  </a>
-          <h5>Hi, I&apos;m Alastair. I make things with computers!</h5>
-          <p>I&apos;m a graduate in Computer Science from the University of Cambridge, and I work as a programmer at <a href="http://www.studiogobo.com" target="_blank">Studio Gobo</a>.
-          </p>
-          <p>AddyMotion.com is my strangely named personal website where you can find some of my projects past and present, including programming,
-          web design, games and level design. This is also the place to get in touch with me, or check out my blog.</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <div class="divider"></div>
-          <p>More about <a href="about/now/">what I&apos;m up to now</a>.</p>
-          <div class="divider"></div>
-          <p><a href="#contact">Contact me</a> for a copy of my CV.</p>
-          <div class="divider"></div>
-        </div>
-        <div class="col s12 m8 l6">
-          <img src="images/home/avatar_gamegig.jpg" alt="" class="circle" id="main-avatar">
-        </div>
-      </div>
-    </div>
-    <!--End about-->
-
-
-    <!--Blog promo section-->
-    <div id ="blog" class="addymotion-fixed-bg section scrollspy">
-      <div class="container">
-        <div class="row">
-          <div class="col s12 m6 offset-m6">
-            <div id="blog-panel" class="card-panel">
-              <div class="card-content">
-                <a name="blog"><h2 class="left-align cyan-text text-darken-1">Blog</h2></a>
-                <p>I wrote about my first two years at university on <a href="http://alastairblogs.tumblr.com">Tumblr</a>. </p>
-                <p>You can find my latest articles at my new blog on Medium, where I'll write about CompSci, coding and whatever I feel like.</p>
-                <div class="row">
-                  <div class="col l4 offset-l8 m6 offset-m6 s12">
-                    <a class="waves-effect waves-light btn cyan" href="https://medium.com/addymotion">View Blog</a>
-                  </div>
+        <div class="col s12 m6 offset-m6">
+          <div id="blog-panel" class="card-panel">
+            <div class="card-content">
+              <a name="blog"><h2 class="left-align cyan-text text-darken-1">Blog</h2></a>
+              <p>I wrote about my first two years at university on <a href="http://alastairblogs.tumblr.com">Tumblr</a>. </p>
+              <p>You can find my latest articles at my new blog on Medium, where I'll write about CompSci, coding and whatever I feel like.</p>
+              <div class="row">
+                <div class="col l4 offset-l8 m6 offset-m6 s12">
+                  <a class="waves-effect waves-light btn cyan" href="https://medium.com/addymotion">View Blog</a>
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-    <!--End blog section-->
+  </div>
+  <!--End blog section-->
 
-    <img src="images/home/logos.svg" height="365px" style="float:right; margin-top:20px;max-width:150%">
-    <div id="projects" class="container section scrollspy" style="padding-top:220px; padding-bottom:190px">
 
-      <div class="row" style="margin:0">
-        <div class="col s12 m6" style="margin-bottom:50px;">
-          <a name="projects"><h2 class="left-align cyan-text text-darken-1" style="margin-bottom:none;">Projects</h2></a>
-          <p>These are a few of the things I've worked on recently, grouped roughly into categories.
-          Further projects not listed here can be found on my
+  <!--Projects section-->
+  <img src="images/home/logos.svg" height="365px" style="float:right; margin-top:20px;max-width:150%">
+  <div id="projects" class="container section scrollspy" style="padding-top:220px; padding-bottom:190px">
+
+    <div class="row" style="margin:0">
+      <div class="col s12 m6" style="margin-bottom:50px;">
+        <a name="projects"><h2 class="left-align cyan-text text-darken-1" style="margin-bottom:none;">Projects</h2></a>
+        <p>These are a few of the things I've worked on recently, grouped roughly into categories. Further projects not listed here can be found on my
           <a href="/archive/2014">old site</a>.</p>
 
-        </div>
       </div>
-        <ul class="collapsible" data-collapsible="accordion">
-           <li>
-             <div class="collapsible-header waves-effect"><i class="material-icons">code</i>Programming</div>
-             <div class="collapsible-body">
-               <ul class="collection">
-
-                {% for proj in site.code reversed %}
-                <a href="{{proj.url}}">
-                <li class="collection-item avatar">
-                  <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                  <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                  <span class="title">{{proj.title}}</span>
-                  <br>{{proj.summary}}
-                </li></a>
-
-                <div class="divider"></div>
-                {% endfor %}
-
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header waves-effect"><i class="material-icons">games</i>Level Design</div>
-            <div class="collapsible-body">
-              <ul class="collection">
-
-                {% for proj in site.maps reversed %}
-                <a href="{{proj.url}}">
-                <li class="collection-item avatar">
-                  <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                  <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                  <span class="title">{{proj.title}}</span>
-                  <br>{{proj.summary}}
-                </li></a>
-
-                <div class="divider"></div>
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header waves-effect"><i class="material-icons">http</i>Web Design</div>
-            <div class="collapsible-body">
-              <ul class="collection">
-
-                {% for proj in site.web reversed %}
-                <a href="{{proj.url}}">
-                <li class="collection-item avatar">
-                  <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                  <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                  <span class="title">{{proj.title}}</span>
-                  <br>{{proj.summary}}
-                </li></a>
-
-                <div class="divider"></div>
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header waves-effect"><i class="material-icons">subject</i>Other Projects</div>
-            <div class="collapsible-body">
-              <ul class="collection">
-
-                {% for proj in site.misc reversed %}
-                <a href="{{proj.url}}">
-               <li class="collection-item avatar">
-                  <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                  <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}}| {%endif%} {{proj.year}}</span>
-                  <span class="title">{{proj.title}}</span>
-                  <br>{{proj.summary}}
-                </li></a>
-
-                <div class="divider"></div>
-                {% endfor %}
-              </ul>
-            </div>
-          </li>
-
-        </ul>
     </div>
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header waves-effect"><i class="material-icons">code</i>Programming</div>
+        <div class="collapsible-body">
+          <ul class="collection">
 
-    <!--Contact section-->
+            {% for proj in site.code reversed %}
+            <a href="{{proj.url}}">
+              <li class="collection-item avatar">
+                <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                <span class="title">{{proj.title}}</span>
+                <br>{{proj.summary}}
+              </li>
+            </a>
 
-    <div id ="contact" class="parallax-container section scrollspy" style="width:100%">
-      <div id="googlemaps" style="height:600px;width:100%;position:absolute; top:0px;left:0px;z-index:0;"></div>
-        <div class="container"style="z-index:1;position:relative;pointer-events: none;">
-          <div class="row">
-            <div class="col s12 m6 offset-m6"style="z-index:1;">
-              <div id="blog-panel" class="card-panel" style="z-index:1;pointer-events: auto;"> <!--Rename this-->
-                <div class="card-content">
-                  <a name="blog"><h2 class="left-align cyan-text text-darken-1">Contact</h2></a>
-                  <p>In real life, you might find me somewhere in Brighton, Cambridge, or Weymouth, England.</p>
-                  <p>Online, I'm easier to track down. You can reach me at the links below:</p>
-                  <p>
-                  <a href="http://www.google.com/recaptcha/mailhide/d?k=013-VGRfrK080al_nkZYyUWg==&amp;c=l0r_6zTFe90HF12KxMwyW_9KKpMhVBv2bRkNDAaDOe4="
-                  onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075013-VGRfrK080al_nkZYyUWg\75\75\46c\75l0r_6zTFe90HF12KxMwyW_9KKpMhVBv2bRkNDAaDOe4\075',
+            <div class="divider"></div>
+            {% endfor %}
+
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header waves-effect"><i class="material-icons">games</i>Level Design</div>
+        <div class="collapsible-body">
+          <ul class="collection">
+
+            {% for proj in site.maps reversed %}
+            <a href="{{proj.url}}">
+              <li class="collection-item avatar">
+                <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                <span class="title">{{proj.title}}</span>
+                <br>{{proj.summary}}
+              </li>
+            </a>
+
+            <div class="divider"></div>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header waves-effect"><i class="material-icons">http</i>Web Design</div>
+        <div class="collapsible-body">
+          <ul class="collection">
+
+            {% for proj in site.web reversed %}
+            <a href="{{proj.url}}">
+              <li class="collection-item avatar">
+                <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                <span class="title">{{proj.title}}</span>
+                <br>{{proj.summary}}
+              </li>
+            </a>
+
+            <div class="divider"></div>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header waves-effect"><i class="material-icons">subject</i>Other Projects</div>
+        <div class="collapsible-body">
+          <ul class="collection">
+
+            {% for proj in site.misc reversed %}
+            <a href="{{proj.url}}">
+              <li class="collection-item avatar">
+                <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}}| {%endif%} {{proj.year}}</span>
+                <span class="title">{{proj.title}}</span>
+                <br>{{proj.summary}}
+              </li>
+            </a>
+
+            <div class="divider"></div>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  <!--End project section-->
+
+  <!--Contact section-->
+  <div id="contact" class="parallax-container section scrollspy" style="width:100%">
+    <div id="googlemaps" style="height:600px;width:100%;position:absolute; top:0px;left:0px;z-index:0;"></div>
+    <div class="container" style="z-index:1;position:relative;pointer-events: none;">
+      <div class="row">
+        <div class="col s12 m6 offset-m6" style="z-index:1;">
+          <div id="blog-panel" class="card-panel" style="z-index:1;pointer-events: auto;">
+            <!--Rename this-->
+            <div class="card-content">
+              <a name="blog"><h2 class="left-align cyan-text text-darken-1">Contact</h2></a>
+              <p>In real life, you might find me somewhere in Brighton, Cambridge, or Weymouth, England.</p>
+              <p>Online, I'm easier to track down. You can reach me at the links below:</p>
+              <p>
+                <a href="http://www.google.com/recaptcha/mailhide/d?k=013-VGRfrK080al_nkZYyUWg==&amp;c=l0r_6zTFe90HF12KxMwyW_9KKpMhVBv2bRkNDAaDOe4=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075013-VGRfrK080al_nkZYyUWg\75\75\46c\75l0r_6zTFe90HF12KxMwyW_9KKpMhVBv2bRkNDAaDOe4\075',
                    '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">
                   <i class="tiny material-icons">email</i> Email</a></p>
-                  <p>
-                  <a href="https://linkedin.com/in/alastairtoft">
+              <p>
+                <a href="https://linkedin.com/in/alastairtoft">
                   <img src="images/icons/linkedin-tiny.png"> LinkedIn</a></p>
-                  <p><a href="https://twitter.com/addymotion">
+              <p><a href="https://twitter.com/addymotion">
                   <img src="images/icons/twitter-tiny.png"> Twitter</a></p>
-                  <p><a href="https://www.facebook.com/AddyMotion/">
+              <p><a href="https://www.facebook.com/AddyMotion/">
                   <img src="images/icons/fb-tiny.png"> Facebook</a></p>
 
 
-                </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <!--End contact section-->
 
-    <!--End contact section-->
+  <!--Footer-->
+  <footer class="page-footer cyan" style="height:200px;">
 
-    <!--Temporary footer-->
-    <footer class="page-footer cyan" style="height:200px;">
+    <div class="footer-copyright" style="bottom:0;margin-top:110px;">
+      <div class="container">
+        Site design and content &#169; 2008-2017 Alastair Toft unless noted otherwise. All trademarks are properties of their respective owners.
+        <a class="grey-text text-lighten-4 right" href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
 
-          <div class="footer-copyright" style="bottom:0;margin-top:110px;">
-            <div class="container">
-             Site design and content &#169; 2008-2016 Alastair Toft unless noted otherwise.
-             All trademarks are properties of their respective owners.
-            <a class="grey-text text-lighten-4 right" href="#top">Back to top</a>
-            </div>
-          </div>
-        </footer>
+  <!--Load scripts last-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvVlWHjEvG2gyO0MGr7MnU-JP_RumnQew"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/PxLoader.js"></script>
+  <script type="text/javascript" src="js/PxLoaderImage.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/init.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
 
-    <!--Load scripts last-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvVlWHjEvG2gyO0MGr7MnU-JP_RumnQew"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/PxLoader.js"></script>
-    <script type="text/javascript" src="js/PxLoaderImage.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/init.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-  </body>
 </html>
