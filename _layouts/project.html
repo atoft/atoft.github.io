@@ -9,7 +9,7 @@
     <meta name="description" content="{{ page.summary }}">
     <meta name="keywords" content="{{ page.metadata }}, Alastair Toft, Cambridge, Computer Science, student, programming, Source SDK, level design, web design, Java">
     <meta name="author" content="Alastair Toft">
-    
+
 
     <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/favicon.ico?">
     <!--Import Google Icon Font-->
@@ -20,14 +20,14 @@
 
     <!--Import custom css-->
     <link type="text/css" rel="stylesheet" href="{{site.url}}/css/style.css"  media="screen,projection"/>
-    
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
     <!--Top navbar-->
-    <div class="navbar-fixed">
+    <div class="addymotion-navbar-fixed">
     <nav class="cyan">
       <div class="nav-wrapper container">
         <a href="{{site.url}}/" class="brand-logo right"><img src="{{site.url}}/images/logos/old_logo_vector_standard.svg"></a>
@@ -48,27 +48,23 @@
         </ul>
       </div>
     </nav>
-    </div>    
+    </div>
     <!--End top navbar-->
-   
+
     <!--Parallax title area-->
 
-    <div class="parallax-container section scrollspy" id="top">
-      <div class="parallax">
-        <img src="{{site.url}}/{{page.img}}" style="min-width:100%; min-height:1080px" >
-      </div>
-      <div class="container" style="height:100%;">
-        <h2 class="left-align cyan-text text-darken-1" style="width:inherit;position:absolute; bottom:30px; {%if page.lighttheme != true%}color:#005c67!important;{%else%}color:#fff!important;{%endif%}">{{ page.title }}</h2>
-        <h5 class="left-align cyan-text text-darken-1" style="width:inherit;position:absolute; bottom:10px; {%if page.lighttheme != true%}color:#323c3e!important;{%else%}color:#adadad!important;{%endif%}"> {% if page.metadata != null %} {{ page.metadata }} | {% endif %}{{page.year}}</h2>
-        </div>
+    <div class="addymotion-proj-banner section scrollspy" id="top" style="background-image:url({{site.url}}/{{page.img}})">
+      <div class="addymotion-proj-h-container container">
+        <h2 class="left-align cyan-text text-darken-1 addymotion-proj-heading" style="{%if page.lighttheme != true%}color:#005c67!important;{%else%}color:#fff!important;{%endif%}">{{ page.title }}</h2>
+        <h5 class="left-align cyan-text text-darken-1 addymotion-proj-subheading" style="{%if page.lighttheme != true%}color:#323c3e!important;{%else%}color:#adadad!important;{%endif%}"> {% if page.metadata != null %} {{ page.metadata }} | {% endif %}{{page.year}}</h2>
       </div>
     </div>
-</div>
+
     <!--End parallax-->
 
     <!--Begin about-->
     <div id="about" class="container section scrollspy">
-      <div class="row">   
+      <div class="row">
         <div class="col m6" id="project-content">
           <h5>About</h5>
             {{ page.about }}
@@ -84,14 +80,14 @@
     <!--End about-->
 
 
-    
+
 
     <!--Temporary footer-->
     <footer class="page-footer cyan" style="height:200px;">
 
           <div class="footer-copyright" style="bottom:0;margin-top:110px;">
             <div class="container">
-             Site design and content &#169; 2008-2016 Alastair Toft unless noted otherwise. 
+             Site design and content &#169; 2008-2017 Alastair Toft unless noted otherwise.
              All trademarks are properties of their respective owners.
             <a class="grey-text text-lighten-4 right" href="#top">Back to top</a>
             </div>
@@ -99,7 +95,7 @@
         </footer>
 
 
-    
+
     <!--Load scripts last-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvVlWHjEvG2gyO0MGr7MnU-JP_RumnQew"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -109,4 +105,3 @@
 
   </body>
 </html>
-        

@@ -195,18 +195,73 @@ h1{
   opacity:1;
 }
 
-.parallax-container {
-  min-height: 380px;
-  height:600px;
-}
-#parallax-back {
-  background-color:#f5f5f5;
-  z-index:0;
+.addymotion-marquee {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  top:0;
+  height: 650px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 70px;
 }
 
-.parallax-container .section {
+.addymotion-proj-banner {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  top:0;
+  height: 650px;
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
+
+.addymotion-proj-h-container {
+  height:100%;
+  position:relative;
+}
+
+.addymotion-proj-heading {
+  width:inherit;
+  position:absolute;
+  bottom:50px;
+}
+
+.addymotion-proj-subheading {
+  width:inherit;
+  position:absolute;
+  bottom:30px;
+}
+
+.addymotion-animated {
+  transition: background-image 1s ease-in-out;
+  -webkit-transition: background-image 1s ease-in-out;
+  -moz-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+}
+
+.addymotion-fixed-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url("/images/bg/cambridge.jpg");
+  background-size: cover;
+  top:0;
+  height: 650px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.addymotion-navbar-fixed {
+  top:0;
+  position:fixed;
+  width:100%;
+  z-index: 100;
+}
+
 #main-avatar{
 	margin-top:30px;
 	float:right;
@@ -221,9 +276,16 @@ h1{
   font-weight:bold;
 }
 
+#jumbo-card {
+  position: absolute;
+  bottom: 50px;
+  right:0px;
+}
+
 .topImage-container {
-  bottom:0;
-  margin-top:250px;
+
+  position:relative;
+  height:100%;
 }
 
 .topImage-card {
@@ -246,9 +308,6 @@ h1{
   top:40px;
 }
 
-
-
-/*CSS for generated project pages */
 #project-content img {
   max-width: 100%;
 }

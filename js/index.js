@@ -56,7 +56,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 // Globals
 var isDark = false;
 
-var topImages = ["images/code/banner_diss.jpg", 
+var topImages = ["images/code/banner_diss.jpg",
                     "images/bg/clouds.jpg",
                     "images/bg/ld34.png",
                     "images/bg/up.jpg",
@@ -79,7 +79,7 @@ for (i=0; i<topImages.length;i++) {
 loader.start();
 // Cycles through the arrays of images and captions above
 loader.addCompletionListener(function(){
-    
+
     // Remove the loading animation
     document.getElementById('spinner').style.display="none";
 
@@ -90,10 +90,10 @@ loader.addCompletionListener(function(){
     var i =0;
 
     function nextTopImage() {
-    document.getElementById('changeImg').src=topImages[i];
+    document.getElementById('top').style.backgroundImage="url("+topImages[i]+")";
     document.querySelector('.results').innerHTML = topImageText[i];
     document.getElementById('jumbo-card').href = topImageHref[i];
-    Materialize.fadeInImage('#changeImg');
+    //Materialize.fadeInImage('#changeImg');
     i++;
     if(i==topImages.length) i=0;
     }

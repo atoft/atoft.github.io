@@ -9,7 +9,7 @@
     <meta name="description" content="I'm a computer science graduate from Cambridge University. A collection of my projects including programming, web design and game mods.">
     <meta name="keywords" content="Alastair Toft, Cambridge, Computer Science, student, programming, Source SDK, level design, web design, Java">
     <meta name="author" content="Alastair Toft">
-    
+
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
     <!--Import Google Icon Font-->
@@ -20,14 +20,14 @@
 
     <!--Import custom css-->
     <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
-    
+
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
     <!--Top navbar-->
-    <div class="navbar-fixed">
+    <div class="addymotion-navbar-fixed">
     <nav class="cyan">
       <div class="nav-wrapper container">
         <a href="#top" class="brand-logo right"><img src="images/logos/old_logo_vector.svg" title="&#35;LoveWins"></a>
@@ -47,21 +47,17 @@
         </ul>
       </div>
     </nav>
-    </div>    
+    </div>
     <!--End top navbar-->
-   
-    <!--Parallax title area-->
 
-    <div class="parallax-container section scrollspy" id="top">
-      <div class="parallax">
-        <img id ="changeImg" style="min-width:100%; min-height:1080px">
-      </div>
-      <div class="container" style="height:100%">
+    <!--Parallax title area-->
+    <div class="addymotion-marquee addymotion-animated section scrollspy" id="top">
+      <div class="container topImage-container">
       <h1 class="left-align cyan-text text-darken-2">Alastair Toft</h1>
         <h2 class="left-align cyan-text text-darken-1">Computer Science Graduate</h2>
 
-        <div class="row topImage-container">
-         
+        <!-- <div class="row topImage-container"> -->
+
           <div id = "spinner" class="preloader-wrapper big active">
             {% include spinner.html %}
           </div>
@@ -75,21 +71,23 @@
 
             </div>
           </div></a>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
     <!--End parallax-->
 
     <!--Begin about-->
     <div id="about" class="container section scrollspy">
-      <div class="row">   
+      <div class="row">
         <div class="col s12 m4 l6">
           <a name="about"><h2 class="left-align cyan-text text-darken-1">About Me</h2>  </a>
           <h5>Hi, I&apos;m Alastair. I make things with computers!</h5>
           <p>I&apos;m a graduate in Computer Science from the University of Cambridge, and I work as a programmer at <a href="http://www.studiogobo.com" target="_blank">Studio Gobo</a>.
           </p>
-          <p>AddyMotion.com is my strangely named personal website where you can find some of my projects past and present, including programming, 
+          <p>AddyMotion.com is my strangely named personal website where you can find some of my projects past and present, including programming,
           web design, games and level design. This is also the place to get in touch with me, or check out my blog.</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
           <div class="divider"></div>
           <p>More about <a href="about/now/">what I&apos;m up to now</a>.</p>
           <div class="divider"></div>
@@ -105,37 +103,36 @@
 
 
     <!--Blog promo section-->
-    <div id ="blog" class="parallax-container section scrollspy">
-      <div class="parallax"><img src="images/bg/cambridge.jpg"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col s12 m6 offset-m6">
-              <div id="blog-panel" class="card-panel">
-                <div class="card-content">
-                  <a name="blog"><h2 class="left-align cyan-text text-darken-1">Blog</h2></a>
-                  <p>I wrote about my first two years at university on <a href="http://alastairblogs.tumblr.com">Tumblr</a>. </p>
-                  <p>You can find my latest articles at my new blog on Medium, where I'll write about CompSci, coding and whatever I feel like.</p>
-                  <div class="row">
-                    <div class="col l4 offset-l8 m6 offset-m6 s12">
-                      <a class="waves-effect waves-light btn cyan" href="https://medium.com/addymotion">View Blog</a>
-                    </div>
+    <div id ="blog" class="addymotion-fixed-bg section scrollspy">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6 offset-m6">
+            <div id="blog-panel" class="card-panel">
+              <div class="card-content">
+                <a name="blog"><h2 class="left-align cyan-text text-darken-1">Blog</h2></a>
+                <p>I wrote about my first two years at university on <a href="http://alastairblogs.tumblr.com">Tumblr</a>. </p>
+                <p>You can find my latest articles at my new blog on Medium, where I'll write about CompSci, coding and whatever I feel like.</p>
+                <div class="row">
+                  <div class="col l4 offset-l8 m6 offset-m6 s12">
+                    <a class="waves-effect waves-light btn cyan" href="https://medium.com/addymotion">View Blog</a>
                   </div>
                 </div>
               </div>
-          </div>
+            </div>
         </div>
       </div>
+    </div>
     </div>
     <!--End blog section-->
 
     <img src="images/home/logos.svg" height="365px" style="float:right; margin-top:20px;max-width:150%">
     <div id="projects" class="container section scrollspy" style="padding-top:220px; padding-bottom:190px">
-      
+
       <div class="row" style="margin:0">
         <div class="col s12 m6" style="margin-bottom:50px;">
           <a name="projects"><h2 class="left-align cyan-text text-darken-1" style="margin-bottom:none;">Projects</h2></a>
-          <p>These are a few of the things I've worked on recently, grouped roughly into categories. 
-          Further projects not listed here can be found on my 
+          <p>These are a few of the things I've worked on recently, grouped roughly into categories.
+          Further projects not listed here can be found on my
           <a href="/archive/2014">old site</a>.</p>
 
         </div>
@@ -145,7 +142,7 @@
              <div class="collapsible-header waves-effect"><i class="material-icons">code</i>Programming</div>
              <div class="collapsible-body">
                <ul class="collection">
-                
+
                 {% for proj in site.code reversed %}
                 <a href="{{proj.url}}">
                 <li class="collection-item avatar">
@@ -157,7 +154,7 @@
 
                 <div class="divider"></div>
                 {% endfor %}
-               
+
               </ul>
             </div>
           </li>
@@ -165,7 +162,7 @@
             <div class="collapsible-header waves-effect"><i class="material-icons">games</i>Level Design</div>
             <div class="collapsible-body">
               <ul class="collection">
-                
+
                 {% for proj in site.maps reversed %}
                 <a href="{{proj.url}}">
                 <li class="collection-item avatar">
@@ -184,7 +181,7 @@
             <div class="collapsible-header waves-effect"><i class="material-icons">http</i>Web Design</div>
             <div class="collapsible-body">
               <ul class="collection">
-                
+
                 {% for proj in site.web reversed %}
                 <a href="{{proj.url}}">
                 <li class="collection-item avatar">
@@ -203,7 +200,7 @@
             <div class="collapsible-header waves-effect"><i class="material-icons">subject</i>Other Projects</div>
             <div class="collapsible-body">
               <ul class="collection">
-                
+
                 {% for proj in site.misc reversed %}
                 <a href="{{proj.url}}">
                <li class="collection-item avatar">
@@ -218,7 +215,7 @@
               </ul>
             </div>
           </li>
-          
+
         </ul>
     </div>
 
@@ -235,7 +232,7 @@
                   <p>In real life, you might find me somewhere in Brighton, Cambridge, or Weymouth, England.</p>
                   <p>Online, I'm easier to track down. You can reach me at the links below:</p>
                   <p>
-                  <a href="http://www.google.com/recaptcha/mailhide/d?k=013-VGRfrK080al_nkZYyUWg==&amp;c=l0r_6zTFe90HF12KxMwyW_9KKpMhVBv2bRkNDAaDOe4=" 
+                  <a href="http://www.google.com/recaptcha/mailhide/d?k=013-VGRfrK080al_nkZYyUWg==&amp;c=l0r_6zTFe90HF12KxMwyW_9KKpMhVBv2bRkNDAaDOe4="
                   onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075013-VGRfrK080al_nkZYyUWg\75\75\46c\75l0r_6zTFe90HF12KxMwyW_9KKpMhVBv2bRkNDAaDOe4\075',
                    '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">
                   <i class="tiny material-icons">email</i> Email</a></p>
@@ -246,18 +243,14 @@
                   <img src="images/icons/twitter-tiny.png"> Twitter</a></p>
                   <p><a href="https://www.facebook.com/AddyMotion/">
                   <img src="images/icons/fb-tiny.png"> Facebook</a></p>
-                  
-                  
+
+
                 </div>
               </div>
           </div>
         </div>
       </div>
     </div>
-
-
-
-
 
     <!--End contact section-->
 
@@ -266,13 +259,13 @@
 
           <div class="footer-copyright" style="bottom:0;margin-top:110px;">
             <div class="container">
-             Site design and content &#169; 2008-2016 Alastair Toft unless noted otherwise. 
+             Site design and content &#169; 2008-2016 Alastair Toft unless noted otherwise.
              All trademarks are properties of their respective owners.
             <a class="grey-text text-lighten-4 right" href="#top">Back to top</a>
             </div>
           </div>
         </footer>
-    
+
     <!--Load scripts last-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvVlWHjEvG2gyO0MGr7MnU-JP_RumnQew"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -283,4 +276,3 @@
     <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
-        
