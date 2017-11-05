@@ -207,6 +207,18 @@ h1{
   padding-top: 70px;
 }
 
+.addymotion-marquee-overlay {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width:100%;
+  height:650px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top:0;
+}
+
 .addymotion-proj-banner {
   background-attachment: fixed;
   background-position: center;
@@ -235,12 +247,12 @@ h1{
   bottom:30px;
 }
 
-.addymotion-animated {
+/*.addymotion-animated {
   transition: background-image 1s ease-in-out;
   -webkit-transition: background-image 1s ease-in-out;
   -moz-transition: background-image 1s ease-in-out;
   -o-transition: background-image 1s ease-in-out;
-}
+}*/
 
 .addymotion-fixed-bg {
   background-attachment: fixed;
