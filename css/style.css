@@ -1,4 +1,8 @@
 /* Custom additional CSS for AddyMotion.com */
+html {
+  background-attachment: fixed;       
+}
+
 
 /*Force overwrite color of link text on cards*/
 .card-action a{
