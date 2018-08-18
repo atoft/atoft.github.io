@@ -9,7 +9,10 @@ html {
   color:#00bcd4 !important;
 }
 
-
+#sidenav-overlay
+{
+  z-index: 1;
+}
 
 /* Custom blog showcase */
 #blog-panel{
