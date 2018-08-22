@@ -2,7 +2,7 @@
 
 // Google maps code
 var cambridge = [52.1999722, 0.1247423]
-var centre = [51.1676113, 0.121708]
+var centre = [51.4889381, 0.121708]
 var weymouth = [50.62683, -2.4928438]
 var brighton = [50.8399049, -0.1966856]
 
@@ -51,14 +51,18 @@ google.maps.event.addDomListener(window, 'load', initialize)
 
 // End google maps
 
-var topImages = ['images/code/banner_diss.jpg',
+var topImages = [
+  'images/code/banner_forhonor.jpg',
+  'images/code/banner_diss.jpg',
   'images/bg/clouds.jpg',
   'images/bg/ld34.png',
   'images/bg/up.jpg',
   'images/bg/cambridge_cl.jpg'
 ]
 
-var topImageText = ['<span class=\'topImage-emphasis\'>Parallax-corrected cubemaps:</span> My undergraduate dissertation',
+var topImageText = [
+  '<span class=\'topImage-emphasis\'>For Honor:</span> Gameplay programming at Studio Gobo',
+  '<span class=\'topImage-emphasis\'>Parallax-corrected cubemaps:</span> My undergraduate dissertation',
   '<span class=\'topImage-emphasis\'>Volumetric Cloudscapes:</span> An internship graphics project',
   '<span class=\'topImage-emphasis\'>The Forces Awakened:</span> An entry to Ludum Dare',
   '<span class=\'topImage-emphasis\'>Uncertainty Principle:</span>' +
@@ -66,7 +70,9 @@ var topImageText = ['<span class=\'topImage-emphasis\'>Parallax-corrected cubema
   'Computer Science at the University of Cambridge'
 ]
 
-var topImageHref = ['projects/code/dissertation',
+var topImageHref = [
+  'projects/code/goboforhonor',
+  'projects/code/dissertation',
   'projects/code/clouds',
   'projects/code/ld34',
   'projects/maps/uncertainty-principle',
