@@ -16,7 +16,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
   <!--Import custom css-->
   <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
@@ -35,13 +35,11 @@
         <ul class="table-of-contents left hide-on-med-and-down ">
           <li class="waves-effect"><a href="#top">Home</a></li>
           <li class="waves-effect"><a href="#about">About</a></li>
-          <li class="waves-effect"><a href="#blog">Blog</a></li>
           <li class="waves-effect"><a href="#projects">Projects</a></li>
           <li class="waves-effect"><a href="#contact">Contact</a></li>
         </ul>
-        <ul class="side-nav" id="mobile-drawer">
+        <ul class="side-nav" id="mobile-drawer" style="z-index: 1000;">
           <li><a href="#about">About</a></li>
-          <li><a href="#blog">Blog</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -97,127 +95,114 @@
   </div>
   <!--End about-->
 
+  <!--Projects section-->
+  <div id="projects" class="addymotion-fixed-bg section scrollspy" style="padding-top:100px; padding-bottom:190px">
 
-  <!--Blog promo section-->
-  <div id="blog" class="addymotion-fixed-bg section scrollspy">
+
     <div class="container">
       <div class="row">
         <div class="col s12 m6 offset-m6">
           <div id="blog-panel" class="card-panel">
             <div class="card-content">
-              <a name="blog"><h2 class="left-align cyan-text text-darken-1">Blog</h2></a>
-              <p>I wrote about my first two years at university on <a href="http://alastairblogs.tumblr.com">Tumblr</a>. </p>
-              <p>You can find my latest articles at my new blog on Medium, where I'll write about CompSci, coding and whatever I feel like.</p>
-              <div class="row">
-                <div class="col l4 offset-l8 m6 offset-m6 s12">
-                  <a class="waves-effect waves-light btn cyan" href="https://medium.com/addymotion">View Blog</a>
-                </div>
+              <a name="projects"><h2 class="left-align cyan-text text-darken-1" style="margin-bottom:none;">Projects</h2></a>
+              <p>These are a few of the things I've worked on recently, grouped roughly into categories. Further projects not listed here can be found on my
+                <a href="/archive/2014">old site</a>.</p>
+                
               </div>
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col s12">
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header waves-effect"><i class="material-icons">code</i>Programming</div>
+                <div class="collapsible-body">
+                  <ul class="collection">
+        
+                    {% for proj in site.code reversed %}
+                    <a href="{{proj.url}}">
+                      <li class="collection-item avatar">
+                        <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                        <span class="title">{{proj.title}}</span>
+                        <br>{{proj.summary}}
+                      </li>
+                    </a>
+        
+                    <div class="divider"></div>
+                    {% endfor %}
+        
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header waves-effect"><i class="material-icons">games</i>Level Design</div>
+                <div class="collapsible-body">
+                  <ul class="collection">
+        
+                    {% for proj in site.maps reversed %}
+                    <a href="{{proj.url}}">
+                      <li class="collection-item avatar">
+                        <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                        <span class="title">{{proj.title}}</span>
+                        <br>{{proj.summary}}
+                      </li>
+                    </a>
+        
+                    <div class="divider"></div>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header waves-effect"><i class="material-icons">http</i>Web Design</div>
+                <div class="collapsible-body">
+                  <ul class="collection">
+        
+                    {% for proj in site.web reversed %}
+                    <a href="{{proj.url}}">
+                      <li class="collection-item avatar">
+                        <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                        <span class="title">{{proj.title}}</span>
+                        <br>{{proj.summary}}
+                      </li>
+                    </a>
+        
+                    <div class="divider"></div>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header waves-effect"><i class="material-icons">subject</i>Other Projects</div>
+                <div class="collapsible-body">
+                  <ul class="collection">
+        
+                    {% for proj in site.misc reversed %}
+                    <a href="{{proj.url}}">
+                      <li class="collection-item avatar">
+                        <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}}| {%endif%} {{proj.year}}</span>
+                        <span class="title">{{proj.title}}</span>
+                        <br>{{proj.summary}}
+                      </li>
+                    </a>
+        
+                    <div class="divider"></div>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </li>
+        
+            </ul>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </div>
-  <!--End blog section-->
-
-
-  <!--Projects section-->
-  <img src="images/home/logos.svg" height="365px" style="float:right; margin-top:20px;max-width:150%">
-  <div id="projects" class="container section scrollspy" style="padding-top:220px; padding-bottom:190px">
-
-    <div class="row" style="margin:0">
-      <div class="col s12 m6" style="margin-bottom:50px;">
-        <a name="projects"><h2 class="left-align cyan-text text-darken-1" style="margin-bottom:none;">Projects</h2></a>
-        <p>These are a few of the things I've worked on recently, grouped roughly into categories. Further projects not listed here can be found on my
-          <a href="/archive/2014">old site</a>.</p>
-
-      </div>
-    </div>
-    <ul class="collapsible" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header waves-effect"><i class="material-icons">code</i>Programming</div>
-        <div class="collapsible-body">
-          <ul class="collection">
-
-            {% for proj in site.code reversed %}
-            <a href="{{proj.url}}">
-              <li class="collection-item avatar">
-                <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                <span class="title">{{proj.title}}</span>
-                <br>{{proj.summary}}
-              </li>
-            </a>
-
-            <div class="divider"></div>
-            {% endfor %}
-
-          </ul>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header waves-effect"><i class="material-icons">games</i>Level Design</div>
-        <div class="collapsible-body">
-          <ul class="collection">
-
-            {% for proj in site.maps reversed %}
-            <a href="{{proj.url}}">
-              <li class="collection-item avatar">
-                <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                <span class="title">{{proj.title}}</span>
-                <br>{{proj.summary}}
-              </li>
-            </a>
-
-            <div class="divider"></div>
-            {% endfor %}
-          </ul>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header waves-effect"><i class="material-icons">http</i>Web Design</div>
-        <div class="collapsible-body">
-          <ul class="collection">
-
-            {% for proj in site.web reversed %}
-            <a href="{{proj.url}}">
-              <li class="collection-item avatar">
-                <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                <span class="title">{{proj.title}}</span>
-                <br>{{proj.summary}}
-              </li>
-            </a>
-
-            <div class="divider"></div>
-            {% endfor %}
-          </ul>
-        </div>
-      </li>
-      <li>
-        <div class="collapsible-header waves-effect"><i class="material-icons">subject</i>Other Projects</div>
-        <div class="collapsible-body">
-          <ul class="collection">
-
-            {% for proj in site.misc reversed %}
-            <a href="{{proj.url}}">
-              <li class="collection-item avatar">
-                <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
-                <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}}| {%endif%} {{proj.year}}</span>
-                <span class="title">{{proj.title}}</span>
-                <br>{{proj.summary}}
-              </li>
-            </a>
-
-            <div class="divider"></div>
-            {% endfor %}
-          </ul>
-        </div>
-      </li>
-
-    </ul>
+    </div>   
   </div>
   <!--End project section-->
 
@@ -226,7 +211,7 @@
     <div id="googlemaps" style="height:600px;width:100%;position:absolute; top:0px;left:0px;z-index:0;"></div>
     <div class="container" style="z-index:1;position:relative;pointer-events: none;">
       <div class="row">
-        <div class="col s12 m6 offset-m6" style="z-index:1;">
+        <div class="col s12 m6" style="z-index:1;">
           <div id="blog-panel" class="card-panel" style="z-index:1;pointer-events: auto;">
             <!--Rename this-->
             <div class="card-content">

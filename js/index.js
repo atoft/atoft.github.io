@@ -2,7 +2,7 @@
 
 // Google maps code
 var cambridge = [52.1999722, 0.1247423]
-var centre = [51.500836, 0.121708]
+var centre = [51.1676113, 0.121708]
 var weymouth = [50.62683, -2.4928438]
 var brighton = [50.8399049, -0.1966856]
 

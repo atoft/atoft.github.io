@@ -31,7 +31,7 @@ html {
 
 /* Custom project collection */
 #projects{
-	min-height:600px;
+	min-height:200px;
 }
 
 .table-of-contents a.active{
@@ -62,12 +62,12 @@ html {
 
 .collapsible-header{
 	font-size:1.4em;
-  background-color:rgba(0,0,0,0)!important;
+  background-color:rgb(255, 255, 255)!important;
 }
 
 .collapsible
 {
-  background-color:rgba(0,0,0,0)!important;
+  background-color:rgb(255, 255, 255)!important;
 }
 
 .collection
@@ -264,10 +264,11 @@ h1{
 .addymotion-fixed-bg {
   background-attachment: fixed;
   background-position: center;
-  background-image: url("/images/bg/cambridge.jpg");
-  background-size: cover;
+  background-image: url("/images/home/logos.svg");
+  background-repeat: repeat;
+  back
   top:0;
-  height: 650px;
+  min-height: 700px;
   width: 100%;
   padding: 0;
   margin: 0;
