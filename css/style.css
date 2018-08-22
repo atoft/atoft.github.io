@@ -246,12 +246,20 @@ h1{
   width:inherit;
   position:absolute;
   bottom:50px;
+  background-color: #00838faa;
+  margin-right: 0;
+  width: fit-content;
+  border-radius: 3px;
 }
 
 .addymotion-proj-subheading {
   width:inherit;
   position:absolute;
   bottom:30px;
+  background-color: #00838faa;
+  margin-right: 0;
+  width: fit-content;
+  border-radius: 3px;
 }
 
 /*.addymotion-animated {
@@ -338,4 +346,11 @@ h1{
 
 #project-content img {
   max-width: 100%;
+}
+
+.addymotion-heading {
+  background-color: #00838faa;
+  margin-right: 0;
+  width: fit-content;
+  border-radius: 3px;
 }
