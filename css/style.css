@@ -272,13 +272,6 @@ h1{
   border-radius: 3px;
 }
 
-/*.addymotion-animated {
-  transition: background-image 1s ease-in-out;
-  -webkit-transition: background-image 1s ease-in-out;
-  -moz-transition: background-image 1s ease-in-out;
-  -o-transition: background-image 1s ease-in-out;
-}*/
-
 .addymotion-fixed-bg {
   background-attachment: fixed;
   background-position: center;

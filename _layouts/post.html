@@ -19,7 +19,7 @@
     <link type="text/css" rel="stylesheet" href="{{site.url}}/css/materialize.min.css"  media="screen,projection"/>
 
     <!--Import custom css-->
-    <link type="text/css" rel="stylesheet" href="{{site.url}}/css/style.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/style.css"  media="screen,projection"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -53,7 +53,7 @@
 
     <div class="addymotion-proj-banner section scrollspy" id="top" style="background-image:url({{site.url}}/{{page.img}})">
       <div class="addymotion-proj-h-container container">
-        <h2 class="left-align white-text addymotion-proj-heading">{{ page.title }}</h2>
+        <h2 class="left-align white-text addymotion-post-heading">{{ page.title }}</h2>
         <h5 class="left-align white-text addymotion-proj-subheading"> {% if page.metadata != null %} {{ page.metadata }} | {% endif %}{{page.year}}</h2>
       </div>
     </div>
@@ -63,28 +63,23 @@
     <!--Begin about-->
     <div id="about" class="container section scrollspy">
       <div class="row">
-        <div class="col m6" id="project-content">
-          <h5>About</h5>
-            {{ page.about }}
-            <div class="divider"></div>
-            {{ page.more }}
+        <div class="col m6 l8" id="project-content">
+            {{ page.content }}
         </div>
-        <div class="col m6">
-          <h5>Links</h5>
-            {{ page.links }}
+        <div class="col m6 l4">
           <ul>
-          {% capture relatedPosts %}
-            {% for post in site.posts %}
-              {% if page.tags contains post.project %}
-                <li><a href="{{post.url}}">{{ post.title }}</a></li>
-              {% endif %}
-            {% endfor %}
-          {% endcapture %}
-          {% if relatedPosts contains "a href" %}
-            <h5>Related posts</h5>
-            {{ relatedPosts }}
-          {% endif %}
-          </ul>
+            {% capture relatedProjects %}
+              {% for project in site.documents reversed %}
+                {% if project.tags contains page.project %}
+                  <li><a href="{{project.url}}">{{ project.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            {% endcapture %}
+            {% if relatedProjects contains "a href" %}
+              <h5>Related projects</h5>
+              {{ relatedProjects }}
+            {% endif %}
+        </ul>
         </div>
       </div>
     </div>
