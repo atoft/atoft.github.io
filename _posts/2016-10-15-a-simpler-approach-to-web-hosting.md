@@ -1,0 +1,17 @@
+---
+layout: post
+title: A simpler approach to web hosting?
+tags: []
+---
+
+*This post was archived from Medium.*
+
+I’ve had a website since approximately forever — forever being July 2006 according to the domain name registry. The site itself has changed a lot in that time, from a silly collection of Lego animations and poorly coded Flash games to a portfolio of projects which I include on my CV. But over all that time it’s been on one paid web hosting platform or another. Always a pain to edit, requiring a deadly slow FTP connection or a horrible web interface, it also cost a not-insignificant amount each year. So this year I finally got around to doing something about it and looking into an alternative.
+
+First of all, the site in question consists of a handful of static pages and a few hosted files, so a huge amount of storage wasn’t a requirement. In addition, my small personal website is unlikely to ever have a huge volume of traffic hitting it. Both these factors mean that a full web hosting package was a bit of overkill, and meant that I could look into some more basic options for serving the site.
+
+The one which quickly stood out was GitHub Pages, which allows you to host a free personal site at a .github.io address. Obviously the service it provides is pretty limited, but so far looks to be enough for my purposes. The best thing about it is that it’s super fast to update the site, since you can just use Git in a terminal as you would with any other repository. I wanted to keep the address from my old site, so I do still have to pay for domain name registration. On the bright side it was easier than I expected to extract from the clutches of my old web host and get it transferred. (I went with hover.com which seems to have good customer service.) I simply pushed the entire contents of the previous site to the Git repository and the transition was almost seamless.
+
+So far so good. I’ve got the same site for a fraction of the cost and a much more convenient update method. There’s been one other unexpected benefit as well. GitHub Pages introduced me to Jekyll, which is a really straightforward site generator. In short, you can use it to create (for example) formatted blog posts out of an HTML template and a collection of plain text files. A full content management system like WordPress has always been unnecessary for me and I usually stuck with just raw HTML/CSS. That’s fine for a single homepage but it becomes difficult when you want to maintain a bunch of separate project pages with the design kept consistent between them. I dealt with that in various ways in the past but Jekyll looks to be a very quick and flexible solution. Each of my projects consists of a bunch of key/value pairs (title, description, images etc) which are automatically built into pages. They’re a format which doesn’t match the usual blog post but it was easy to get set up, and a template matching the design of my site was ready in five minutes with a couple of tweaks to an existing HTML file. All my project pages now automatically stay consistent. On top of that, the project lists on my home page which were previously hand coded can now be generated automatically.
+
+It remains to be seen whether this will work as a long term solution. Apart from anything else it assumes that GitHub Pages will remain available as a free service in the future. But for now it seems to be a much cheaper and easier way to host my site.

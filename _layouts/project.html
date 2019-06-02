@@ -26,28 +26,7 @@
   </head>
 
   <body>
-    <!--Top navbar-->
-    <div class="addymotion-navbar-fixed">
-    <nav class="cyan">
-      <div class="nav-wrapper container">
-        <a href="{{site.url}}/" class="brand-logo right"><img src="{{site.url}}/images/logos/old_logo_vector_standard.svg"></a>
-        <a href="#" data-activates="mobile-drawer" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="table-of-contents left hide-on-med-and-down ">
-          <li class="waves-effect"><a href="{{site.url}}/">Home</a></li>
-          <li class="waves-effect"><a href="{{site.url}}/index.html#about">About</a></li>
-          <li class="waves-effect"><a class="active" href="{{site.url}}/index.html#projects">Projects</a></li>
-          <li class="waves-effect"><a href="{{site.url}}/index.html#contact">Contact</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-drawer">
-          <li><a href="{{site.url}}/">Home</a></li>
-          <li><a href="{{site.url}}/index.html#about">About</a></li>
-          <li><a href="{{site.url}}/index.html#projects">Projects</a></li>
-          <li><a href="{{site.url}}/index.html#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    </div>
-    <!--End top navbar-->
+    {% include header.html active = "projects" %}
 
     <!--Parallax title area-->
 

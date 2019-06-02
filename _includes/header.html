@@ -1,0 +1,25 @@
+---
+---
+
+<div class="addymotion-navbar-fixed">
+<nav class="cyan">
+  <div class="nav-wrapper container">
+  <a href="{{site.url}}/" class="brand-logo right"><img src="{{site.url}}/images/logos/old_logo_vector_standard.svg"></a>
+  <a href="#" data-activates="mobile-drawer" class="button-collapse"><i class="material-icons">menu</i></a>
+  <ul class="table-of-contents left hide-on-med-and-down ">
+    <li class="waves-effect"><a {% if include.active == "home" %} class="active" {% endif %} href="{{site.url}}/">Home</a></li>
+    <li class="waves-effect"><a {% if include.active == "about" %} class="active" {% endif %} href="{{site.url}}/index.html#about">About</a></li>
+    <li class="waves-effect"><a {% if include.active == "projects" %} class="active" {% endif %} href="{{site.url}}/index.html#projects">Projects</a></li>
+    <li class="waves-effect"><a {% if include.active == "posts" %} class="active" {% endif %} href="{{site.url}}/index.html#posts">Posts</a></li>
+    <li class="waves-effect"><a {% if include.active == "contact" %} class="active" {% endif %}href="{{site.url}}/index.html#contact">Contact</a></li>
+  </ul>
+  <ul class="side-nav" id="mobile-drawer">
+    <li><a href="{{site.url}}/">Home</a></li>
+    <li><a href="{{site.url}}/index.html#about">About</a></li>
+    <li><a href="{{site.url}}/index.html#projects">Projects</a></li>
+    <li><a href="{{site.url}}/index.html#posts">Posts</a></li>
+    <li><a href="{{site.url}}/index.html#contact">Contact</a></li>
+  </ul>
+  </div>
+</nav>
+</div>
