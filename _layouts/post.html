@@ -26,7 +26,9 @@
       <div class="row">
         <div class="col m6 l8" id="project-content">
           <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date_to_long_string }}</span>
-          {{ page.content }}
+          <div class="addymotion-post-text">
+            {{ page.content }}
+          </div>
           <div class="divider"></div>
           <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date_to_long_string }}</span>
         </div>
