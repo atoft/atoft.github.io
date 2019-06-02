@@ -51,7 +51,7 @@
 
     <!--Parallax title area-->
 
-    <div class="addymotion-proj-banner section scrollspy" id="top" style="background-image:url({{site.url}}/{{page.img}})">
+    <div class="addymotion-proj-banner section scrollspy" id="top" style="background-color: #b2ebf2ff; background-image:url({{site.url}}/{{page.img}}); {% if page.img == null %} height:300px;{% endif %}">
       <div class="addymotion-proj-h-container container">
         <h2 class="left-align white-text addymotion-post-heading">{{ page.title }}</h2>
         <h5 class="left-align white-text addymotion-proj-subheading"> {% if page.metadata != null %} {{ page.metadata }} | {% endif %}{{page.year}}</h2>
@@ -64,7 +64,9 @@
     <div id="about" class="container section scrollspy">
       <div class="row">
         <div class="col m6 l8" id="project-content">
-            {{ page.content }}
+          {{ page.content }}
+          <div class="divider"></div>
+          <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date_to_long_string }}</span>
         </div>
         <div class="col m6 l4">
           <ul>

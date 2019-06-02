@@ -16,7 +16,12 @@ collections:
     permalink: /about/:path/
 
 permalink: /posts/:categories/:year/:month/:day/:title/
+paginate: 2
+paginate_path: /posts/page:num/
 
+gems: [jekyll-paginate]
+plugins_dir:
+  jekyll-paginate
 
 #
 # This file contains configuration flags to customize your site

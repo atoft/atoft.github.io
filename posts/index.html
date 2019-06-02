@@ -1,5 +1,6 @@
 ---
-permalink: posts/
+title: All posts
+
 ---
 
 <!DOCTYPE html>
@@ -20,7 +21,8 @@ permalink: posts/
     <link type="text/css" rel="stylesheet" href="{{site.url}}/css/materialize.min.css"  media="screen,projection"/>
 
     <!--Import custom css-->
-    <link type="text/css" rel="stylesheet" href="{{site.url}}/css/style.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/style.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="/css/post.css"  media="screen,projection"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -50,17 +52,18 @@ permalink: posts/
     </div>
     <!--End top navbar-->
 
-    <div class="container">
-      <h1>All posts</h1>      
+    <div class="container addymotion-top-container">
+      <h1>All posts</h1>
+      <p>These are all the blog posts ever. Some posts have been archived from other sources.</p>
+      <div class="divider"></div>
     </div>
 
-
-  <!--Begin about-->
+    <!--Begin post list-->
     <div class="container">
 
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
         <a href="{{post.url}}" style="color: black;">
-          <div class="card-panel" style="background-color: #b2ebf2ff; background-image: url({{site.url}}/{{post.img}}); background-size: cover; background-position: center; ">
+          <div class="card-panel addymotion-post-card" style="background-image: url({{site.url}}/{{post.img}});">
             <div class="card-content">
                 <div class="row">
                     <div class="col m8 l6">
@@ -70,7 +73,7 @@ permalink: posts/
                     <h3>{{ post.title }}</h3>
                     {{ post.excerpt }}
                     <div class="divider"></div>
-                    <span style="font-style: italic;" class="cyan-text text-lighten-2">{{ site.time | date_to_long_string }}</span>
+                    <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ post.date | date_to_long_string }}</span>
                     </div>
                     </div>
               </div>
@@ -79,8 +82,38 @@ permalink: posts/
             </div>
           </a>
         {% endfor %}
+
+
+      <!-- Pagination links -->
+      {% if paginator.total_pages > 1 %}
+      <div class="row">
+      <ul class="pagination addymotion-pagination right">
+        {% if paginator.previous_page %}
+          <li class="waves-effect"><a href="{{ paginator.previous_page_path | relative_url }}"><i class="material-icons">chevron_left</i></a></li>
+        {% else %}
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <li class="active cyan darken-3"><a href="#!">{{ page }}</a></li>
+          {% elsif page == 1 %}
+            <li class="waves-effect"><a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a></li>
+          {% else %}
+          <li class="waves-effect"><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a></li>
+          {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+        <li class="waves-effect"><a href="{{ paginator.next_page_path | relative_url }}"><i class="material-icons">chevron_right</i></a></li>
+        {% else %}
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        {% endif %}
+      </ul>
     </div>
-  <!--End about-->
+      {% endif %}
+    </div>
+    <!--End post list-->
 
   {% include footer.html %}
 

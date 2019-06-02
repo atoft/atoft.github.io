@@ -358,3 +358,8 @@ h1{
   width: fit-content;
   border-radius: 3px;
 }
+
+/* A container which is right at the top of the page and needs to avoid the navbar. */
+.addymotion-top-container {
+  margin-top: 70px;
+}
