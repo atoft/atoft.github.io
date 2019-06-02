@@ -262,6 +262,16 @@ h1{
   border-radius: 3px;
 }
 
+.addymotion-post-heading {
+  width:inherit;
+  position:absolute;
+  bottom:10px;
+  background-color: #00838faa;
+  margin-right: 0;
+  width: fit-content;
+  border-radius: 3px;
+}
+
 /*.addymotion-animated {
   transition: background-image 1s ease-in-out;
   -webkit-transition: background-image 1s ease-in-out;
@@ -272,6 +282,7 @@ h1{
 .addymotion-fixed-bg {
   background-attachment: fixed;
   background-position: center;
+  background-color: #b2ebf2ff;
   background-image: url("/images/home/logos.svg");
   background-repeat: repeat;
   back
