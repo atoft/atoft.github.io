@@ -8,6 +8,7 @@ summary: "I'm a computer science graduate from Cambridge University. A collectio
 
 <head>
 {% include html-head-common.html %}
+<link href="feed.xml" rel="alternate" type ="application/rss+xml">
 </head>
 
 <body>
@@ -21,11 +22,13 @@ summary: "I'm a computer science graduate from Cambridge University. A collectio
           <li class="waves-effect"><a href="#top">Home</a></li>
           <li class="waves-effect"><a href="#about">About</a></li>
           <li class="waves-effect"><a href="#projects">Projects</a></li>
+          <li class="waves-effect"><a href="#posts">Posts</a></li>
           <li class="waves-effect"><a href="#contact">Contact</a></li>
         </ul>
         <ul class="side-nav" id="mobile-drawer" style="z-index: 1000;">
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#projects">Posts</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -191,12 +194,45 @@ summary: "I'm a computer science graduate from Cambridge University. A collectio
   </div>
   <!--End project section-->
 
+  <!--Posts-->
+  <div id="posts" class="container section scrollspy">
+    <a name="posts"><h2 class="left-align cyan-text text-darken-1">Blog posts</h2></a>
+    <div class="row">
+      <div class="col s12 l6">
+        <p>
+          Occasionally I feel the need to write some words about things. Here's where you can find all the blog posts I've written on various different topics.
+        </p>
+        <a class="waves-effect waves-light btn cyan darken-1" href="/posts/">All posts</a>
+        &nbsp;
+        <a class="waves-effect waves-light btn orange darken-1" href="/feed.xml"><i class="material-icons left">rss_feed</i>RSS</a>
+      </div>
+      <div class="col s8 l4">
+        <h5>Latest posts</h5>
+        {% for i in (0..2) %}
+        <a href="{{ site.posts[i].url }}">
+          <div class="addymotion-speech-bubble">
+            <span style="font-weight: bold">{{ site.posts[i].title }}</span> {{ site.posts[i].excerpt | | strip_html | truncate: 80 }}
+          </div>
+          <div class="cyan-text text-lighten-2 right-align" style="font-size: 0.8em;">{{ site.posts[i].date | date_to_long_string }}</div>
+        </a>
+        {% endfor %}
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="col s4 l2 offset-s8 offset-l10">
+            <img src="images/home/avatar_gamegig.jpg" alt="" class="circle addymotion-speech-avatar">
+    </div>
+    </div>
+  </div>
+  <!--End posts-->
+
   <!--Contact section-->
   <div id="contact" class="parallax-container section scrollspy" style="width:100%; height:600px">
     <div id="googlemaps" style="height:600px;width:100%;position:absolute; top:0px;left:0px;z-index:0;"></div>
     <div class="container" style="z-index:1;position:relative;pointer-events: none;">
       <div class="row">
-        <div class="col s12 m6" style="z-index:1;">
+        <div class="col s12 m6 offset-m6" style="z-index:1;">
           <div id="blog-panel" class="card-panel" style="z-index:1;pointer-events: auto;">
             <!--Rename this-->
             <div class="card-content">
@@ -234,11 +270,9 @@ summary: "I'm a computer science graduate from Cambridge University. A collectio
 
   <!--Load scripts last-->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvVlWHjEvG2gyO0MGr7MnU-JP_RumnQew"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  {% include scripts-common.html %}
   <script type="text/javascript" src="js/PxLoader.js"></script>
   <script type="text/javascript" src="js/PxLoaderImage.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/init.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 </body>
 
