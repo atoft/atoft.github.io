@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Graduating from Cambridge
-img: images/bg/cambridge.jpg
+img: images/posts/graduating-from-cambridge.jpeg
 project: cambridge
 ---
 
