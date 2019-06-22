@@ -9,7 +9,7 @@ Five years ago, this month, I came out as gay.
 A lot has changed in my life (and the world) since then, and as I've become more open about myself I've been 
 fortunate enough to live, study and work in largely accepting and welcoming environments.
 
-I reached that point as a white, cisgendered male from a stable home. I could be quite sure that I
+I reached that point as a white, cisgender male from a stable home. I could be quite sure that I
 wouldn't be disowned by my friends or family. My privilege meant that after coming out I could generally pass as a straight 
 man in our heteronormative society and accept all the advantages that come with that.
 
