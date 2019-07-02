@@ -245,31 +245,25 @@ h1{
 .addymotion-proj-heading {
   width:inherit;
   position:absolute;
-  bottom:50px;
-  background-color: #00838faa;
+  bottom:55px;
   margin-right: 0;
   width: fit-content;
-  border-radius: 3px;
 }
 
 .addymotion-proj-subheading {
   width:inherit;
   position:absolute;
   bottom:30px;
-  background-color: #00838faa;
   margin-right: 0;
   width: fit-content;
-  border-radius: 3px;
 }
 
-.addymotion-post-heading {
-  width:inherit;
-  position:absolute;
-  bottom:10px;
+.addymotion-heading-text {
   background-color: #00838faa;
   margin-right: 0;
   width: fit-content;
   border-radius: 3px;
+  line-height: 1.25em;
 }
 
 .addymotion-fixed-bg {
@@ -278,7 +272,6 @@ h1{
   background-color: #b2ebf2ff;
   background-image: url("/images/home/logos.svg");
   background-repeat: repeat;
-  back
   top:0;
   min-height: 700px;
   width: 100%;
@@ -353,10 +346,8 @@ h1{
 }
 
 .addymotion-heading {
-  background-color: #00838faa;
-  margin-right: 0;
-  width: fit-content;
-  border-radius: 3px;
+  margin-bottom: 0;
+  margin-top: 18px;
 }
 
 /* A container which is right at the top of the page and needs to avoid the navbar. */
