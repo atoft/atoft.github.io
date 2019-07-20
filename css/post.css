@@ -7,3 +7,13 @@ h1, h2, h3, h4, h5, h6
 {
     margin-bottom: 80px;
 }
+
+.addymotion-pagination a
+{
+    color: initial;
+}
+
+.addymotion-pagination a .active
+{
+    color: white;
+}

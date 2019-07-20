@@ -57,11 +57,11 @@ title: All posts
 
         {% for page in (1..paginator.total_pages) %}
           {% if page == paginator.page %}
-            <li class="active cyan darken-3"><a href="#!">{{ page }}</a></li>
+          <a href="#!" class="active"><li class="active cyan darken-3">{{ page }}</li></a>
           {% elsif page == 1 %}
-            <li class="waves-effect"><a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a></li>
+          <a href="{{ paginator.previous_page_path | relative_url }}"><li class="waves-effect">{{ page }}</li></a>
           {% else %}
-          <li class="waves-effect"><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a></li>
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}"><li class="waves-effect">{{ page }}</li></a>
           {% endif %}
         {% endfor %}
 
