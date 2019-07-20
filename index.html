@@ -109,7 +109,7 @@ summary: "I'm a computer science graduate from Cambridge University. A collectio
                     {% for proj in site.code reversed %}
                     <a href="{{proj.url}}">
                       <li class="collection-item avatar">
-                        <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                        <img src="/{{proj.thumb}}" alt="" class="circle">
                         <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
                         <span class="title">{{proj.title}}</span>
                         <br>{{proj.summary}}
@@ -130,7 +130,7 @@ summary: "I'm a computer science graduate from Cambridge University. A collectio
                     {% for proj in site.maps reversed %}
                     <a href="{{proj.url}}">
                       <li class="collection-item avatar">
-                        <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                        <img src="/{{proj.thumb}}" alt="" class="circle">
                         <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
                         <span class="title">{{proj.title}}</span>
                         <br>{{proj.summary}}
@@ -150,7 +150,7 @@ summary: "I'm a computer science graduate from Cambridge University. A collectio
                     {% for proj in site.web reversed %}
                     <a href="{{proj.url}}">
                       <li class="collection-item avatar">
-                        <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                        <img src="/{{proj.thumb}}" alt="" class="circle">
                         <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
                         <span class="title">{{proj.title}}</span>
                         <br>{{proj.summary}}
@@ -170,7 +170,7 @@ summary: "I'm a computer science graduate from Cambridge University. A collectio
                     {% for proj in site.misc reversed %}
                     <a href="{{proj.url}}">
                       <li class="collection-item avatar">
-                        <img src="{{site.url}}/{{proj.thumb}}" alt="" class="circle">
+                        <img src="/{{proj.thumb}}" alt="" class="circle">
                         <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}}| {%endif%} {{proj.year}}</span>
                         <span class="title">{{proj.title}}</span>
                         <br>{{proj.summary}}

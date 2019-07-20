@@ -13,7 +13,7 @@ Here's a few more details about how it works. The site is hosted on GitHub
 Pages, which includes built-in support for a tool called [Jekyll](https://jekyllrb.com/).
 Jekyll takes posts written in the Markdown text format, applies a template
 writtem in specially annotated HTML, and produces a static website containing
-your content. I've also been using this to generate the [project]({{site.url}}/#projects)
+your content. I've also been using this to generate the [project](/#projects)
 pages of the site, and now it generates a blog too. The Liquid template
 features also let the blog be more integrated into the rest of the site, for
 example generating links to related posts on other pages, and showing a nice
