@@ -258,6 +258,14 @@ h1{
   width: fit-content;
 }
 
+.addymotion-post-heading {
+  width:inherit;
+  position:absolute;
+  bottom:15px;
+  margin-right: 0;
+  width: fit-content;
+}
+
 .addymotion-heading-text {
   background-color: #00838faa;
   margin-right: 0;
