@@ -1,4 +1,4 @@
-/* Custom additional CSS for AddyMotion.com */
+/* Custom additional CSS for atoft.dev */
 html {
   background-attachment: fixed;
 }
@@ -34,11 +34,14 @@ html {
 	min-height:200px;
 }
 
-.table-of-contents a.active{
-
-  border-bottom: 5px solid white;
+.addymotion-table-of-contents a.active{
+  border-bottom: 5px solid;
   height:64px;
   font-weight:bold;
+}
+
+.addymotion-title{
+  font-family:"Roboto Condensed";
 }
 
 .breadcrumb{
