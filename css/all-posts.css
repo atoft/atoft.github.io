@@ -17,3 +17,11 @@ h1, h2, h3, h4, h5, h6
 {
     color: white;
 }
+
+/* A card containing the preview of a blog post. */
+.addymotion-post-card
+{
+    background-color: #b2ebf2ff;
+    background-size: cover;
+    background-position: center;
+}

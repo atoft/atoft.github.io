@@ -1,184 +1,88 @@
 /* Custom additional CSS for atoft.dev */
-html {
-  background-attachment: fixed;
+/* Shared across all pages. */
+
+html 
+{
+    background-attachment: fixed;
 }
 
 
 /*Force overwrite color of link text on cards*/
-.card-action a{
-  color:#00bcd4 !important;
+.card-action a
+{
+    color:#00bcd4 !important;
 }
 
 #sidenav-overlay
 {
-  z-index: 1;
+    z-index: 1;
 }
 
-/* Custom blog showcase */
-#blog-panel{
-  margin-top:100px;
-
-}
-#blog{
-  height:800px;
-}
-/* End blog showcase */
-
-#about li{
-  list-style-type: disc;
-  list-style-position: inside;
-}
-
-/* Custom project collection */
-#projects{
-	min-height:200px;
-}
-
-.addymotion-table-of-contents a.active{
-  border-bottom: 5px solid;
-  height:64px;
-  font-weight:bold;
-}
-
-.addymotion-title{
-  font-family:"Roboto Condensed";
-}
-
-.breadcrumb{
-  padding-left:10px;
-  padding-right:10px;
-  font-weight:bold;
-}
-.breadcrumb:hover{
-  background-color:rgba(0,0,0,0);
-
-}
-
-.collection a{
-	color:black;
-}
-.collection{
-	border:none;
-	margin-top:none;
-	padding-top:none;
-}
-
-.collapsible-header{
-	font-size:1.4em;
-  background-color:rgb(255, 255, 255)!important;
-}
-
-.collapsible
+.addymotion-table-of-contents a.active
 {
-  background-color:rgb(255, 255, 255)!important;
+    border-bottom: 5px solid;
+    height:64px;
+    font-weight:bold;
 }
 
-.collection
+.addymotion-title
 {
-  background-color:rgba(0,0,0,0)!important;
+    font-family:"Roboto Condensed";
 }
 
-.collection-item
+@media only screen and (max-width : 992px) 
 {
-  background-color:rgba(0,0,0,0)!important;
+    .parallax-container .section 
+    {
+        position: absolute;
+        top: 40%;
+    }
+
+    #index-banner .section 
+    {
+        top: 10%;
+    }
+
+    #main-avatar .img 
+    {
+        width:150px;
+        height:150px;
+    }
 }
 
-.project-type{
-	top:0;
-	padding-top:0;
-	margin-top:0;
-	float:right;
-	color:#4dd0e1;
+@media only screen and (max-width : 600px) 
+{
+    #index-banner .section
+    {
+        top: 0;
+    }
+
+    #blog
+    {
+        height:600px;
+    }
 }
 
-/* End project collection */
-
-/* Custom project modals */
-#modal-iframe{
-	max-width:800px;
+.icon-block
+{
+    padding: 0 15px;
 }
 
-.modal-fixed-footer{
-	overflow:hidden;
-	height:auto;
-}
-.modal-banner{
-	max-width:100%;
-	max-height:300px;
-	display:block;
-	overflow:hidden;
-	vertical-align:middle;
-}
-.modal-banner img{
-	width:100%;
-}
-.modal-text{
-	max-width:100%;
-	padding:20px;
-	padding-top:10px;
-	padding-bottom:60px;
-}
-.right-btn{
-	float:right;
-	margin-bottom:20px;
+.icon-block .material-icons
+{
+    font-size: inherit;
 }
 
-/*Custom iframe for modals*/
-#frame-dynamic{
-  border:0px;
-  padding:0px;
-  margin:0px;
-  width:100%;
-  height:90%;
+footer.page-footer 
+{
+    margin: 0;
 }
-/* End custom modals */
-
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-  #main-avatar .img {
-    width:150px;
-    height:150px;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-
-  #blog{
-    height:600px;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-}
-
-
 
 /* Custom navbar and home page header */
-h1{
-  font-family:"Roboto Condensed";
-  font-size:6em;
-  /*text-shadow: 0 0 5px #b2ebf2;  */
-}
-#top h2{
-  /*text-shadow: 0 0 5px #b2ebf2;  */
+h1
+{
+    font-family:"Roboto Condensed";
+    font-size:6em;
 }
 
 @media only screen and (max-width : 600px) {
@@ -195,39 +99,6 @@ h1{
   text-align:center;
 }
 
-.brand-logo img{
-  vertical-align:middle;
-  margin-left:auto;
-  margin-right:auto;
-  opacity:0.75;
-}
-.brand-logo img:hover{
-  opacity:1;
-}
-
-.addymotion-marquee {
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  top:0;
-  height: 650px;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  padding-top: 70px;
-}
-
-.addymotion-marquee-overlay {
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  width:100%;
-  height:650px;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top:0;
-}
 
 .addymotion-proj-banner {
   background-attachment: fixed;
@@ -298,63 +169,10 @@ h1{
   z-index: 100;
 }
 
-.addymotion-map-container {
-  width:100%;
-  height:600px;
-  padding: 0;
-  margin:0;
-  position: absolute;
-}
 
-#main-avatar{
-	margin-top:30px;
-	float:right;
-        max-width:inherit;
-        max-height:auto;
-}
-#main-avatar .img{
-	max-width:inherit;
-}
 
-.topImage-emphasis {
-  font-weight:bold;
-}
 
-#jumbo-card {
-  position: absolute;
-  bottom: 50px;
-  right:0px;
-}
-
-.topImage-container {
-
-  position:relative;
-  height:100%;
-}
-
-.topImage-card {
-  float:right;
-  width:auto;
-}
 /* End custom navbar and home page header */
-
-.preloader-wrapper {
-  margin-left:auto;
-  margin-right:auto;
-  left:50%;
-  bottom:10%;
-}
-
-#modal-spinner {
-  margin-left:auto;
-  margin-right:auto;
-  left:0;
-  top:40px;
-}
-
-#project-content img {
-  max-width: 100%;
-}
 
 .addymotion-heading {
   margin-bottom: 0;
@@ -366,37 +184,28 @@ h1{
   margin-top: 70px;
 }
 
-/* A card containing the preview of a blog post. */
-.addymotion-post-card
+
+.addymotion-post-text h1
 {
-    background-color: #b2ebf2ff; 
-    background-size: cover; 
-    background-position: center; 
+    font-family:"Roboto";
+    font-size: 2.5em;
+    margin-bottom: 0;
 }
 
-.addymotion-speech-bubble
+.addymotion-post-text h2
 {
-  border-radius: 30px 30px 10px 30px;
-  background-color: #00bcd4;
-  padding: 15px;
-  color:white;
-  margin-top: 10px;
-
+    font-size: 2em;
+    margin-bottom: 0;
 }
 
-.addymotion-speech-avatar
+.addymotion-post-text h3
 {
-  margin-top: -120px;
-  width: 120px;
-  height: auto;
-  max-width: 100%;
-  /* position: absolute;
-  right: 0px;
-  bottom: 0px; */
+    font-size: 1.5em;
+    margin-bottom: 0;
 }
 
 
-.addymotion-post-text
+.addymotion-post-text p
 {
     font-size: 1.2em;
     text-align: justify;

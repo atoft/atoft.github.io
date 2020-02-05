@@ -1,0 +1,140 @@
+.addymotion-marquee
+{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    top:0;
+    height: 650px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-top: 70px;
+}
+
+.addymotion-marquee-overlay
+{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height:650px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:0;
+}
+
+#jumbo-card
+{
+    position: absolute;
+    bottom: 50px;
+    right:0px;
+}
+
+.topImage-container
+{
+    position:relative;
+    height:100%;
+}
+
+.topImage-card
+{
+    float:right;
+    width:auto;
+}
+
+.preloader-wrapper
+{
+    margin-left:auto;
+    margin-right:auto;
+    left:50%;
+    bottom:10%;
+}
+
+
+/* About section */
+#main-avatar
+{
+    margin-top:30px;
+    float:right;
+    max-width:inherit;
+    max-height:auto;
+}
+
+#main-avatar .img
+{
+    max-width:inherit;
+}
+
+/* End about section */
+
+/* Custom project collection */
+#projects
+{
+    min-height:200px;
+}
+
+.collection a
+{
+    color:black;
+}
+
+.collection
+{
+    border:none;
+    margin-top:none;
+    padding-top:none;
+}
+
+.collapsible-header
+{
+    font-size:1.4em;
+    background-color:rgb(255, 255, 255)!important;
+}
+
+.collapsible
+{
+    background-color:rgb(255, 255, 255)!important;
+}
+
+.collection
+{
+    background-color:rgba(0,0,0,0)!important;
+}
+
+.collection-item
+{
+    background-color:rgba(0,0,0,0)!important;
+}
+
+.project-type
+{
+    top:0;
+    padding-top:0;
+    margin-top:0;
+    float:right;
+    color:#4dd0e1;
+}
+
+/* End project collection */
+
+/* Blog featured section */
+.addymotion-speech-bubble
+{
+    border-radius: 30px 30px 10px 30px;
+    background-color: #00bcd4;
+    padding: 15px;
+    color:white;
+    margin-top: 10px;
+
+}
+
+.addymotion-speech-avatar
+{
+    margin-top: -120px;
+    width: 120px;
+    height: auto;
+    max-width: 100%;
+}
+
+/* End blog featured section */
