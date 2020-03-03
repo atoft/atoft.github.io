@@ -210,3 +210,10 @@ h1
     font-size: 1.2em;
     text-align: justify;
 }
+
+#about li
+{
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
