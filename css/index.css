@@ -51,6 +51,10 @@
     bottom:10%;
 }
 
+.topImage-emphasis
+{
+    font-weight:bold;
+}
 
 /* About section */
 #main-avatar
