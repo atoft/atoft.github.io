@@ -15,7 +15,7 @@ I'll try to update this page over time with more things!
 **Useful for:** An introduction to common ways of solving problems in games.  
 **Assuming:** You're somewhat familiar with any C-like language.  
 
-An over-reliance on Design Patterns as a "magic bullet" for engineering problems is 
+An over-reliance on Design Patterns as a "silver bullet" for engineering problems is 
 bad, but rather than prescribed solutions, this book presents examples of useful approaches to problems
  which turn up a lot in games. I've definitely seen (and used) these in the engines I've worked in. 
 
