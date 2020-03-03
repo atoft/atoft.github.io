@@ -24,12 +24,12 @@
     <div id="about" class="container section scrollspy">
       <div class="row">
         <div class="col m6 l8" id="project-content">
-          <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date_to_long_string }}</span>
+          <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date: "%Y-%m-%d" }}</span>
           <div class="addymotion-post-text">
             {{ page.content }}
           </div>
           <div class="divider"></div>
-          <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date_to_long_string }}</span>
+          <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date: "%Y-%m-%d" }}</span>
         </div>
         <div class="col m6 l4">
           <ul>

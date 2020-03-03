@@ -212,7 +212,7 @@ summary: "I'm a games programmer and graduate in Computer Science from the Unive
           <div class="addymotion-speech-bubble">
             <span style="font-weight: bold">{{ site.posts[i].title }}</span> {{ site.posts[i].excerpt | | strip_html | truncate: 80 }}
           </div>
-          <div class="cyan-text text-lighten-2 right-align" style="font-size: 0.8em;">{{ site.posts[i].date | date_to_long_string }}</div>
+          <div class="cyan-text text-lighten-2 right-align" style="font-size: 0.8em;">Posted on {{ site.posts[i].date | date: "%Y-%m-%d" }}</div>
         </a>
         {% endfor %}
       </div>
