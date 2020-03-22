@@ -211,9 +211,17 @@ h1
     text-align: justify;
 }
 
+.addymotion-post-text img
+{
+    max-width: 100%;
+}
+
 #about li
 {
     list-style-type: disc;
     list-style-position: inside;
+    font-size: 1.2em;
+    text-align: justify;
+    margin-left: 1em;
 }
 
