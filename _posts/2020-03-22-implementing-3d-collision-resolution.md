@@ -27,7 +27,7 @@ book. I'll give a quick explanation here.
 The core idea is that for a pair of convex objects, you can be sure they're not colliding if you can see a 
 separation between them when looking at them in any direction.
 
-More concretely, you can perform this test by projecting each of the shapes onto an axis (a line), and checking if 
+More concretely, we can perform this test by projecting each of the shapes onto an axis (a line), and checking if 
 there is a separation between them. They are separated if the distance between the maximum and minimum point on the
 axis is strictly greater than the sum of the lengths of the two projected shapes. The diagram below hopefully
 illustrates this.
@@ -60,15 +60,20 @@ so we need to extend it slightly to compute more information.
 
 It turns out that from the separating axis test, we can use the axis we tested which had the **smallest** 
 overlap, and its overlap distance will be the distance we need to move the objects to resolve the collision.
-Keeping track of the smallest overlap distance, and corresponding axis, while running the tests means you will
+Keeping track of the smallest overlap distance, and corresponding axis, while running the tests means we will
 have this information available at the end.
 
-There are a few details to take care of. For example, you need to establish a convention for which direction your
-chosen axis is pointing (such as towards the first shape of the pair). You might need to flip the chosen axis to
-match your convention, otherwise you'll send your shapes flying off in opposite directions in certain edge
-cases. Some of your tests will also need special cases. For example, when one of the shapes is a triangle, you need 
+There are a few details to take care of. For example, we need to establish a convention for which direction our
+chosen axis is pointing (such as towards the first shape of the pair). We might need to flip the chosen axis to
+match our convention, otherwise we'll send our shapes flying off in opposite directions in certain edge
+cases. Some of our tests also need special cases. For example, when one of the shapes is a triangle, we need 
 a special case for calculating the overlap distance in the direction of the triangle's normal (because the triangle 
 has a thickness of zero in this direction).
+
+We also need to think about what happens when a shape is involved in multiple collisions. Resolving one of the 
+collisions can make another collision worse, and the order of resolution matters. In the case where I am resolving
+collisions with a terrain made of many triangles, I am choosing to only resolve the collision with the greatest
+overlap.
 
 # Implementing detection and resolution
 Writing these tests in code is very error-prone, and small bugs cause wildly incorrect results and are hard to 
