@@ -1,0 +1,37 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  {% include html-head-common.html %}
+</head>
+
+<body class="grey lighten-5">
+<div class="container">
+  <div class="row">
+    <div class="col m12 l10 offset-l1">
+      <div class="card">
+        <div class="card-content">
+          <p style="text-align: center;">
+            {{ page.app }}
+          </p>
+          <span class="card-title grey-text text-darken-4">{{page.title}}</span>
+          {{page.about}}
+        </div>
+        <div class="card-action">
+          {% for project in site.documents reversed %}
+            {% if project.tags contains page.project %}
+              <a href="{{project.url}}">Back to site</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Load scripts last-->
+{% include scripts-common.html %}
+</body>
+</html>
+
