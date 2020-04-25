@@ -32,7 +32,7 @@ title: All posts
                   <div class="card-content">
                 
                     <h3>{{ post.title }}</h3>
-                    {{ post.excerpt }}
+                    <p>{{ post.excerpt | strip_html }}</p>
                     <div class="divider"></div>
                     <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ post.date | date_to_long_string }}</span>
                     </div>
