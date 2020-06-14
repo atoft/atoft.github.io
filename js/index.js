@@ -30,59 +30,6 @@ var topImageHref = [
 
 // ------------------------------------------------------------------------------------------
 
-/* global $ google PxLoader */
-
-// Google maps code
-var cambridge = [52.1999722, 0.1247423]
-var centre = [51.4889381, 0.121708]
-var weymouth = [50.62683, -2.4928438]
-var brighton = [50.8399049, -0.1966856]
-
-function initialize () {
-  var myOptions = {
-    zoom: 8,
-    zoomControl: false,
-    scaleControl: false,
-    scrollwheel: false,
-    disableDoubleClickZoom: true,
-    streetViewControl: false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
-
-  var map = new google.maps.Map(document.getElementById('googlemaps'),
-    myOptions)
-
-  var posCambridge = new google.maps.LatLng(cambridge[0], cambridge[1])
-  var customCentre = new google.maps.LatLng(centre[0], centre[1])
-  var posWeymouth = new google.maps.LatLng(weymouth[0], weymouth[1])
-  var posBrighton = new google.maps.LatLng(brighton[0], brighton[1])
-
-  map.setCenter(customCentre)
-
-  new google.maps.Marker({
-    position: posCambridge,
-    map: map,
-    draggable: false,
-    animation: google.maps.Animation.DROP
-  })
-  new google.maps.Marker({
-    position: posWeymouth,
-    map: map,
-    draggable: false,
-    animation: google.maps.Animation.DROP
-  })
-  new google.maps.Marker({
-    position: posBrighton,
-    map: map,
-    draggable: false,
-    animation: google.maps.Animation.DROP
-  })
-}
-
-google.maps.event.addDomListener(window, 'load', initialize)
-
-// End google maps
-
 var loader = new PxLoader()
 
 // End globals
