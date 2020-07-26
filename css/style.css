@@ -231,6 +231,12 @@ h1
     max-width: 100%;
 }
 
+code
+{
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
 #about li
 {
     list-style-type: disc;
