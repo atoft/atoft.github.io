@@ -5,21 +5,19 @@ img: images/posts/pinephone/pinephone-1-crop.jpg
 project: 
 ---
 
-I've been using GNU/Linux as the main operating system on my desktop (and laptop) for a few years. As a programmer I much prefer it as an operating system, thanks to how natural it is to use the terminal and Unix commands. For everyday use I find it more pleasant than Windows, and the user experience is getting better all the time.
-
-The same has not really been possible on other devices like my phone, but fortunately several projects are working to change that. One example is Pine64's [PinePhone](https://www.pine64.org/pinephone/), a phone aimed at enthusiasts and developers who are working on mobile Linux distributions and apps.
+I've been using GNU/Linux as the main operating system on my desktop (and laptop) for a few years. The same has not really been possible on other devices like my phone, but fortunately several projects are working to change that. One example is Pine64's [PinePhone](https://www.pine64.org/pinephone/), a phone aimed at enthusiasts and developers who are working on mobile Linux distributions and apps.
 
 In this post I'll take a look at my experience using and programming for the PinePhone so far. I'll go into some technical details, but you can skip over them if you just want an idea of what the phone is like.
 
 # The phone
-The PinePhone costs $150, so obviously it doesn't compare to high-end Android devices and iPhones. That said, the build quality is good and it feels like a "real phone". As well as a good, large screen and front and rear cameras, it also has a headphone jack, a removable battery and a MicroSD card slot. Another interesting feature is the hardware switches behind the back case to disable features like the modem and GPS for the privacy-conscious.
+The PinePhone costs $150, so obviously it doesn't compare to high-end Android devices and iPhones. That said, the build quality is good and it feels like a "real phone". As well as a good, large screen and front and rear cameras, it also has a headphone jack, a removable battery and a MicroSD card slot. Another interesting feature is the hardware switches behind the back case to disable features like the modem and cameras for the privacy-conscious.
 
 ![Rear view of the PinePhone, showing the UBports and Pine64 logos.](/images/posts/pinephone/pinephone-2.jpg)
 
 All in all the hardware, while still definitely an early model, is really impressive.
 
 # Getting started with Ubuntu Touch
-The version of the phone I bought came pre-installed with an operating system called [Ubuntu Touch](https://ubports.com/), from the UBports team. It has a fairly polished graphical user interface, a good web browser, and an app store, and a few basic apps installed. These apps are generally designed specifically for the OS, so they work properly on a mobile screen, but they vary a bit in how polished they are.
+The version of the phone I bought came pre-installed with an operating system called [Ubuntu Touch](https://ubports.com/), from the UBports team. It has a slick graphical user interface, a good web browser, an app store, and a few basic apps installed. These apps are generally designed specifically for the OS, so they work properly on a mobile screen, but they vary a bit in how polished they are.
 
 Like all the operating systems that are available, it's still early days on the device, so some things needed improvement (battery life) and others (camera) didn't work at all.
 
@@ -89,3 +87,4 @@ It should be pretty clear from the post that "Linux on mobile" is not ready for 
 
 I'm still holding on to my Android phone for now. I'm really excited to see how the experience improves and I hope it won't be too long before I can switch over to the PinePhone for everyday use. In the meantime I hope to keep using it to learn more about Linux tools, and programming with new languages and libraries. I'd also like to work on a more useful app that might more helpful for Linux phone users.
 
+If you have questions or comments (or spot something I got wrong!) you can [contact me](/#contact).
