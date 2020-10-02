@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include html-head-common.html %}
+    <link type="text/css" rel="stylesheet" href="/css/all-posts.css"  media="screen,projection"/>
+  </head>
+
+  <body style="blue-grey lighten-5">
+    {% include header.html active = "posts" %}
+
+    <div class="container addymotion-top-container">
+      <h1>All posts</h1>
+      <p>These are all the blog posts ever. Some posts have been archived from other sources.</p>
+      <div class="divider"></div>
+    </div>
+
+  {% include footer.html %}
+
+  <!--Load scripts last-->
+  {% include scripts-common.html %}
+</body>
+</html>

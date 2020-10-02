@@ -56,12 +56,25 @@
     font-weight:bold;
 }
 
+.addymotion-title-splash {
+  background-position: center;
+  background-color: #b2ebf2ff;
+  background-image: url("/images/home/logos.svg");
+  background-repeat: repeat;
+  top:0;
+  min-height: 460px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-top: 80px;
+}
+
 /* About section */
 #main-avatar
 {
     margin-top:30px;
     float:right;
-    max-width:inherit;
+    max-width:100%;
     max-height:auto;
 }
 
@@ -71,6 +84,15 @@
 }
 
 /* End about section */
+
+/* Launchpad */
+/* A card containing the preview of a blog post. */
+.addymotion-launchpad-card
+{
+    height: 500px;
+}
+
+/* End launchpad */
 
 /* Custom project collection */
 #projects

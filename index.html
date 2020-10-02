@@ -38,174 +38,32 @@ summary: "I'm a games programmer and graduate in Computer Science from the Unive
   <!--End top navbar-->
 
   <!--Featured image area-->
-  <div class="addymotion-marquee section scrollspy" id="top">
-    <div class="addymotion-marquee-overlay" id="top-overlay"></div>
+  <div class="addymotion-title-splash section scrollspy" id="top">
     <div class="container topImage-container">
-      <h1 class="left-align white-text addymotion-heading"><span class="addymotion-heading-text">Alastair Toft</span></h1>
-      <h2 class="left-align white-text addymotion-heading"><span class="addymotion-heading-text">Games Programmer</span></h2>
-
-      <div id="spinner" class="preloader-wrapper big active">
-        {% include spinner.html %}
+      <div class="row">
+	<div class="col m8">
+	  <h1 class="left-align white-text addymotion-heading"><span class="addymotion-heading-text">Alastair Toft</span></h1>
+	  <h2 class="left-align white-text addymotion-heading"><span class="addymotion-heading-text">Games Programmer</span></h2>
+	</div>
+	<div class="col m4">
+	  <img src="images/home/avatar_2020.jpg" alt="" class="circle" id="main-avatar">
+	</div>
       </div>
-
-      <a id="jumbo-card">
-        <div id="caption" class="card cyan darken-1 topImage-card" style="display:none;">
-          <div class="card-content white-text">
-            <div class="results">
-              <!--Image caption is inseted here-->
-            </div>
-
-          </div>
-        </div>
-      </a>
     </div>
   </div>
   <!--End featured-->
 
   <!--About-->
   <div id="about" class="container section scrollspy">
+    <a name="about"><h2 class="left-align cyan-text text-darken-1">About Me</h2>  </a>
     <div class="row">
-      <div class="col s12 m4 l6">
-        <a name="about"><h2 class="left-align cyan-text text-darken-1">About Me</h2>  </a>
+      <div class="col s12 l8">
         <h5>Hi, I&apos;m Alastair. I make things with computers!</h5>
         <p>I&apos;m a graduate in Computer Science from the University of Cambridge, and I work as a programmer at <a href="http://www.studiogobo.com" target="_blank">Studio Gobo</a>.
         </p>
         <p>This is my personal website where you can find some of my projects past and present, including programming, games and level design. This is also the place to get in touch with me, or check out my blog.</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <div class="divider"></div>
-        <p><a href="#contact">Contact me</a> for a copy of my CV.</p>
-        <div class="divider"></div>
       </div>
-      <div class="col s12 m8 l6">
-        <img src="images/home/avatar_gamegig.jpg" alt="" class="circle" id="main-avatar">
-      </div>
-    </div>
-  </div>
-  <!--End about-->
-
-  <!--Projects section-->
-  <div id="projects" class="addymotion-fixed-bg section scrollspy" style="padding-top:100px; padding-bottom:190px">
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m6 offset-m6">
-          <div id="blog-panel" class="card-panel">
-            <div class="card-content">
-              <a name="projects"><h2 class="left-align cyan-text text-darken-1" style="margin-bottom:none;">Projects</h2></a>
-              <p>These are a few of the things I've worked on recently, grouped roughly into categories. Professional work and personal projets are listed here.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <ul class="collapsible" data-collapsible="accordion">
-              <li>
-                <div class="collapsible-header waves-effect"><i class="material-icons">code</i>Programming</div>
-                <div class="collapsible-body">
-                  <ul class="collection">
-        
-                    {% for proj in site.code reversed %}
-                    <a href="{{proj.url}}">
-                      <li class="collection-item avatar">
-                        <img src="/{{proj.thumb}}" alt="" class="circle">
-                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                        <span class="title">{{proj.title}}</span>
-                        <br>{{proj.summary}}
-                      </li>
-                    </a>
-        
-                    <div class="divider"></div>
-                    {% endfor %}
-        
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header waves-effect"><i class="material-icons">games</i>Level Design</div>
-                <div class="collapsible-body">
-                  <ul class="collection">
-        
-                    {% for proj in site.maps reversed %}
-                    <a href="{{proj.url}}">
-                      <li class="collection-item avatar">
-                        <img src="/{{proj.thumb}}" alt="" class="circle">
-                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                        <span class="title">{{proj.title}}</span>
-                        <br>{{proj.summary}}
-                      </li>
-                    </a>
-        
-                    <div class="divider"></div>
-                    {% endfor %}
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header waves-effect"><i class="material-icons">http</i>Web Design</div>
-                <div class="collapsible-body">
-                  <ul class="collection">
-        
-                    {% for proj in site.web reversed %}
-                    <a href="{{proj.url}}">
-                      <li class="collection-item avatar">
-                        <img src="/{{proj.thumb}}" alt="" class="circle">
-                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                        <span class="title">{{proj.title}}</span>
-                        <br>{{proj.summary}}
-                      </li>
-                    </a>
-        
-                    <div class="divider"></div>
-                    {% endfor %}
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="collapsible-header waves-effect"><i class="material-icons">subject</i>Other Projects</div>
-                <div class="collapsible-body">
-                  <ul class="collection">
-        
-                    {% for proj in site.misc reversed %}
-                    <a href="{{proj.url}}">
-                      <li class="collection-item avatar">
-                        <img src="/{{proj.thumb}}" alt="" class="circle">
-                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}}| {%endif%} {{proj.year}}</span>
-                        <span class="title">{{proj.title}}</span>
-                        <br>{{proj.summary}}
-                      </li>
-                    </a>
-        
-                    <div class="divider"></div>
-                    {% endfor %}
-                  </ul>
-                </div>
-              </li>
-        
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>   
-  </div>
-  <!--End project section-->
-
-  <!--Posts-->
-  <div id="posts" class="container section scrollspy">
-    <a name="posts"><h2 class="left-align cyan-text text-darken-1">Blog posts</h2></a>
-    <div class="row">
-      <div class="col s12 l6">
-        <p>
-          Occasionally I feel the need to write some words about things. Here's where you can find all the blog posts I've written on various different topics.
-        </p>
-        <a class="waves-effect waves-light btn cyan darken-1" href="/posts/">All posts</a>
-        &nbsp;
-        <a class="waves-effect waves-light btn orange darken-1" href="/feed.xml"><i class="material-icons left">rss_feed</i>RSS</a>
-      </div>
-      <div class="col s8 l4">
+      <div class="col s12 l4">
         <h5>Latest posts</h5>
         {% for i in (0..2) %}
         <a href="{{ site.posts[i].url }}">
@@ -216,47 +74,62 @@ summary: "I'm a games programmer and graduate in Computer Science from the Unive
         </a>
         {% endfor %}
       </div>
-      
     </div>
-    <div class="row">
-      <div class="col s4 l2 offset-s8 offset-l10">
-            <img src="images/home/avatar_gamegig.jpg" alt="" class="circle addymotion-speech-avatar">
-    </div>
-    </div>
+    <div class="divider"></div>
   </div>
-  <!--End posts-->
+  <!--End about-->
 
-  <!--Contact section-->
-  <div id="contact" class="addymotion-fixed-contacts section scrollspy" style="padding-top:100px; padding-bottom:50px">
-    <div class="container" style="z-index:1;position:relative;pointer-events: none;">
-      <div class="row">
-        <div class="col s12 m6 offset-m6 l4 offset-l8" style="z-index:1;">
-          <div id="blog-panel" class="card-panel" style="z-index:1;pointer-events: auto;">
-            <!--Rename this-->
-            <div class="card-content">
-              <a name="blog"><h2 class="left-align cyan-text text-darken-1">Contact</h2></a>
-              <p>You can reach me at the links below:</p>
-              <p>
-                <a href="mailto:hello@addymotion.com">
-                  <i class="tiny material-icons">email</i> Email
-                </a>
-              </p>
-              <p>
-                <a href="https://linkedin.com/in/alastairtoft">
-                  <img src="images/icons/linkedin-tiny.png"> LinkedIn
-                </a>
-              </p>
-              <p><a rel="me" href="https://mastodon.gamedev.place/@alastair">
-                  <img src="images/icons/mastodon-tiny.svg"> Mastodon
-                </a>
-              </p>
+  <div id="launchpad" class="container section scrollspy">
+    <a name="launchpad"><h2 class="left-align cyan-text text-darken-1">Where To?</h2>  </a>
+    <div class="row">
+      <div class="col s12 l4">
+	<a href="/resume/">
+	  <div class="card addymotion-launchpad-card">
+            <div class="card-image">
+	      <img src="/images/code/banner_hyperscape.jpg">
+	    </div>
+	    <div class="card-content">
+              <h3>Resume</h3>
+              <p>Professional work and eduction.</p>
             </div>
           </div>
-        </div>
+	</a>
       </div>
+      <div class="col s12 l4">
+	<a href="/projects/">
+	<div class="card addymotion-launchpad-card">
+          <div class="card-image">
+	    <img src="/images/code/banner_diss.jpg">
+	  </div>
+	  <div class="card-content">
+            <h3>Projects</h3>
+            <p>
+	      Here's some things I've worked on, past and present. Code projects, level design,
+	      and terrible Flash games from the late 2000s.
+	    </p>
+          </div>
+        </div>
+	</a>
+      </div>
+      <div class="col s12 l4">
+	<a href="/posts/">
+	<div class="card addymotion-launchpad-card">
+          <div class="card-image">
+	    <img src="/images/posts/pinephone/pinephone-1.jpg">
+	  </div>
+	  <div class="card-content">
+            <h3>Posts</h3>
+            <p>
+	      Occasionally I feel the need to write some words about things. Here's where you
+	      can find all the blog posts I've written on various different topics. 
+	    </p>
+          </div>
+        </div>
+	</a>
+      </div>
+      
     </div>
   </div>
-  <!--End contact section-->
 
   <!--Footer-->
   {% include footer.html %}
@@ -265,7 +138,7 @@ summary: "I'm a games programmer and graduate in Computer Science from the Unive
   {% include scripts-common.html %}
   <script type="text/javascript" src="js/PxLoader.js"></script>
   <script type="text/javascript" src="js/PxLoaderImage.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
+  <!--<script type="text/javascript" src="js/index.js"></script>-->
 </body>
 
 </html>
