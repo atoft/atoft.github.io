@@ -11,9 +11,9 @@ collections:
   misc:
     output: true
     permalink: /projects/misc/:path/
-  about:
+  resume:
     output: true
-    permalink: /about/:path/
+    permalink: /resume/:path/
 
 permalink: /posts/:categories/:year/:month/:day/:title/
 paginate: 4

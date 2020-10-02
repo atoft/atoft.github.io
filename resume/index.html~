@@ -1,0 +1,118 @@
+---
+title: Projects
+
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include html-head-common.html %}
+    <link type="text/css" rel="stylesheet" href="/css/all-posts.css"  media="screen,projection"/>
+  </head>
+
+  <body style="blue-grey lighten-5">
+    {% include header.html active = "posts" %}
+
+    <div class="container addymotion-top-container">
+      <h1>Projects</h1>
+      <p>
+	These are a few of the things I've worked on recently, grouped roughly into categories. Professional work and personal projets are listed here.
+      </p>
+      <div class="divider"></div>
+
+      <div class="row">
+          <div class="col s12">
+            <ul class="collapsible" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header waves-effect"><i class="material-icons">code</i>Programming</div>
+                <div class="collapsible-body">
+                  <ul class="collection">
+        
+                    {% for proj in site.code reversed %}
+                    <a href="{{proj.url}}">
+                      <li class="collection-item avatar">
+                        <img src="/{{proj.thumb}}" alt="" class="circle">
+                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                        <span class="title">{{proj.title}}</span>
+                        <br>{{proj.summary}}
+                      </li>
+                    </a>
+        
+                    <div class="divider"></div>
+                    {% endfor %}
+        
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header waves-effect"><i class="material-icons">games</i>Level Design</div>
+                <div class="collapsible-body">
+                  <ul class="collection">
+        
+                    {% for proj in site.maps reversed %}
+                    <a href="{{proj.url}}">
+                      <li class="collection-item avatar">
+                        <img src="/{{proj.thumb}}" alt="" class="circle">
+                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                        <span class="title">{{proj.title}}</span>
+                        <br>{{proj.summary}}
+                      </li>
+                    </a>
+        
+                    <div class="divider"></div>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header waves-effect"><i class="material-icons">http</i>Web Design</div>
+                <div class="collapsible-body">
+                  <ul class="collection">
+        
+                    {% for proj in site.web reversed %}
+                    <a href="{{proj.url}}">
+                      <li class="collection-item avatar">
+                        <img src="/{{proj.thumb}}" alt="" class="circle">
+                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                        <span class="title">{{proj.title}}</span>
+                        <br>{{proj.summary}}
+                      </li>
+                    </a>
+        
+                    <div class="divider"></div>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header waves-effect"><i class="material-icons">subject</i>Other Projects</div>
+                <div class="collapsible-body">
+                  <ul class="collection">
+        
+                    {% for proj in site.misc reversed %}
+                    <a href="{{proj.url}}">
+                      <li class="collection-item avatar">
+                        <img src="/{{proj.thumb}}" alt="" class="circle">
+                        <span class="project-type">{% if proj.metadata != null %} {{proj.metadata}}| {%endif%} {{proj.year}}</span>
+                        <span class="title">{{proj.title}}</span>
+                        <br>{{proj.summary}}
+                      </li>
+                    </a>
+        
+                    <div class="divider"></div>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </li>
+        
+            </ul>
+          </div>
+      </div>
+    </div>
+
+  {% include footer.html %}
+
+  <!--Load scripts last-->
+  {% include scripts-common.html %}
+</body>
+</html>
