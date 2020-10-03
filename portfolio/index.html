@@ -1,5 +1,5 @@
 ---
-title: Projects
+title: Portfolio
 
 ---
 
@@ -11,10 +11,10 @@ title: Projects
   </head>
 
   <body style="blue-grey lighten-5">
-    {% include header.html active = "posts" %}
+    {% include header.html active = "portfolio" %}
 
     <div class="container addymotion-top-container">
-      <h1>Resume</h1>
+      <h1>Portfolio</h1>
       <p>
 	Hi, I'm Alastair Toft. I'm a programmer based in the UK. I've worked in the games industry for over
 	three years, at Studio Gobo in Brighton. My current role mainly involves gameplay programming, but
@@ -28,7 +28,7 @@ title: Projects
       <div class="row">
           <div class="col s12">
             <ul>
-                    {% for proj in site.resume reversed %}
+                    {% for proj in site.portfolio reversed %}
                     <a href="{{proj.url}}">
                       <li class="">
                         <img src="/{{proj.thumb}}" alt="" class="circle">

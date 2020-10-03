@@ -14,27 +14,7 @@ summary: "I'm a games programmer and graduate in Computer Science from the Unive
 
 <body>
   <!--Top navbar-->
-  <div class="addymotion-navbar-fixed">
-    <nav class="cyan">
-      <div class="nav-wrapper container">
-        <a href="#top" class="brand-logo right addymotion-title">Alastair Toft</a>
-        <a href="#" data-activates="mobile-drawer" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="addymotion-table-of-contents left hide-on-med-and-down ">
-          <li class="waves-effect"><a href="#top">Home</a></li>
-          <li class="waves-effect"><a href="#about">About</a></li>
-          <li class="waves-effect"><a href="#projects">Projects</a></li>
-          <li class="waves-effect"><a href="#posts">Posts</a></li>
-          <li class="waves-effect"><a href="#contact">Contact</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-drawer" style="z-index: 1000;">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#posts">Posts</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+  {% include header.html active = "home" %}
   <!--End top navbar-->
 
   <!--Featured image area-->
