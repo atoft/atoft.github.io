@@ -41,11 +41,11 @@ summary: "I'm a games programmer and graduate in Computer Science from the Unive
   <div class="addymotion-title-splash section scrollspy" id="top">
     <div class="container topImage-container">
       <div class="row">
-	<div class="col m8">
+	<div class="col m8 s12">
 	  <h1 class="left-align white-text addymotion-heading"><span class="addymotion-heading-text">Alastair Toft</span></h1>
 	  <h2 class="left-align white-text addymotion-heading"><span class="addymotion-heading-text">Games Programmer</span></h2>
 	</div>
-	<div class="col m4">
+	<div class="col m4 s6 offset-s6">
 	  <img src="images/home/avatar_2020.jpg" alt="" class="circle" id="main-avatar">
 	</div>
       </div>
@@ -67,7 +67,7 @@ summary: "I'm a games programmer and graduate in Computer Science from the Unive
         <h5>Latest posts</h5>
         {% for i in (0..2) %}
         <a href="{{ site.posts[i].url }}">
-          <div class="addymotion-speech-bubble">
+          <div class="addymotion-speech-bubble z-depth-1">
             <span style="font-weight: bold">{{ site.posts[i].title }}</span> {{ site.posts[i].excerpt | strip_html | truncate: 80 }}
           </div>
           <div class="cyan-text text-lighten-2 right-align" style="font-size: 0.8em;">Posted on {{ site.posts[i].date | date: "%Y-%m-%d" }}</div>
@@ -89,7 +89,7 @@ summary: "I'm a games programmer and graduate in Computer Science from the Unive
 	      <img src="/images/code/banner_hyperscape.jpg">
 	    </div>
 	    <div class="card-content">
-              <h3>Resume</h3>
+              <h3>Portfolio</h3>
               <p>Professional work and eduction.</p>
             </div>
           </div>
@@ -136,9 +136,6 @@ summary: "I'm a games programmer and graduate in Computer Science from the Unive
 
   <!--Load scripts last-->
   {% include scripts-common.html %}
-  <script type="text/javascript" src="js/PxLoader.js"></script>
-  <script type="text/javascript" src="js/PxLoaderImage.js"></script>
-  <!--<script type="text/javascript" src="js/index.js"></script>-->
 </body>
 
 </html>

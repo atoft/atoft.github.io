@@ -246,3 +246,12 @@ code
     margin-left: 1em;
 }
 
+.btn-floating
+{
+    margin: 20px;
+}
+
+.btn-floating img
+{
+    padding-top: 15px;
+}

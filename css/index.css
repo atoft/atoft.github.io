@@ -1,62 +1,11 @@
-.addymotion-marquee
-{
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    top:0;
-    height: 650px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    padding-top: 70px;
-}
-
-.addymotion-marquee-overlay
-{
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    width:100%;
-    height:650px;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top:0;
-}
-
-#jumbo-card
-{
-    position: absolute;
-    bottom: 50px;
-    right:0px;
-}
-
 .topImage-container
 {
     position:relative;
     height:100%;
 }
 
-.topImage-card
+.addymotion-title-splash
 {
-    float:right;
-    width:auto;
-}
-
-.preloader-wrapper
-{
-    margin-left:auto;
-    margin-right:auto;
-    left:50%;
-    bottom:10%;
-}
-
-.topImage-emphasis
-{
-    font-weight:bold;
-}
-
-.addymotion-title-splash {
   background-position: center;
   background-color: #b2ebf2ff;
   background-image: url("/images/home/logos.svg");
@@ -67,20 +16,21 @@
   padding: 0;
   margin: 0;
   padding-top: 80px;
+  padding-bottom: 20px;
 }
 
 /* About section */
 #main-avatar
 {
-    margin-top:30px;
-    float:right;
-    max-width:100%;
-    max-height:auto;
+    margin-top: 30px;
+    float: right;
+    max-width: 100%;
+    max-height: auto;
 }
 
 #main-avatar .img
 {
-    max-width:inherit;
+    max-width: inherit;
 }
 
 /* End about section */
@@ -89,7 +39,18 @@
 /* A card containing the preview of a blog post. */
 .addymotion-launchpad-card
 {
-    height: 500px;
+    min-height: 450px;
+}
+
+#launchpad a
+{
+    color: black;
+}
+
+.addymotion-launchpad-card h3
+{
+    color: #00acc1;
+    margin-top: 0;
 }
 
 /* End launchpad */
