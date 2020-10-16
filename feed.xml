@@ -3,13 +3,14 @@ layout: null
 ---
 
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
     <channel>
         <title>{{ site.title }}</title>
         <link>{{ site.url }}</link>
         <description>{{ site.description }}</description>
         <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+	<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
         {% for post in site.posts %}
         <item>
             <title>{{ post.title }}</title>
@@ -17,7 +18,7 @@ layout: null
                 {{ post.url | prepend: site.url }}
             </link>
             <description>
-                {{ post.content | escape | truncate: '400' }}
+                {{ post.content | strip_html | escape | truncate: '400' }}
             </description>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
             <guid>
