@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6
+{
+    color: #00acc1;
+}
 
 
 .addymotion-resume-meta
@@ -7,4 +11,13 @@
     margin-top:0;
     float:right;
     color:#4dd0e1;
+}
+
+@media only screen and (max-width : 600px) 
+{
+    .addymotion-resume-meta
+    {
+	float:none;
+	display:block;
+    }
 }

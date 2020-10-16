@@ -55,56 +55,6 @@
 
 /* End launchpad */
 
-/* Custom project collection */
-#projects
-{
-    min-height:200px;
-}
-
-.collection a
-{
-    color:black;
-}
-
-.collection
-{
-    border:none;
-    margin-top:none;
-    padding-top:none;
-}
-
-.collapsible-header
-{
-    font-size:1.4em;
-    background-color:rgb(255, 255, 255)!important;
-}
-
-.collapsible
-{
-    background-color:rgb(255, 255, 255)!important;
-}
-
-.collection
-{
-    background-color:rgba(0,0,0,0)!important;
-}
-
-.collection-item
-{
-    background-color:rgba(0,0,0,0)!important;
-}
-
-.project-type
-{
-    top:0;
-    padding-top:0;
-    margin-top:0;
-    float:right;
-    color:#4dd0e1;
-}
-
-/* End project collection */
-
 /* Blog featured section */
 .addymotion-speech-bubble
 {

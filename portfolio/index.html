@@ -26,20 +26,21 @@ title: Portfolio
       <div class="divider"></div>
 
       <div class="row">
-          <div class="col s12">
-            <ul>
+        <div class="col s12">
+	  
+            <div class="collection">
                     {% for proj in site.portfolio reversed %}
-                    <a href="{{proj.url}}">
-                      <li class="">
+                    <a class="collection-item avatar black-text" href="{{proj.url}}">
+                    
                         <img src="/{{proj.thumb}}" alt="" class="circle">
                         <span class="addymotion-resume-meta">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
                         <span class="title">{{proj.title}}</span>
                         <br>{{proj.summary}}
-                      </li>
+                    
                     </a>
                     {% endfor %}
         
-                  </ul>
+                  </div>
           </div>
       </div>
     </div>
