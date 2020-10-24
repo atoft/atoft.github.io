@@ -12,38 +12,39 @@ title: Portfolio
 
   <body style="blue-grey lighten-5">
     {% include header.html active = "portfolio" %}
-
-    <div class="container addymotion-top-container">
-      <h1>Portfolio</h1>
-      <p>
-	Hi, I'm Alastair Toft. I'm a programmer based in the UK. I've worked in the games industry for over
-	three years, at Studio Gobo in Brighton. My current role mainly involves gameplay programming, but
-	I also have interests in real-time graphics and game engine architecture.
-      </p>
-      <p>
-        I graduated from the University of Cambridge in 2017 with a BA  in Computer Science.
-      </p>
-      <div class="divider"></div>
-
-      <div class="row">
-        <div class="col s12">
-	  
+    <main>
+      <div class="container addymotion-top-container">
+        <h1>Portfolio</h1>
+        <p>
+          Hi, I'm Alastair Toft. I'm a programmer based in the UK. I've worked in the games industry for over
+          three years, at Studio Gobo in Brighton. My current role mainly involves gameplay programming, but
+          I also have interests in real-time graphics and game engine architecture.
+        </p>
+        <p>
+          I graduated from the University of Cambridge in 2017 with a BA  in Computer Science.
+        </p>
+        <div class="divider"></div>
+      
+        <div class="row">
+          <div class="col s12">
+      	  
             <div class="collection">
-                    {% for proj in site.portfolio reversed %}
-                    <a class="collection-item avatar black-text" href="{{proj.url}}">
-                    
-                        <img src="/{{proj.thumb}}" alt="" class="circle">
-                        <span class="addymotion-resume-meta">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
-                        <span class="title">{{proj.title}}</span>
-                        <br>{{proj.summary}}
-                    
-                    </a>
-                    {% endfor %}
-        
-                  </div>
+              {% for proj in site.portfolio reversed %}
+              <a class="collection-item avatar black-text" href="{{proj.url}}">
+                      
+                <img src="/{{proj.thumb}}" alt="" class="circle">
+                <span class="addymotion-resume-meta">{% if proj.metadata != null %} {{proj.metadata}} | {%endif%} {{proj.year}}</span>
+                <span class="title">{{proj.title}}</span>
+                <br>{{proj.summary}}
+                     
+              </a>
+             {% endfor %}
+          
+             </div>
           </div>
+        </div>
       </div>
-    </div>
+    </main>
 
   {% include footer.html %}
 

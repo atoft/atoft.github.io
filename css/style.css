@@ -6,6 +6,18 @@ html
     background-attachment: fixed;
 }
 
+body
+{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main
+{
+    flex: 1 0 auto;
+}
+
 h1, h2, h3, h4, h5, h6
 {
     color: #00acc1;
@@ -201,7 +213,7 @@ h1
 
 /* A container which is right at the top of the page and needs to avoid the navbar. */
 .addymotion-top-container {
-  margin-top: 70px;
+  margin-top: 90px;
 }
 
 

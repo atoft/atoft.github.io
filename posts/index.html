@@ -12,16 +12,16 @@ title: All posts
 
   <body style="blue-grey lighten-5">
     {% include header.html active = "posts" %}
-
-    <div class="container addymotion-top-container">
-      <h1>All posts</h1>
-      <p>These are all the blog posts ever. Some posts have been archived from other sources.</p>
-      <div class="divider"></div>
-    </div>
-
-    <!--Begin post list-->
-    <div class="container">
-
+    <main>  
+      <div class="container addymotion-top-container">
+        <h1>All posts</h1>
+        <p>These are all the blog posts ever. Some posts have been archived from other sources.</p>
+        <div class="divider"></div>
+      </div>
+      
+      <!--Begin post list-->
+      <div class="container">
+    
         {% for post in paginator.posts %}
         <a href="{{post.url}}" style="color: black;">
           <div class="card-panel addymotion-post-card" style="background-image: url(/{{post.img}});">
@@ -43,8 +43,8 @@ title: All posts
             </div>
           </a>
         {% endfor %}
-
-
+    
+    
       <!-- Pagination links -->
       {% if paginator.total_pages > 1 %}
       <div class="row">
@@ -54,7 +54,7 @@ title: All posts
         {% else %}
           <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
         {% endif %}
-
+    
         {% for page in (1..paginator.total_pages) %}
           {% if page == paginator.page %}
           <a href="#!" class="active"><li class="active cyan darken-3">{{ page }}</li></a>
@@ -64,7 +64,7 @@ title: All posts
           <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}"><li class="waves-effect">{{ page }}</li></a>
           {% endif %}
         {% endfor %}
-
+    
         {% if paginator.next_page %}
         <li class="waves-effect"><a href="{{ paginator.next_page_path | relative_url }}"><i class="material-icons">chevron_right</i></a></li>
         {% else %}
@@ -75,7 +75,7 @@ title: All posts
       {% endif %}
     </div>
     <!--End post list-->
-
+  </main>
   {% include footer.html %}
 
   <!--Load scripts last-->

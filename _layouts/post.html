@@ -10,44 +10,45 @@
   <body>
     {% include header.html active = "posts" %}
 
-    <!--Parallax title area-->
-
-    <div class="addymotion-proj-banner section scrollspy" id="top" style="background-color: #b2ebf2ff; background-image:url(/{{page.img}}); {% if page.img == null %} height:300px;{% endif %}">
-      <div class="addymotion-proj-h-container container">
-        <h2 class="left-align white-text addymotion-post-heading"><span class="addymotion-heading-text">{{ page.title }}</span></h2>
+    <main>
+      <!--Parallax title area-->
+      <div class="addymotion-proj-banner section scrollspy" id="top" style="background-color: #b2ebf2ff; background-image:url(/{{page.img}}); {% if page.img == null %} height:300px;{% endif %}">
+        <div class="addymotion-proj-h-container container">
+          <h2 class="left-align white-text addymotion-post-heading"><span class="addymotion-heading-text">{{ page.title }}</span></h2>
+        </div>
       </div>
-    </div>
-
-    <!--End parallax-->
-
-    <!--Begin about-->
-    <div id="about" class="container section scrollspy">
-      <div class="row">
-        <div class="col m6 l8" id="project-content">
-          <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date: "%Y-%m-%d" }}</span>
-          <div class="addymotion-post-text">
-            {{ page.content }}
+      
+      <!--End parallax-->
+      
+      <!--Begin about-->
+      <div id="about" class="container section scrollspy">
+        <div class="row">
+          <div class="col m6 l8" id="project-content">
+            <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date: "%Y-%m-%d" }}</span>
+            <div class="addymotion-post-text">
+              {{ page.content }}
+            </div>
+            <div class="divider"></div>
+            <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date: "%Y-%m-%d" }}</span>
           </div>
-          <div class="divider"></div>
-          <span style="font-style: italic;" class="cyan-text text-lighten-2">Posted on {{ page.date | date: "%Y-%m-%d" }}</span>
-        </div>
-        <div class="col m6 l4">
-          <ul>
-            {% capture relatedProjects %}
-              {% for project in site.documents reversed %}
-                {% if project.tags contains page.project %}
-                  <li><a href="{{project.url}}">{{ project.title }}</a></li>
-                {% endif %}
-              {% endfor %}
-            {% endcapture %}
-            {% if relatedProjects contains "a href" %}
-              <h5>Related projects</h5>
-              {{ relatedProjects }}
-            {% endif %}
-        </ul>
+          <div class="col m6 l4">
+            <ul>
+              {% capture relatedProjects %}
+                {% for project in site.documents reversed %}
+                  {% if project.tags contains page.project %}
+                    <li><a href="{{project.url}}">{{ project.title }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              {% endcapture %}
+              {% if relatedProjects contains "a href" %}
+                <h5>Related projects</h5>
+                {{ relatedProjects }}
+              {% endif %}
+          </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
     <!--End about-->
 
     {% include footer.html %}

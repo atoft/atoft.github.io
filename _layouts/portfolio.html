@@ -11,45 +11,46 @@
     {% comment %} For now this template is identical to "project" but this might change later. {% endcomment %}
     {% include header.html active = "portfolio" %}
 
-    <!--Parallax title area-->
-
-    <div class="addymotion-proj-banner section scrollspy" id="top" style="background-color: #b2ebf2ff; background-image:url(/{{page.img}}); {% if page.img == null %} height:300px;{% endif %}">
-      <div class="addymotion-proj-h-container container">
-        <h2 class="left-align white-text addymotion-proj-heading"><span class="addymotion-heading-text"> {{ page.title }} </span></h2>
-        <h5 class="left-align white-text addymotion-proj-subheading"><span class="addymotion-heading-text"> {% if page.metadata != null %} {{ page.metadata }} | {% endif %}{{page.year}} </span></h5>
-      </div>
-    </div>
-
-    <!--End parallax-->
-
-    <!--Begin about-->
-    <div id="about" class="container section scrollspy">
-      <div class="row">
-        <div class="col m6" id="project-content">
-          <h5>About</h5>
-            {{ page.about }}
-            <div class="divider"></div>
-            {{ page.more }}
-        </div>
-        <div class="col m6">
-          <h5>Links</h5>
-            {{ page.links }}
-          <ul>
-          {% capture relatedPosts %}
-            {% for post in site.posts %}
-              {% if page.tags contains post.project %}
-                <li><a href="{{post.url}}">{{ post.title }}</a></li>
-              {% endif %}
-            {% endfor %}
-          {% endcapture %}
-          {% if relatedPosts contains "a href" %}
-            <h5>Related posts</h5>
-            {{ relatedPosts }}
-          {% endif %}
-          </ul>
+    <main>
+      <!--Parallax title area-->
+      <div class="addymotion-proj-banner section scrollspy" id="top" style="background-color: #b2ebf2ff; background-image:url(/{{page.img}}); {% if page.img == null %} height:300px;{% endif %}">
+        <div class="addymotion-proj-h-container container">
+          <h2 class="left-align white-text addymotion-proj-heading"><span class="addymotion-heading-text"> {{ page.title }} </span></h2>
+          <h5 class="left-align white-text addymotion-proj-subheading"><span class="addymotion-heading-text"> {% if page.metadata != null %} {{ page.metadata }} | {% endif %}{{page.year}} </span></h5>
         </div>
       </div>
-    </div>
+      
+      <!--End parallax-->
+      
+      <!--Begin about-->
+      <div id="about" class="container section scrollspy">
+        <div class="row">
+          <div class="col m6" id="project-content">
+            <h5>About</h5>
+              {{ page.about }}
+              <div class="divider"></div>
+              {{ page.more }}
+          </div>
+          <div class="col m6">
+            <h5>Links</h5>
+              {{ page.links }}
+            <ul>
+            {% capture relatedPosts %}
+              {% for post in site.posts %}
+                {% if page.tags contains post.project %}
+                  <li><a href="{{post.url}}">{{ post.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            {% endcapture %}
+            {% if relatedPosts contains "a href" %}
+              <h5>Related posts</h5>
+              {{ relatedPosts }}
+            {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
     <!--End about-->
 
     {% include footer.html %}
