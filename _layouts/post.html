@@ -44,6 +44,17 @@
                 <h5>Related projects</h5>
                 {{ relatedProjects }}
               {% endif %}
+              {% capture relatedPosts %}
+                {% for otherPost in site.posts %}
+                  {% if otherPost.project == page.project and otherPost != page %}
+                    <li><a href="{{otherPost.url}}">{{ otherPost.title }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              {% endcapture %}
+              {% if relatedPosts contains "a href" %}
+                <h5>Related posts</h5>
+                {{ relatedPosts }}
+              {% endif %}
           </ul>
           </div>
         </div>
