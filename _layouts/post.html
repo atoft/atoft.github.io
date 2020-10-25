@@ -45,11 +45,13 @@
                 {{ relatedProjects }}
               {% endif %}
               {% capture relatedPosts %}
-                {% for otherPost in site.posts %}
-                  {% if otherPost.project == page.project and otherPost != page %}
-                    <li><a href="{{otherPost.url}}">{{ otherPost.title }}</a></li>
-                  {% endif %}
-                {% endfor %}
+                {% if page.project != nil %}
+                  {% for otherPost in site.posts %}
+                    {% if otherPost.project == page.project and otherPost != page %}
+                      <li><a href="{{otherPost.url}}">{{ otherPost.title }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}  
               {% endcapture %}
               {% if relatedPosts contains "a href" %}
                 <h5>Related posts</h5>
