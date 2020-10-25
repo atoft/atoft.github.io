@@ -2,7 +2,6 @@
 layout: post
 title: Graduating from Cambridge
 img: images/posts/graduating-from-cambridge.jpeg
-project: cambridge
 ---
 
 *This post was archived from Medium.*
