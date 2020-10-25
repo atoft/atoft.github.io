@@ -59,7 +59,7 @@ title: All posts
           {% if page == paginator.page %}
           <a href="#!" class="active"><li class="active cyan darken-3">{{ page }}</li></a>
           {% elsif page == 1 %}
-          <a href="{{ paginator.previous_page_path | relative_url }}"><li class="waves-effect">{{ page }}</li></a>
+          <a href="/posts/"><li class="waves-effect">{{ page }}</li></a>
           {% else %}
           <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}"><li class="waves-effect">{{ page }}</li></a>
           {% endif %}
