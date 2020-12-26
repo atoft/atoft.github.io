@@ -2,7 +2,7 @@
 layout: post
 title: "Implementing 3D collision resolution"
 img: images/posts/collision-banner.png
-project: 
+project: freeplanet
 ---
 
 For a personal project, I decided to implement my own collision detection and resolution for 3D objects.
