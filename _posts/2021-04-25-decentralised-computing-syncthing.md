@@ -3,7 +3,7 @@ layout: post
 title: "Towards more decentralised computing with Syncthing"
 ---
 
-For individuals, a personal computer is more and more just a window to services that are provided over the internet. One of the driving factors for that is the expectation for your stuff to be "available everywhere". When most people use multiple devices, from phones to tablets to desktops, local files are not good enough any more, leading to the proliferation of cloud services from the likes of Google and Dropbox.
+For individuals, a personal computer is more and more just a window to services that are provided over the internet. One of the driving factors for that is the expectation for your stuff to be "available everywhere". When most people use multiple devices, from phones to tablets to desktops, local files are not good enough any more, leading to the proliferation of "cloud" services.
 
 Disregarding the privacy implications of handing your data over to third parties, your reliance on their security in the face of potential breaches, or the dubious power and influence of the corporations involved, there are more pragmatic reasons to avoid relying on centralised services. What if your file syncing service [stops supporting the setup that you use](https://www.dropboxforum.com/t5/Dropbox-files-folders/Dropbox-client-warns-me-that-it-ll-stop-syncing-in-Nov-why/m-p/290065/highlight/true#M42255), or your password manager [starts charging for features you were using for free](https://blog.lastpass.com/2021/02/changes-to-lastpass-free/)? Both of these examples actually happened to me, and led me to look at alternatives where the control of my stuff is back in my hands.
 
@@ -22,25 +22,25 @@ Once you have it set up, Syncthing will happily run in the background to keep yo
 Beyond just the obvious file syncing uses, here's a couple of other ways that I use Syncthing to do things that would otherwise require online services.
 
 # Photo syncing
-I take photos on my phone, but I want to look at them on my computer. And, after having the same phone for years, its storage is always full of pictures. Rather than rely on Google Photos or whatever Apple provides, I make the phone's camera folder a Syncthing folder (something that the Android app will offer to do for you automatically).
+I take photos on my phone, but I want to look at them on my computer. And, after having the same phone for years, its storage is always full of pictures. Rather than rely on a photo sharing service, I make the phone's camera folder a Syncthing folder (something that the Android app will offer to do for you automatically).
 
 ![Syncthing running on Android](/images/posts/syncthing/android-interface.jpg)
 
 Then on my desktop I can delete the ones I don't want, and move old pictures I want to save to another folder.
 
 # Calendar
-Who needs Google Calendar? I have a .ics calendar file in my Syncthing, and I can use the same calendar on my desktop and my laptop.
+I have a .ics calendar file in my Syncthing, and I can use the same calendar on my desktop and my laptop.
 
 ![Using a calendar synced by Syncthing in GNOME Calendar](/images/posts/syncthing/gnome-calendar.png)
 
-(One caveat on this one, I'm yet to find a good Android app that can edit these calendar files. Give me a shout it you find one!)
+(One caveat on this one, I'm yet to find a good Android app that can edit these calendar files. Give me a shout if you find one!)
 
 # Password manager
 This section comes with the disclaimer that I'm not a security expert. 😉
 
 I mentioned my password manager troubles at the start of the post. Instead I now have a KeePass file in my Syncthing which I use to hold my passwords. KeePass files are encrypted, and use both a master password and a separate private key file (which is not synced) so, even if you don't trust Syncthing (which is encrypted anyway) or the network you're using, it ought to be secure.
 
-Once you have it, there are nice apps on every platform (including mobile) that can use KeePass files, making it very easy to use.
+Once you have it, there are nice [apps](https://flathub.org/apps/details/org.gnome.PasswordSafe) on every platform (including mobile) that can use KeePass files, making it very easy to use.
 
 ![Password Safe app on GNOME desktop](/images/posts/syncthing/password-safe.png)
 
