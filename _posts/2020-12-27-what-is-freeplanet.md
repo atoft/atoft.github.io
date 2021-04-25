@@ -15,7 +15,7 @@ Here's some of the main features of this not-game so far:
 
 - 3D rendering with OpenGL.
 - An architecture for large game worlds which supports loading/unloading parts of them on the fly.
-- [Basic 3D object collisions.](http://localhost:4000/posts/2020/04/12/implementing-3d-collision-resolution/)
+- [Basic 3D object collisions.](/posts/2020/04/12/implementing-3d-collision-resolution/)
 - Randomly generated spherical planets.
 - Creation and destruction of smooth 3D volumetric terrain.
 - Randomly generated and spawned trees.
