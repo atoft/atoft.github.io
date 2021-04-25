@@ -2,3 +2,4 @@ wiki/*
 files/uncertaintyprinciple_v1.zip
 _site/*
 .idea/*
+.jekyll-cache/*
