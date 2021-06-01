@@ -254,6 +254,20 @@ code
     border-radius: 5px;
 }
 
+pre
+{
+    display: block;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+pre code
+{
+    background-color: transparent;
+}
+    
+
 #about li
 {
     list-style-type: disc;
