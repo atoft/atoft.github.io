@@ -271,7 +271,7 @@ pre code
 #about li
 {
     list-style-type: disc;
-    list-style-position: inside;
+    list-style-position: outside;
     font-size: 1.2em;
     text-align: justify;
     margin-left: 1em;
