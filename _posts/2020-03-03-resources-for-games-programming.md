@@ -26,7 +26,7 @@ Character, camera, controls. How to make a game feel good.
 | **Cameras** |
 | *GDC: Juicing Your Cameras With Math* | Camera shake, framing, and smoothing, with demos for a 2D game. | [YouTube](https://www.youtube.com/watch?v=tu-Qe66AvtY)
 | *GDC: The Cameras of Uncharted 3* | Implementation of a camera system for a AAA third-person game. | [GDC Vault (public)](https://www.gdcvault.com/play/1015514/The-Cameras-of-Uncharted) |
-| *GDC: 50 Game Camera Mistakes* | Game camera lessons from the game Journey. | [YouTube](https://www.youtube.com/watch?v=C7307qRmlMI&t=1286s) |
+| *GDC: 50 Game Camera Mistakes* | Game camera lessons from the game Journey. | [YouTube](https://www.youtube.com/watch?v=C7307qRmlMI) |
 | **Controls** |
 | *GDC: Techniques for Building Aim Assist in Console Shooters* | How to handle analog sticks, deadzones, input acceleration, and aim assist, for a first-person shooter. | [GDC Vault (public)](https://gdcvault.com/play/1017942/Techniques-for-Building-Aim-Assist) |
 
