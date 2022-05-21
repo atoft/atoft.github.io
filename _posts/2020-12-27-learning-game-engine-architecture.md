@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is freeplanet?"
+title: "Learning about game engine architecture"
 project: freeplanet
 img: images/code/banner_freeplanet.jpg
 ---
