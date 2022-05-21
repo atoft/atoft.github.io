@@ -237,7 +237,7 @@ h1
 }
 
 
-.addymotion-post-text p
+.addymotion-post-text
 {
     font-size: 1.2em;
     text-align: justify;
@@ -246,6 +246,20 @@ h1
 .addymotion-post-text img
 {
     max-width: 100%;
+}
+
+.addymotion-post-text tr
+{
+    border-top: #aaaaaa 1px solid;
+    border-bottom: #aaaaaa 1px solid;
+    font-size: 0.8em;
+}
+
+.addymotion-post-text li
+{
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 1em;
 }
 
 code
