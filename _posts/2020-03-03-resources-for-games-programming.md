@@ -5,65 +5,61 @@ img: images/posts/programming-generic.jpg
 project: 
 ---
 
-This post is a list of sites, books, and talks I've found useful working in games. These links might be helpful for you too if you're looking to get into the industry, or if you're there already. Programmers working in other contexts 
-may get some use out of it, but no guarantees 🙃.
+This post is a list of sites, books, and talks I've found useful working in games. 
 
 I'll try to update this page over time with more things!
 
-# Game Programming Patterns - Robert Nystrom
-**[Website](http://gameprogrammingpatterns.com/)**  
-**Useful for:** An introduction to common ways of solving problems in games.  
-**Assuming:** You're somewhat familiar with any C-like language.  
+- TOC
+{:toc}
 
-An over-reliance on Design Patterns as a "silver bullet" for engineering problems is 
-bad, but rather than prescribed solutions, this book presents examples of useful approaches to problems
- which turn up a lot in games. I've definitely seen (and used) these in the engines I've worked in. 
+# Gameplay
+## 3Cs
+Character, camera, controls. How to make a game feel good.
 
-It's very accessible to beginners. I recommend the getting the paperback if you can, but 
-the author provides the whole book online for free.
+| **General** |
+| *The Game Developer's Spring-Roll-Call* | Deep-dive into the use of springs for gamedev, with mathematical derivations, animated examples, and code snippets. | [Website](https://theorangeduck.com/page/spring-roll-call) |
+| **Character** |
+| *Celeste Game-Feel* | Examples of how Celeste makes platforming feel good. | [Twitter](https://mobile.twitter.com/MaddyThorson/status/1238338574220546049) |
+| *Code vs Data Driven Displacement* | Overview of the tradeoffs between animation and code-driven locomotion for a character. | [Website](https://theorangeduck.com/page/code-vs-data-driven-displacement) |
+| *GDC: Take 'Control' of Animation* | More on the motion-matching approach to gameplay animation, from the game Control. | [YouTube](https://www.youtube.com/watch?v=JH69g7yA7QM) |
+| *GDC: Player Traversal Mechanics in the Vast World of Horizon Zero Dawn* | Examples of player locomotion, start-and-stop animation, vaulting, jumping, etc, in a third-person open world game. | [YouTube](https://www.youtube.com/watch?v=LrLHsbTK5bM) |
+| **Cameras** |
+| *GDC: Juicing Your Cameras With Math* | Camera shake, framing, and smoothing, with demos for a 2D game. | [YouTube](https://www.youtube.com/watch?v=tu-Qe66AvtY)
+| *GDC: The Cameras of Uncharted 3* | Implementation of a camera system for a AAA third-person game. | [GDC Vault (public)](https://www.gdcvault.com/play/1015514/The-Cameras-of-Uncharted) |
+| *GDC: 50 Game Camera Mistakes* | Game camera lessons from the game Journey. | [YouTube](https://www.youtube.com/watch?v=C7307qRmlMI&t=1286s) |
+| **Controls** |
+| *GDC: Techniques for Building Aim Assist in Console Shooters* | How to handle analog sticks, deadzones, input acceleration, and aim assist, for a first-person shooter. | [GDC Vault (public)](https://gdcvault.com/play/1017942/Techniques-for-Building-Aim-Assist) |
 
-# Data-Oriented Design and C++ - Mike Acton
-**[YouTube](https://www.youtube.com/watch?v=rX0ItVEVjHc)**  
-**Useful for:** Unlearn what you have learned (about object-oriented programming).  
-**Assuming:** You have some C++ knowledge.
+## Replication
+Gameplay programming for online multiplayer.
 
-This talk is a good introduction to the ideas of data-oriented design, specifically, why caring about
-the layout of your data in memory is very important for writing software with good performance.
+| --- |
+| *GDC: Overwatch Gameplay Architecture and Netcode* | Examples of gameplay networking, as well as an introduction to Entity Component System programming. | [YouTube](https://www.youtube.com/watch?v=W3aieHjyNvw) |
+| *GDC: Networking the Gameplay of Halo: Reach* | Practical examples of replicating gameplay features, including what happens when it's done wrong. | [YouTube](https://www.youtube.com/watch?v=h47zZrqjgLc) |
 
-# Simplicity: Not Just For Beginners - Kate Gregory
-**[YouTube](https://youtu.be/n0Ak6xtVXno?t=55)**  
-**Useful for:** How to think about your code.  
-**Assuming:** You have some C++ knowledge.
+# General programming
+Advice and mindset for programming in games.
 
-Kate Gregory has a lot of great C++ talks, but this is a good one about the mindset we have when 
-writing code. Writing simple code can be hard, but it's important.
+| --- |
+| *Game Programming Patterns* | An accessible introduction to common ways of solving problems in games. | [Website/book](http://gameprogrammingpatterns.com/) |
+| *Simplicity: Not Just For Beginners* | What it means to write simple code. | [YouTube](https://youtu.be/n0Ak6xtVXno?t=55) |
+| *Data-Oriented Design and C++* | A good introduction to the ideas of data-oriented design, as an alternative to object-oriented programming. | [YouTube](https://www.youtube.com/watch?v=rX0ItVEVjHc) |
+| *Data oriented design in practice* | More hands-on examples of data-oriented design and its impacts. | [YouTube](https://www.youtube.com/watch?v=NWMx1Q66c14) | 
 
-# Computer Graphics - Inigo Quilez
-**[Website](https://iquilezles.org/www/index.htm)**  
-**Useful for:** Lots of resources for graphics, shaders and procedural generation.  
-**Assuming:** You've used any shader language before.
+# Game engines
+The architecture of games and their key systems.
 
-This site is filled with all sorts of great snippets related to graphics programming, especially techniques for
-ray-marching and procedural noise. (I even cited it in my dissertation 🙂)
+| --- |
+| *Game Engine Architecture* | A high level view of what game engines are and how they work. | [Book](https://www.gameenginebook.com/) |
+| *How to Write Your Own C++ Game Engine* | Some lessons learned from game engine development, particularly around serialization/reflection. | [Website](https://preshing.com/20171218/how-to-write-your-own-cpp-game-engine/) |
+| *GDC: Valve's Physics for Game Programmers* | Examples of using serialization and reflection to aid debugging, with the use case of a physics engine. | [YouTube](https://www.youtube.com/watch?v=1RphLzpQiJY) |
 
-The author also co-created [ShaderToy](https://www.shadertoy.com/), and worked at Pixar.
+# Graphics
+Rendering, procedural generation, and putting pretty things on the screen.
 
-# Overwatch Gameplay Architecture and Netcode - Timothy Ford
-**[YouTube](https://www.youtube.com/watch?v=W3aieHjyNvw)**  
-**Useful for:** Learn about ECS and networking all in one hour!  
-**Assuming:** You have some C++ knowledge.  
-
-Of course there are dozens of great GDC talks for programmers, but as far as engine architecture goes, this one is 
-great. It's a good introduction to the Entity Component System model, and to gameplay networking, in the context
-of a triple A game.
-
-# Game Engine Architecture - Jason Gregory
-**[Book](https://www.gameenginebook.com/)**  
-**Useful for:** A high level view of what game engines are and how they work, with a few specifics.  
-**Assuming:**  You're familiar with any C-like language.  
-
-This is the canonical text for game engine architecture, and it covers *a lot*. Personally I found a little 
-too broad in scope when I first read it, but 
-for an overview of what game engines do and to get started in most areas, this is a great reference.
+| --- |
+| *Inigo Quilez* | Lots of resources for graphics, shaders and procedural generation. Many topics such as signed distance fields can come in useful in unexpected places unrelated to graphics as well. | [Website](https://iquilezles.org/www/index.htm) |
+| *SIGGRAPH: Future of Real-Time Transparency* | An overview of transparency in real time graphics and potential future approaches. | [YouTube](https://www.youtube.com/watch?v=rVh-tnsJv54)
 
 
+  
