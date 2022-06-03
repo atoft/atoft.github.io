@@ -23,9 +23,9 @@ Character, camera, controls. How to make a game feel good.
 | *Code vs Data Driven Displacement* | Overview of the tradeoffs between animation and code-driven locomotion for a character. | [Website](https://theorangeduck.com/page/code-vs-data-driven-displacement) |
 | *GDC: Take 'Control' of Animation* | More on the motion-matching approach to gameplay animation, from the game Control. | [YouTube](https://www.youtube.com/watch?v=JH69g7yA7QM) |
 | *GDC: Player Traversal Mechanics in the Vast World of Horizon Zero Dawn* | Examples of player locomotion, start-and-stop animation, vaulting, jumping, etc, in a third-person open world game. | [YouTube](https://www.youtube.com/watch?v=LrLHsbTK5bM) |
-| **Cameras** |
+| **Camera** |
 | *GDC: Juicing Your Cameras With Math* | Camera shake, framing, and smoothing, with demos for a 2D game. | [YouTube](https://www.youtube.com/watch?v=tu-Qe66AvtY)
-| *GDC: The Cameras of Uncharted 3* | Implementation of a camera system for a AAA third-person game. | [GDC Vault (public)](https://www.gdcvault.com/play/1015514/The-Cameras-of-Uncharted) |
+| *GDC: The Cameras of Uncharted 3* | Implementation of a camera system for a third-person game. | [GDC Vault (public)](https://www.gdcvault.com/play/1015514/The-Cameras-of-Uncharted) |
 | *GDC: 50 Game Camera Mistakes* | Game camera lessons from the game Journey. | [YouTube](https://www.youtube.com/watch?v=C7307qRmlMI) |
 | **Controls** |
 | *GDC: Techniques for Building Aim Assist in Console Shooters* | How to handle analog sticks, deadzones, input acceleration, and aim assist, for a first-person shooter. | [GDC Vault (public)](https://gdcvault.com/play/1017942/Techniques-for-Building-Aim-Assist) |
