@@ -20,7 +20,10 @@ of copy-pasting from online tutorials and trying to hack at the code to make it 
 I experimented with a lot of different game ideas, most quickly abandoned, but one that did 
 see the light of day was WormWorld.
 
-Despite being, in hindsight, a terrible platformer, with broken physics, embarrassing art
+![A screenshot of the amazing visuals of WormWorld.](/images/posts/2024-wormworld-level3.png)
+
+WormWorld was a platformer based on some stop-motion animations I'd made, and despite being, 
+in hindsight, not great, with broken physics, embarrassing art,
 and the most irritating audio you've ever heard, I was quite proud of it. It was especially
 fun to watch my friends try it out in the school library, even more so once I added
 a multiplayer version that two people could play on a single keyboard. Looking back, I had
